@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.lavid.hogares">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".sermonMenu"
+            android:label="@string/title_activity_sermon_menu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".sermon1"
+            android:label="@string/title_activity_sermon_1"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".sermon2"
+            android:label="@string/title_activity_sermon2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".sermon3"
+            android:label="@string/title_activity_sermon3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".sermon4"
+            android:label="@string/title_activity_sermon4"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".sermon5"
+            android:label="@string/title_activity_sermon5"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".sermon6"
+            android:label="@string/title_activity_sermon6"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".sermon7"
+            android:label="@string/title_activity_sermon7"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".sermon8"
+            android:label="@string/title_activity_sermon8"
+            android:theme="@style/AppTheme.NoActionBar" />
+    </application>
+
+</manifest>
