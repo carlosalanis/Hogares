@@ -1,12 +1,16 @@
 package org.lavid.hogares;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.WindowManager;
+import android.webkit.JsResult;
+import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
@@ -27,6 +31,34 @@ public class chapters extends AppCompatActivity {
         view = findViewById(R.id.webChapters);
         view.getSettings().setTextZoom(60);
         view.getSettings().setJavaScriptEnabled(true);
+        view.setWebChromeClient(new WebChromeClient());
+//        view.setWebChromeClient(new WebChromeClient() {
+//
+//            @Override
+//            public boolean onJsAlert(WebView view, String url, String message, final JsResult result) {
+//                String title = "";
+//                String[] msg = message.split("\\|");
+//                if(msg.length > 1) title = msg[1];
+//                AlertDialog dialog = new AlertDialog.Builder(view.getContext()).
+//                        setTitle("").
+//                        setMessage(msg[0]).
+//                        setNegativeButton(title, new DialogInterface.OnClickListener() {
+//                            @Override
+//                            public void onClick(DialogInterface dialog, int which) {
+//                                //do nothing
+//                            }
+//                        }).
+//                        setPositiveButton("CERRAR", new DialogInterface.OnClickListener() {
+//                            @Override
+//                            public void onClick(DialogInterface dialog, int which) {
+//                                //do nothing
+//                            }
+//                        }).create();
+//                dialog.show();
+//                result.confirm();
+//                return true;
+//            } });
+
         view.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
         //view.loadData(getString(R.string.sermon1_text), "text/html", "UTF-8");
         Intent intent = getIntent();

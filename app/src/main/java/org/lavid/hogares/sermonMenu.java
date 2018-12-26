@@ -55,7 +55,7 @@ public class sermonMenu extends AppCompatActivity {
         cardSermon4.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
-                mainIntent.putExtra("cap", "losquetienehambre.html");
+                mainIntent.putExtra("cap", "losquetienenhambre.html");
                 startActivity(mainIntent);
             }
         });
