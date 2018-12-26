@@ -19,10 +19,7 @@ public class sermonMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sermon_menu);
-
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-            getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
-        }
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -30,7 +27,8 @@ public class sermonMenu extends AppCompatActivity {
         cardSermon1 = findViewById(R.id.card_view);
         cardSermon1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent mainIntent = new Intent(getApplicationContext(), sermon1.class);
+                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                mainIntent.putExtra("cap", "lospobres.html");
                 startActivity(mainIntent);
             }
         });
@@ -38,7 +36,8 @@ public class sermonMenu extends AppCompatActivity {
         cardSermon2 = findViewById(R.id.card_view2);
         cardSermon2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent mainIntent = new Intent(getApplicationContext(), sermon2.class);
+                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                mainIntent.putExtra("cap", "losquelloran.html");
                 startActivity(mainIntent);
             }
         });
@@ -46,7 +45,8 @@ public class sermonMenu extends AppCompatActivity {
         cardSermon3 = findViewById(R.id.card_view3);
         cardSermon3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent mainIntent = new Intent(getApplicationContext(), sermon3.class);
+                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                mainIntent.putExtra("cap", "loshumildes.html");
                 startActivity(mainIntent);
             }
         });
@@ -54,7 +54,8 @@ public class sermonMenu extends AppCompatActivity {
         cardSermon4 = findViewById(R.id.card_view4);
         cardSermon4.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent mainIntent = new Intent(getApplicationContext(), sermon4.class);
+                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                mainIntent.putExtra("cap", "losquetienehambre.html");
                 startActivity(mainIntent);
             }
         });
@@ -62,7 +63,8 @@ public class sermonMenu extends AppCompatActivity {
         cardSermon5 = findViewById(R.id.card_view5);
         cardSermon5.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent mainIntent = new Intent(getApplicationContext(), sermon5.class);
+                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                mainIntent.putExtra("cap", "losmisericordiosos.html");
                 startActivity(mainIntent);
             }
         });
@@ -70,7 +72,8 @@ public class sermonMenu extends AppCompatActivity {
         cardSermon6 = findViewById(R.id.card_view6);
         cardSermon6.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent mainIntent = new Intent(getApplicationContext(), sermon6.class);
+                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                mainIntent.putExtra("cap", "losdelimpio.html");
                 startActivity(mainIntent);
             }
         });
@@ -78,7 +81,8 @@ public class sermonMenu extends AppCompatActivity {
         cardSermon7 = findViewById(R.id.card_view7);
         cardSermon7.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent mainIntent = new Intent(getApplicationContext(), sermon7.class);
+                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                mainIntent.putExtra("cap", "losqueprocuran.html");
                 startActivity(mainIntent);
             }
         });
@@ -86,7 +90,8 @@ public class sermonMenu extends AppCompatActivity {
         cardSermon8 = findViewById(R.id.card_view8);
         cardSermon8.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent mainIntent = new Intent(getApplicationContext(), sermon8.class);
+                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                mainIntent.putExtra("cap", "losperseguidos.html");
                 startActivity(mainIntent);
             }
         });

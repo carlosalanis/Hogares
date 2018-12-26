@@ -1,6 +1,6 @@
 package org.lavid.hogares;
 
-import android.os.Build;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -10,27 +10,28 @@ import android.view.WindowManager;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
-public class sermon8 extends AppCompatActivity {
+public class chapters extends AppCompatActivity {
 
     WebView view;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sermon8);
+        setContentView(R.layout.activity_chapters);
 
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-            getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
-        }
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        view = findViewById(R.id.txtSermon8);
+        view = findViewById(R.id.webChapters);
         view.getSettings().setTextZoom(60);
         view.getSettings().setJavaScriptEnabled(true);
         view.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
-        view.loadData(getString(R.string.sermon8_text), "text/html", "UTF-8");
+        //view.loadData(getString(R.string.sermon1_text), "text/html", "UTF-8");
+        Intent intent = getIntent();
+        String cap = intent.getStringExtra("cap");
+        view.loadUrl("file:///android_asset/" + cap);
 
         view.setLongClickable(false);
         view.setHapticFeedbackEnabled(false);
@@ -43,7 +44,7 @@ public class sermon8 extends AppCompatActivity {
 
         view.addJavascriptInterface(new WebAppInterface(view), "Android");
 
-        FloatingActionButton small = (FloatingActionButton) findViewById(R.id.small);
+        FloatingActionButton small = findViewById(R.id.small);
         small.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -51,7 +52,7 @@ public class sermon8 extends AppCompatActivity {
             }
         });
 
-        FloatingActionButton big = (FloatingActionButton) findViewById(R.id.big);
+        FloatingActionButton big = findViewById(R.id.big);
         big.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -63,7 +64,7 @@ public class sermon8 extends AppCompatActivity {
 
     private void textBigger() {
 
-        view = findViewById(R.id.txtSermon8);
+        view = findViewById(R.id.webChapters);
         WebSettings settings = view.getSettings();
         if (settings.getTextZoom() <= 140)
             settings.setTextZoom(settings.getTextZoom() + 10);
@@ -71,7 +72,7 @@ public class sermon8 extends AppCompatActivity {
 
     private void textSmaller() {
 
-        view = findViewById(R.id.txtSermon8);
+        view = findViewById(R.id.webChapters);
         WebSettings settings = view.getSettings();
         if (settings.getTextZoom() >= 20)
             settings.setTextZoom(settings.getTextZoom() - 10);

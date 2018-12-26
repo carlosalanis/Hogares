@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".sermon6"
-    tools:showIn="@layout/activity_sermon6">
+    tools:context=".chapters"
+    tools:showIn="@layout/activity_chapters">
 
     <WebView
-        android:id="@+id/txtSermon6"
+        android:id="@+id/webChapters"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textIsSelectable="true"
