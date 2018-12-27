@@ -13,7 +13,7 @@ public class sermonMenu extends AppCompatActivity {
 
     CardView cardSermon1; CardView cardSermon2; CardView cardSermon3;
     CardView cardSermon4; CardView cardSermon5; CardView cardSermon6;
-    CardView cardSermon7;  CardView cardSermon8;
+    CardView cardSermon7; CardView cardSermon8; CardView cardSermon9;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,5 +96,14 @@ public class sermonMenu extends AppCompatActivity {
             }
         });
 
+
+        cardSermon9 = findViewById(R.id.card_view9);
+        cardSermon9.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                mainIntent.putExtra("cap", "lasal.html");
+                startActivity(mainIntent);
+            }
+        });
     }
 }
