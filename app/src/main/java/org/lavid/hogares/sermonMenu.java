@@ -14,6 +14,8 @@ public class sermonMenu extends AppCompatActivity {
     CardView cardSermon1; CardView cardSermon2; CardView cardSermon3;
     CardView cardSermon4; CardView cardSermon5; CardView cardSermon6;
     CardView cardSermon7; CardView cardSermon8; CardView cardSermon9;
+    CardView cardSermon10; CardView cardSermon11; CardView cardSermon12;
+    CardView cardSermon13; CardView cardSermon14;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,6 +104,51 @@ public class sermonMenu extends AppCompatActivity {
             public void onClick(View v) {
                 Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
                 mainIntent.putExtra("cap", "lasal.html");
+                startActivity(mainIntent);
+            }
+        });
+
+        cardSermon10 = findViewById(R.id.card_view10);
+        cardSermon10.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                mainIntent.putExtra("cap", "laconsumacion.html");
+                startActivity(mainIntent);
+            }
+        });
+
+        cardSermon11 = findViewById(R.id.card_view11);
+        cardSermon11.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                mainIntent.putExtra("cap", "laira.html");
+                startActivity(mainIntent);
+            }
+        });
+
+        cardSermon12 = findViewById(R.id.card_view12);
+        cardSermon12.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                mainIntent.putExtra("cap", "eladulterio.html");
+                startActivity(mainIntent);
+            }
+        });
+
+        cardSermon13 = findViewById(R.id.card_view13);
+        cardSermon13.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                mainIntent.putExtra("cap", "unavida.html");
+                startActivity(mainIntent);
+            }
+        });
+
+        cardSermon14 = findViewById(R.id.card_view14);
+        cardSermon14.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                mainIntent.putExtra("cap", "lavenganza.html");
                 startActivity(mainIntent);
             }
         });
