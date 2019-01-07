@@ -1,6 +1,7 @@
 package org.lavid.hogares;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +9,7 @@ import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.RelativeLayout;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -19,6 +21,9 @@ public class sermonMenu extends AppCompatActivity {
     CardView cardSermon7; CardView cardSermon8; CardView cardSermon9;
     CardView cardSermon10; CardView cardSermon11; CardView cardSermon12;
     CardView cardSermon13; CardView cardSermon14;
+    RelativeLayout cardLayout10; RelativeLayout cardLayout11;
+    RelativeLayout cardLayout12; RelativeLayout cardLayout13;
+    RelativeLayout cardLayout14;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +35,8 @@ public class sermonMenu extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         Calendar calendar = Calendar.getInstance();
-        int week = calendar.WEEK_OF_YEAR;
+        calendar.setTime(new Date());
+        int week = calendar.get(calendar.WEEK_OF_YEAR);
 
 
         cardSermon1 = findViewById(R.id.card_view);
@@ -124,6 +130,7 @@ public class sermonMenu extends AppCompatActivity {
             }
         });
         cardSermon10.setVisibility(View.GONE);
+        cardLayout10 = findViewById(R.id.cardLayout10);
 
         cardSermon11 = findViewById(R.id.card_view11);
         cardSermon11.setOnClickListener(new View.OnClickListener() {
@@ -134,6 +141,7 @@ public class sermonMenu extends AppCompatActivity {
             }
         });
         cardSermon11.setVisibility(View.GONE);
+        cardLayout11 = findViewById(R.id.cardLayout11);
 
         cardSermon12 = findViewById(R.id.card_view12);
         cardSermon12.setOnClickListener(new View.OnClickListener() {
@@ -144,6 +152,7 @@ public class sermonMenu extends AppCompatActivity {
             }
         });
         cardSermon12.setVisibility(View.GONE);
+        cardLayout12 = findViewById(R.id.cardLayout12);
 
         cardSermon13 = findViewById(R.id.card_view13);
         cardSermon13.setOnClickListener(new View.OnClickListener() {
@@ -154,6 +163,7 @@ public class sermonMenu extends AppCompatActivity {
             }
         });
         cardSermon13.setVisibility(View.GONE);
+        cardLayout13 = findViewById(R.id.cardLayout13);
 
         cardSermon14 = findViewById(R.id.card_view14);
         cardSermon14.setOnClickListener(new View.OnClickListener() {
@@ -164,12 +174,48 @@ public class sermonMenu extends AppCompatActivity {
             }
         });
         cardSermon14.setVisibility(View.GONE);
+        cardLayout14 = findViewById(R.id.cardLayout14);
 
-        if(week>2){ cardSermon10.setVisibility(View.VISIBLE); }
-        if(week>3){ cardSermon11.setVisibility(View.VISIBLE); }
-        if(week>4){ cardSermon12.setVisibility(View.VISIBLE); }
-        if(week>5){ cardSermon13.setVisibility(View.VISIBLE); }
-        if(week>6){ cardSermon14.setVisibility(View.VISIBLE); }
+        switch (week) {
+            case 2:
+                cardSermon10.setVisibility(View.VISIBLE);
+                cardLayout10.setBackgroundColor(Color.parseColor("#F5843F"));
+                break;
+            case 3:
+                cardSermon10.setVisibility(View.VISIBLE);
+                cardSermon11.setVisibility(View.VISIBLE);
+                cardLayout11.setBackgroundColor(Color.parseColor("#F5843F"));
+                break;
+            case 4:
+                cardSermon10.setVisibility(View.VISIBLE);
+                cardSermon11.setVisibility(View.VISIBLE);
+                cardSermon12.setVisibility(View.VISIBLE);
+                cardLayout12.setBackgroundColor(Color.parseColor("#F5843F"));
+                break;
+            case 5:
+                cardSermon10.setVisibility(View.VISIBLE);
+                cardSermon11.setVisibility(View.VISIBLE);
+                cardSermon12.setVisibility(View.VISIBLE);
+                cardSermon13.setVisibility(View.VISIBLE);
+                cardLayout13.setBackgroundColor(Color.parseColor("#F5843F"));
+                break;
+            case 6:
+                cardSermon10.setVisibility(View.VISIBLE);
+                cardSermon11.setVisibility(View.VISIBLE);
+                cardSermon12.setVisibility(View.VISIBLE);
+                cardSermon13.setVisibility(View.VISIBLE);
+                cardSermon14.setVisibility(View.VISIBLE);
+                cardLayout14.setBackgroundColor(Color.parseColor("#F5843F"));
+                break;
+            default:
+                cardSermon10.setVisibility(View.VISIBLE);
+                cardSermon11.setVisibility(View.VISIBLE);
+                cardSermon12.setVisibility(View.VISIBLE);
+                cardSermon13.setVisibility(View.VISIBLE);
+                cardSermon14.setVisibility(View.VISIBLE);
+                cardLayout14.setBackgroundColor(Color.parseColor("#F5843F"));
+                break;
+        }
 
     }
 }
