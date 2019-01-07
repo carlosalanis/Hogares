@@ -9,6 +9,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.WindowManager;
 
+import java.util.Calendar;
+import java.util.Date;
+
 public class sermonMenu extends AppCompatActivity {
 
     CardView cardSermon1; CardView cardSermon2; CardView cardSermon3;
@@ -25,6 +28,10 @@ public class sermonMenu extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        Calendar calendar = Calendar.getInstance();
+        int week = calendar.WEEK_OF_YEAR;
+
 
         cardSermon1 = findViewById(R.id.card_view);
         cardSermon1.setOnClickListener(new View.OnClickListener() {
@@ -116,6 +123,7 @@ public class sermonMenu extends AppCompatActivity {
                 startActivity(mainIntent);
             }
         });
+        cardSermon10.setVisibility(View.GONE);
 
         cardSermon11 = findViewById(R.id.card_view11);
         cardSermon11.setOnClickListener(new View.OnClickListener() {
@@ -125,6 +133,7 @@ public class sermonMenu extends AppCompatActivity {
                 startActivity(mainIntent);
             }
         });
+        cardSermon11.setVisibility(View.GONE);
 
         cardSermon12 = findViewById(R.id.card_view12);
         cardSermon12.setOnClickListener(new View.OnClickListener() {
@@ -134,6 +143,7 @@ public class sermonMenu extends AppCompatActivity {
                 startActivity(mainIntent);
             }
         });
+        cardSermon12.setVisibility(View.GONE);
 
         cardSermon13 = findViewById(R.id.card_view13);
         cardSermon13.setOnClickListener(new View.OnClickListener() {
@@ -143,6 +153,7 @@ public class sermonMenu extends AppCompatActivity {
                 startActivity(mainIntent);
             }
         });
+        cardSermon13.setVisibility(View.GONE);
 
         cardSermon14 = findViewById(R.id.card_view14);
         cardSermon14.setOnClickListener(new View.OnClickListener() {
@@ -152,5 +163,13 @@ public class sermonMenu extends AppCompatActivity {
                 startActivity(mainIntent);
             }
         });
+        cardSermon14.setVisibility(View.GONE);
+
+        if(week>2){ cardSermon10.setVisibility(View.VISIBLE); }
+        if(week>3){ cardSermon11.setVisibility(View.VISIBLE); }
+        if(week>4){ cardSermon12.setVisibility(View.VISIBLE); }
+        if(week>5){ cardSermon13.setVisibility(View.VISIBLE); }
+        if(week>6){ cardSermon14.setVisibility(View.VISIBLE); }
+
     }
 }

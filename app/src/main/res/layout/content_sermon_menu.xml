@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="#F3F3F3"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".sermonMenu"
     tools:showIn="@layout/activity_sermon_menu">
@@ -262,7 +262,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#FFFFFF"
+                android:background="#f5843f"
                 android:padding="15dp"
                 >
                 <ImageView
@@ -334,9 +334,10 @@
                 android:background="#F5843F" />
 
             <RelativeLayout
+                android:id="@+id/cardLayout10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#FFFFFF"
+                android:background="#f5843f"
                 android:padding="15dp"
                 >
                 <ImageView
@@ -356,7 +357,7 @@
                     android:layout_height="match_parent"
                     android:layout_alignEnd="@+id/cap10_text"
                     android:layout_alignRight="@+id/cap10_text"
-                    android:text="Jesús:"
+                    android:text="ESTUDIO: 10"
                     android:textSize="10sp" />
 
 
@@ -372,7 +373,7 @@
                     android:layout_marginLeft="40dp"
                     android:layout_toEndOf="@+id/cardIcon10"
                     android:layout_toRightOf="@+id/cardIcon10"
-                    android:text="La consumación de la ley"
+                    android:text="Jesús: La consumación de la ley"
                     android:textSize="20sp" />
 
                 <TextView
@@ -410,7 +411,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#FFFFFF"
+                android:background="#bbc0c4"
                 android:padding="15dp"
                 >
                 <ImageView
@@ -484,7 +485,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#FFFFFF"
+                android:background="#bbc0c4"
                 android:padding="15dp"
                 >
                 <ImageView
@@ -558,7 +559,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#FFFFFF"
+                android:background="#bbc0c4"
                 android:padding="15dp">
                 <ImageView
                     android:id="@+id/cardIcon7"
@@ -629,7 +630,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#FFFFFF"
+                android:background="#bbc0c4"
                 android:padding="15dp"
                 >
                 <ImageView
@@ -701,7 +702,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#FFFFFF"
+                android:background="#bbc0c4"
                 android:padding="15dp"
                 >
                 <ImageView
@@ -773,7 +774,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#FFFFFF"
+                android:background="#bbc0c4"
                 android:padding="15dp">
                 <ImageView
                     android:id="@+id/cardIcon4"
@@ -845,7 +846,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#FFFFFF"
+                android:background="#bbc0c4"
                 android:padding="15dp"
                 >
                 <ImageView
@@ -917,7 +918,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#FFFFFF"
+                android:background="#bbc0c4"
                 android:padding="15dp"
                 >
                 <ImageView
@@ -991,7 +992,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#FFFFFF"
+                android:background="#bbc0c4"
                 android:padding="15dp">
 
 
@@ -1048,27 +1049,6 @@
             </RelativeLayout>
 
         </android.support.v7.widget.CardView>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     </LinearLayout>
