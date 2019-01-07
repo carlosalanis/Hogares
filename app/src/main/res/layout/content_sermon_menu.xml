@@ -20,6 +20,955 @@
 
         <android.support.v7.widget.CardView
             xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view14"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            card_view:cardBackgroundColor="@android:color/transparent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:background="#F5843F" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:padding="15dp"
+                >
+                <ImageView
+                    android:id="@+id/cardIcon14"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/s14"/>
+
+                <TextView
+                    android:id="@+id/bienaventurado14_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignEnd="@+id/cap14_text"
+                    android:layout_alignRight="@+id/cap14_text"
+                    android:text="ESTUDIO: 14"
+                    android:textSize="10sp" />
+
+
+                <TextView
+                    android:id="@+id/cap14_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="end|top"
+                    android:layout_below="@+id/bienaventurado14_text"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_toEndOf="@+id/cardIcon14"
+                    android:layout_toRightOf="@+id/cardIcon14"
+                    android:text="La venganza y el egoísmo"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/vers14_text"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/cap14_text"
+                    android:textStyle="italic"
+                    android:gravity="end|top"
+                    android:text="... No resistáis al que es malo."
+                    android:textSize="8sp" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view13"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            card_view:cardBackgroundColor="@android:color/transparent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:background="#F5843F" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:padding="15dp"
+                >
+                <ImageView
+                    android:id="@+id/cardIcon13"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/s13"/>
+
+                <TextView
+                    android:id="@+id/bienaventurado13_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignEnd="@+id/cap13_text"
+                    android:layout_alignRight="@+id/cap13_text"
+                    android:text="ESTUDIO: 13"
+                    android:textSize="10sp" />
+
+
+                <TextView
+                    android:id="@+id/cap13_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="end|top"
+                    android:layout_below="@+id/bienaventurado13_text"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_toEndOf="@+id/cardIcon13"
+                    android:layout_toRightOf="@+id/cardIcon13"
+                    android:text="Una vida de veracidad"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/vers13_text"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/cap13_text"
+                    android:textStyle="italic"
+                    android:gravity="end|top"
+                    android:text="... Sea vuestro hablar 'Si, si' o 'No, no'."
+                    android:textSize="8sp" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view12"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            card_view:cardBackgroundColor="@android:color/transparent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:background="#F5843F" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:padding="15dp"
+                >
+                <ImageView
+                    android:id="@+id/cardIcon12"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/s12"/>
+
+                <TextView
+                    android:id="@+id/bienaventurado12_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignEnd="@+id/cap12_text"
+                    android:layout_alignRight="@+id/cap12_text"
+                    android:text="ESTUDIO: 12"
+                    android:textSize="10sp" />
+
+
+                <TextView
+                    android:id="@+id/cap12_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="end|top"
+                    android:layout_below="@+id/bienaventurado12_text"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_toEndOf="@+id/cardIcon12"
+                    android:layout_toRightOf="@+id/cardIcon12"
+                    android:text="El adulterio"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/vers12_text"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/cap12_text"
+                    android:textStyle="italic"
+                    android:gravity="end|top"
+                    android:text="... que todo el que mire a una mujer para codiciarla ya cometió adulterio con ella en su corazón."
+                    android:textSize="8sp" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view11"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            card_view:cardBackgroundColor="@android:color/transparent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:background="#F5843F" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:padding="15dp"
+                >
+                <ImageView
+                    android:id="@+id/cardIcon11"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/s11"/>
+
+                <TextView
+                    android:id="@+id/bienaventurado11_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignEnd="@+id/cap11_text"
+                    android:layout_alignRight="@+id/cap11_text"
+                    android:text="ESTUDIO: 11"
+                    android:textSize="10sp" />
+
+
+                <TextView
+                    android:id="@+id/cap11_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="end|top"
+                    android:layout_below="@+id/bienaventurado11_text"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_toEndOf="@+id/cardIcon11"
+                    android:layout_toRightOf="@+id/cardIcon11"
+                    android:text="La ira"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/vers11_text"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/cap11_text"
+                    android:textStyle="italic"
+                    android:gravity="end|top"
+                    android:text="... todo aquel que esté enojado con su hermano, será culpable ante la corte."
+                    android:textSize="8sp" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view10"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            card_view:cardBackgroundColor="@android:color/transparent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:background="#F5843F" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:padding="15dp"
+                >
+                <ImageView
+                    android:id="@+id/cardIcon10"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/s10"/>
+
+                <TextView
+                    android:id="@+id/bienaventurado10_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignEnd="@+id/cap10_text"
+                    android:layout_alignRight="@+id/cap10_text"
+                    android:text="Jesús:"
+                    android:textSize="10sp" />
+
+
+                <TextView
+                    android:id="@+id/cap10_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="end|top"
+                    android:layout_below="@+id/bienaventurado10_text"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_toEndOf="@+id/cardIcon10"
+                    android:layout_toRightOf="@+id/cardIcon10"
+                    android:text="La consumación de la ley"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/vers10_text"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/cap10_text"
+                    android:textStyle="italic"
+                    android:gravity="end|top"
+                    android:text="... No he venido para abolir, sino para cumplir."
+                    android:textSize="8sp" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view9"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            card_view:cardBackgroundColor="@android:color/transparent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:background="#F5843F" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:padding="15dp"
+                >
+                <ImageView
+                    android:id="@+id/cardIcon9"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/s9"/>
+
+                <TextView
+                    android:id="@+id/bienaventurado9_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignEnd="@+id/cap9_text"
+                    android:layout_alignRight="@+id/cap9_text"
+                    android:text="Vosotros sois"
+                    android:textSize="10sp" />
+
+
+                <TextView
+                    android:id="@+id/cap9_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="end|top"
+                    android:layout_below="@+id/bienaventurado9_text"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_toEndOf="@+id/cardIcon9"
+                    android:layout_toRightOf="@+id/cardIcon9"
+                    android:text="La sal y luz del mundo"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/vers9_text"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/cap9_text"
+                    android:textStyle="italic"
+                    android:gravity="end|top"
+                    android:text="... así brille vuestra luz delante de los hombres."
+                    android:textSize="8sp" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view8"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            card_view:cardBackgroundColor="@android:color/transparent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:background="#F5843F" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:padding="15dp"
+                >
+                <ImageView
+                    android:id="@+id/cardIcon8"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/s8"/>
+
+                <TextView
+                    android:id="@+id/bienaventurado8_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignEnd="@+id/cap8_text"
+                    android:layout_alignRight="@+id/cap8_text"
+                    android:text="Bienaventurados"
+                    android:textSize="10sp" />
+
+
+                <TextView
+                    android:id="@+id/cap8_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="end|top"
+                    android:layout_below="@+id/bienaventurado8_text"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_toEndOf="@+id/cardIcon8"
+                    android:layout_toRightOf="@+id/cardIcon8"
+                    android:text="Los perseguidos"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/vers8_text"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/cap8_text"
+                    android:textStyle="italic"
+                    android:gravity="end|top"
+                    android:text="... porque vuestra recompensa en los cielos es grande."
+                    android:textSize="8sp" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view7"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            card_view:cardBackgroundColor="@android:color/transparent">>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:background="#F5843F" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:padding="15dp">
+                <ImageView
+                    android:id="@+id/cardIcon7"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/s7" />
+                <TextView
+                    android:id="@+id/bienaventurado7_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignEnd="@+id/cap7_text"
+                    android:layout_alignRight="@+id/cap7_text"
+                    android:text="Bienaventurados"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/cap7_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="end|top"
+                    android:layout_below="@+id/bienaventurado7_text"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toEndOf="@+id/cardIcon7"
+                    android:layout_toRightOf="@+id/cardIcon7"
+                    android:text="Los que procuran la paz"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/vers7_text"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/cap7_text"
+                    android:textStyle="italic"
+                    android:gravity="end|top"
+                    android:text="... pues ellos serán llamados hijos de Dios."
+                    android:textSize="8sp" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view6"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            card_view:cardBackgroundColor="@android:color/transparent">>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:background="#F5843F" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:padding="15dp"
+                >
+                <ImageView
+                    android:id="@+id/cardIcon6"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/s6" />
+                <TextView
+                    android:id="@+id/bienaventurado6_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignEnd="@+id/cap6_text"
+                    android:layout_alignRight="@+id/cap6_text"
+                    android:text="Bienaventurados"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/cap6_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="end|top"
+                    android:layout_below="@+id/bienaventurado6_text"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_toEndOf="@+id/cardIcon6"
+                    android:layout_toRightOf="@+id/cardIcon6"
+                    android:text="Los de limpio corazón"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/vers6_text"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/cap6_text"
+                    android:textStyle="italic"
+                    android:gravity="end|top"
+                    android:text="..., pues ellos verán a Dios."
+                    android:textSize="8sp" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view5"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            card_view:cardBackgroundColor="@android:color/transparent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:background="#F5843F" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:padding="15dp"
+                >
+                <ImageView
+                    android:id="@+id/cardIcon5"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/s5" />
+                <TextView
+                    android:id="@+id/bienaventurado5_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignEnd="@+id/cap5_text"
+                    android:layout_alignRight="@+id/cap5_text"
+                    android:text="Bienaventurados"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/cap5_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="end|top"
+                    android:layout_below="@+id/bienaventurado5_text"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_toEndOf="@+id/cardIcon5"
+                    android:layout_toRightOf="@+id/cardIcon5"
+                    android:text="Los misericordiosos"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/vers5_text"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/cap5_text"
+                    android:textStyle="italic"
+                    android:gravity="end|top"
+                    android:text="... pues ellos recibirán misericordia."
+                    android:textSize="8sp" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view4"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            card_view:cardBackgroundColor="@android:color/transparent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:background="#F5843F" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:padding="15dp">
+                <ImageView
+                    android:id="@+id/cardIcon4"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/s4" />
+                <TextView
+                    android:id="@+id/bienaventurado4_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignEnd="@+id/cap4_text"
+                    android:layout_alignRight="@+id/cap4_text"
+                    android:text="Bienaventurados"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/cap4_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="end|top"
+                    android:layout_below="@+id/bienaventurado4_text"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toEndOf="@+id/cardIcon4"
+                    android:layout_toRightOf="@+id/cardIcon4"
+                    android:text="Los que tienen hambre y sed de justicia"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:id="@+id/vers4_text"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/cap4_text"
+                    android:textStyle="italic"
+                    android:gravity="end|top"
+                    android:text="... pues ellos serán saciados."
+                    android:textSize="8sp" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view3"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            card_view:cardBackgroundColor="@android:color/transparent">>>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:background="#F5843F" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:padding="15dp"
+                >
+                <ImageView
+                    android:id="@+id/cardIcon3"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/s3" />
+                <TextView
+                    android:id="@+id/bienaventurado3_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignEnd="@+id/cap3_text"
+                    android:layout_alignRight="@+id/cap3_text"
+                    android:text="Bienaventurados"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/cap3_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="end|top"
+                    android:layout_below="@+id/bienaventurado3_text"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_toEndOf="@+id/cardIcon3"
+                    android:layout_toRightOf="@+id/cardIcon3"
+                    android:text="Los humildes"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/vers3_text"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/cap3_text"
+                    android:textStyle="italic"
+                    android:gravity="end|top"
+                    android:text="... pues ellos heredarán la tierra."
+                    android:textSize="8sp" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view2"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            card_view:cardBackgroundColor="@android:color/transparent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:background="#F5843F" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:padding="15dp"
+                >
+                <ImageView
+                    android:id="@+id/cardIcon2"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/s2" />
+                <TextView
+                    android:id="@+id/bienaventurado2_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignEnd="@+id/cap2_text"
+                    android:layout_alignRight="@+id/cap2_text"
+                    android:text="Bienaventurados"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/cap2_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="end|top"
+                    android:layout_below="@+id/bienaventurado2_text"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_toEndOf="@+id/cardIcon2"
+                    android:layout_toRightOf="@+id/cardIcon2"
+                    android:text="Los que lloran"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/vers2_text"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/cap2_text"
+                    android:textStyle="italic"
+                    android:gravity="end|top"
+                    android:text="... pues ellos serán consolados."
+                    android:textSize="8sp" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
@@ -100,967 +1049,27 @@
 
         </android.support.v7.widget.CardView>
 
-        <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/card_view2"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:clickable="true"
-            android:focusable="true"
-            card_view:cardBackgroundColor="@android:color/transparent">
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:background="#F5843F" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FFFFFF"
-                android:padding="15dp"
-                >
-                <ImageView
-                    android:id="@+id/cardIcon2"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/s2" />
-                <TextView
-                    android:id="@+id/bienaventurado2_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_alignEnd="@+id/cap2_text"
-                    android:layout_alignRight="@+id/cap2_text"
-                    android:text="Bienaventurados"
-                    android:textSize="10sp" />
 
-                <TextView
-                    android:id="@+id/cap2_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="end|top"
-                    android:layout_below="@+id/bienaventurado2_text"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginLeft="40dp"
-                    android:layout_toEndOf="@+id/cardIcon2"
-                    android:layout_toRightOf="@+id/cardIcon2"
-                    android:text="Los que lloran"
-                    android:textSize="20sp" />
 
-                <TextView
-                    android:id="@+id/vers2_text"
-                    android:layout_width="140dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_below="@+id/cap2_text"
-                    android:textStyle="italic"
-                    android:gravity="end|top"
-                    android:text="... pues ellos serán consolados."
-                    android:textSize="8sp" />
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
 
-        <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/card_view3"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:clickable="true"
-            android:focusable="true"
-            card_view:cardBackgroundColor="@android:color/transparent">>>
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:background="#F5843F" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FFFFFF"
-                android:padding="15dp"
-                >
-                <ImageView
-                    android:id="@+id/cardIcon3"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/s3" />
-                <TextView
-                    android:id="@+id/bienaventurado3_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_alignEnd="@+id/cap3_text"
-                    android:layout_alignRight="@+id/cap3_text"
-                    android:text="Bienaventurados"
-                    android:textSize="10sp" />
 
-                <TextView
-                    android:id="@+id/cap3_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="end|top"
-                    android:layout_below="@+id/bienaventurado3_text"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginLeft="40dp"
-                    android:layout_toEndOf="@+id/cardIcon3"
-                    android:layout_toRightOf="@+id/cardIcon3"
-                    android:text="Los humildes"
-                    android:textSize="20sp" />
 
-                <TextView
-                    android:id="@+id/vers3_text"
-                    android:layout_width="140dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_below="@+id/cap3_text"
-                    android:textStyle="italic"
-                    android:gravity="end|top"
-                    android:text="... pues ellos heredarán la tierra."
-                    android:textSize="8sp" />
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
 
-        <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/card_view4"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:clickable="true"
-            android:focusable="true"
-            card_view:cardBackgroundColor="@android:color/transparent">
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:background="#F5843F" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FFFFFF"
-                android:padding="15dp">
-                <ImageView
-                    android:id="@+id/cardIcon4"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/s4" />
-                <TextView
-                    android:id="@+id/bienaventurado4_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_alignEnd="@+id/cap4_text"
-                    android:layout_alignRight="@+id/cap4_text"
-                    android:text="Bienaventurados"
-                    android:textSize="10sp" />
 
-                <TextView
-                    android:id="@+id/cap4_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="end|top"
-                    android:layout_below="@+id/bienaventurado4_text"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_toEndOf="@+id/cardIcon4"
-                    android:layout_toRightOf="@+id/cardIcon4"
-                    android:text="Los que tienen hambre y sed de justicia"
-                    android:textSize="20sp" />
 
 
-                <TextView
-                    android:id="@+id/vers4_text"
-                    android:layout_width="140dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_below="@+id/cap4_text"
-                    android:textStyle="italic"
-                    android:gravity="end|top"
-                    android:text="... pues ellos serán saciados."
-                    android:textSize="8sp" />
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
 
-        <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/card_view5"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:clickable="true"
-            android:focusable="true"
-            card_view:cardBackgroundColor="@android:color/transparent">
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:background="#F5843F" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FFFFFF"
-                android:padding="15dp"
-                >
-                <ImageView
-                    android:id="@+id/cardIcon5"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/s5" />
-                <TextView
-                    android:id="@+id/bienaventurado5_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_alignEnd="@+id/cap5_text"
-                    android:layout_alignRight="@+id/cap5_text"
-                    android:text="Bienaventurados"
-                    android:textSize="10sp" />
 
-                <TextView
-                    android:id="@+id/cap5_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="end|top"
-                    android:layout_below="@+id/bienaventurado5_text"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginLeft="40dp"
-                    android:layout_toEndOf="@+id/cardIcon5"
-                    android:layout_toRightOf="@+id/cardIcon5"
-                    android:text="Los misericordiosos"
-                    android:textSize="20sp" />
 
-                <TextView
-                    android:id="@+id/vers5_text"
-                    android:layout_width="140dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_below="@+id/cap5_text"
-                    android:textStyle="italic"
-                    android:gravity="end|top"
-                    android:text="... pues ellos recibirán misericordia."
-                    android:textSize="8sp" />
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
 
-        <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/card_view6"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:clickable="true"
-            android:focusable="true"
-            card_view:cardBackgroundColor="@android:color/transparent">>
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:background="#F5843F" />
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FFFFFF"
-                android:padding="15dp"
-                >
-                <ImageView
-                    android:id="@+id/cardIcon6"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/s6" />
-                <TextView
-                    android:id="@+id/bienaventurado6_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_alignEnd="@+id/cap6_text"
-                    android:layout_alignRight="@+id/cap6_text"
-                    android:text="Bienaventurados"
-                    android:textSize="10sp" />
-
-                <TextView
-                    android:id="@+id/cap6_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="end|top"
-                    android:layout_below="@+id/bienaventurado6_text"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginLeft="40dp"
-                    android:layout_toEndOf="@+id/cardIcon6"
-                    android:layout_toRightOf="@+id/cardIcon6"
-                    android:text="Los de limpio corazón"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/vers6_text"
-                    android:layout_width="140dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_below="@+id/cap6_text"
-                    android:textStyle="italic"
-                    android:gravity="end|top"
-                    android:text="..., pues ellos verán a Dios."
-                    android:textSize="8sp" />
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/card_view7"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:clickable="true"
-            android:focusable="true"
-            card_view:cardBackgroundColor="@android:color/transparent">>
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:background="#F5843F" />
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FFFFFF"
-                android:padding="15dp">
-                <ImageView
-                    android:id="@+id/cardIcon7"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/s7" />
-                <TextView
-                    android:id="@+id/bienaventurado7_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_alignEnd="@+id/cap7_text"
-                    android:layout_alignRight="@+id/cap7_text"
-                    android:text="Bienaventurados"
-                    android:textSize="10sp" />
-
-                <TextView
-                    android:id="@+id/cap7_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="end|top"
-                    android:layout_below="@+id/bienaventurado7_text"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_toEndOf="@+id/cardIcon7"
-                    android:layout_toRightOf="@+id/cardIcon7"
-                    android:text="Los que procuran la paz"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/vers7_text"
-                    android:layout_width="140dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_below="@+id/cap7_text"
-                    android:textStyle="italic"
-                    android:gravity="end|top"
-                    android:text="... pues ellos serán llamados hijos de Dios."
-                    android:textSize="8sp" />
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/card_view8"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:clickable="true"
-            android:focusable="true"
-            card_view:cardBackgroundColor="@android:color/transparent">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:background="#F5843F" />
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FFFFFF"
-                android:padding="15dp"
-                >
-                <ImageView
-                    android:id="@+id/cardIcon8"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/s8"/>
-
-                <TextView
-                    android:id="@+id/bienaventurado8_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_alignEnd="@+id/cap8_text"
-                    android:layout_alignRight="@+id/cap8_text"
-                    android:text="Bienaventurados"
-                    android:textSize="10sp" />
-
-
-                <TextView
-                    android:id="@+id/cap8_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="end|top"
-                    android:layout_below="@+id/bienaventurado8_text"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginLeft="40dp"
-                    android:layout_toEndOf="@+id/cardIcon8"
-                    android:layout_toRightOf="@+id/cardIcon8"
-                    android:text="Los perseguidos"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/vers8_text"
-                    android:layout_width="140dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_below="@+id/cap8_text"
-                    android:textStyle="italic"
-                    android:gravity="end|top"
-                    android:text="... porque vuestra recompensa en los cielos es grande."
-                    android:textSize="8sp" />
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/card_view9"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:clickable="true"
-            android:focusable="true"
-            card_view:cardBackgroundColor="@android:color/transparent">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:background="#F5843F" />
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FFFFFF"
-                android:padding="15dp"
-                >
-                <ImageView
-                    android:id="@+id/cardIcon9"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/s9"/>
-
-                <TextView
-                    android:id="@+id/bienaventurado9_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_alignEnd="@+id/cap9_text"
-                    android:layout_alignRight="@+id/cap9_text"
-                    android:text="Vosotros sois"
-                    android:textSize="10sp" />
-
-
-                <TextView
-                    android:id="@+id/cap9_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="end|top"
-                    android:layout_below="@+id/bienaventurado9_text"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginLeft="40dp"
-                    android:layout_toEndOf="@+id/cardIcon9"
-                    android:layout_toRightOf="@+id/cardIcon9"
-                    android:text="La sal y luz del mundo"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/vers9_text"
-                    android:layout_width="140dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_below="@+id/cap9_text"
-                    android:textStyle="italic"
-                    android:gravity="end|top"
-                    android:text="... así brille vuestra luz delante de los hombres."
-                    android:textSize="8sp" />
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/card_view10"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:clickable="true"
-            android:focusable="true"
-            card_view:cardBackgroundColor="@android:color/transparent">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:background="#F5843F" />
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FFFFFF"
-                android:padding="15dp"
-                >
-                <ImageView
-                    android:id="@+id/cardIcon10"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/s10"/>
-
-                <TextView
-                    android:id="@+id/bienaventurado10_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_alignEnd="@+id/cap10_text"
-                    android:layout_alignRight="@+id/cap10_text"
-                    android:text="Jesús:"
-                    android:textSize="10sp" />
-
-
-                <TextView
-                    android:id="@+id/cap10_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="end|top"
-                    android:layout_below="@+id/bienaventurado10_text"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginLeft="40dp"
-                    android:layout_toEndOf="@+id/cardIcon10"
-                    android:layout_toRightOf="@+id/cardIcon10"
-                    android:text="La consumación de la ley"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/vers10_text"
-                    android:layout_width="140dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_below="@+id/cap10_text"
-                    android:textStyle="italic"
-                    android:gravity="end|top"
-                    android:text="... No he venido para abolir, sino para cumplir."
-                    android:textSize="8sp" />
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/card_view11"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:clickable="true"
-            android:focusable="true"
-            card_view:cardBackgroundColor="@android:color/transparent">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:background="#F5843F" />
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FFFFFF"
-                android:padding="15dp"
-                >
-                <ImageView
-                    android:id="@+id/cardIcon11"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/s11"/>
-
-                <TextView
-                    android:id="@+id/bienaventurado11_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_alignEnd="@+id/cap11_text"
-                    android:layout_alignRight="@+id/cap11_text"
-                    android:text=""
-                    android:textSize="10sp" />
-
-
-                <TextView
-                    android:id="@+id/cap11_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="end|top"
-                    android:layout_below="@+id/bienaventurado11_text"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginLeft="40dp"
-                    android:layout_toEndOf="@+id/cardIcon11"
-                    android:layout_toRightOf="@+id/cardIcon11"
-                    android:text="La ira"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/vers11_text"
-                    android:layout_width="140dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_below="@+id/cap11_text"
-                    android:textStyle="italic"
-                    android:gravity="end|top"
-                    android:text="... todo aquel que esté enojado con su hermano, será culpable ante la corte."
-                    android:textSize="8sp" />
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/card_view12"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:clickable="true"
-            android:focusable="true"
-            card_view:cardBackgroundColor="@android:color/transparent">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:background="#F5843F" />
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FFFFFF"
-                android:padding="15dp"
-                >
-                <ImageView
-                    android:id="@+id/cardIcon12"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/s12"/>
-
-                <TextView
-                    android:id="@+id/bienaventurado12_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_alignEnd="@+id/cap12_text"
-                    android:layout_alignRight="@+id/cap12_text"
-                    android:text=""
-                    android:textSize="10sp" />
-
-
-                <TextView
-                    android:id="@+id/cap12_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="end|top"
-                    android:layout_below="@+id/bienaventurado12_text"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginLeft="40dp"
-                    android:layout_toEndOf="@+id/cardIcon12"
-                    android:layout_toRightOf="@+id/cardIcon12"
-                    android:text="El adulterio"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/vers12_text"
-                    android:layout_width="140dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_below="@+id/cap12_text"
-                    android:textStyle="italic"
-                    android:gravity="end|top"
-                    android:text="... que todo el que mire a una mujer para codiciarla ya cometió adulterio con ella en su corazón."
-                    android:textSize="8sp" />
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/card_view13"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:clickable="true"
-            android:focusable="true"
-            card_view:cardBackgroundColor="@android:color/transparent">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:background="#F5843F" />
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FFFFFF"
-                android:padding="15dp"
-                >
-                <ImageView
-                    android:id="@+id/cardIcon13"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/s13"/>
-
-                <TextView
-                    android:id="@+id/bienaventurado13_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_alignEnd="@+id/cap13_text"
-                    android:layout_alignRight="@+id/cap13_text"
-                    android:text=""
-                    android:textSize="10sp" />
-
-
-                <TextView
-                    android:id="@+id/cap13_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="end|top"
-                    android:layout_below="@+id/bienaventurado13_text"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginLeft="40dp"
-                    android:layout_toEndOf="@+id/cardIcon13"
-                    android:layout_toRightOf="@+id/cardIcon13"
-                    android:text="Una vida de veracidad"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/vers13_text"
-                    android:layout_width="140dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_below="@+id/cap13_text"
-                    android:textStyle="italic"
-                    android:gravity="end|top"
-                    android:text="... Antes bien, sea vuestro hablar 'Si, si' o 'No, no' ."
-                    android:textSize="8sp" />
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/card_view14"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:clickable="true"
-            android:focusable="true"
-            card_view:cardBackgroundColor="@android:color/transparent">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:background="#F5843F" />
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FFFFFF"
-                android:padding="15dp"
-                >
-                <ImageView
-                    android:id="@+id/cardIcon14"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/s14"/>
-
-                <TextView
-                    android:id="@+id/bienaventurado14_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_alignEnd="@+id/cap14_text"
-                    android:layout_alignRight="@+id/cap14_text"
-                    android:text=""
-                    android:textSize="10sp" />
-
-
-                <TextView
-                    android:id="@+id/cap14_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="end|top"
-                    android:layout_below="@+id/bienaventurado14_text"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginLeft="40dp"
-                    android:layout_toEndOf="@+id/cardIcon14"
-                    android:layout_toRightOf="@+id/cardIcon14"
-                    android:text="La venganza y el egoísmo"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/vers14_text"
-                    android:layout_width="140dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_below="@+id/cap14_text"
-                    android:textStyle="italic"
-                    android:gravity="end|top"
-                    android:text="... Al que te pida, dale; y al que desee pedirte prestado no le vuelvas la espalda."
-                    android:textSize="8sp" />
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
 
     </LinearLayout>
 

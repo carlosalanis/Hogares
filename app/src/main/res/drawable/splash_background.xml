@@ -3,7 +3,7 @@
         <item>
         <bitmap
             android:src="@drawable/logohogares2"
-            android:gravity="fill"
+            android:gravity="center_vertical|center_horizontal"
             />
     </item>
 </layer-list>
