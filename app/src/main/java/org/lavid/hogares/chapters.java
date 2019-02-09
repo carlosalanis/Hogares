@@ -23,7 +23,7 @@ public class chapters extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chapters);
 
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
+        //getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -65,14 +65,14 @@ public class chapters extends AppCompatActivity {
         String cap = intent.getStringExtra("cap");
         view.loadUrl("file:///android_asset/" + cap);
 
-        view.setLongClickable(false);
-        view.setHapticFeedbackEnabled(false);
-        view.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                return true;
-            }
-        });
+        view.setLongClickable(true);
+        view.setHapticFeedbackEnabled(true);
+        //view.setOnLongClickListener(new View.OnLongClickListener() {
+        //    @Override
+        //    public boolean onLongClick(View v) {
+        //        return true;
+        //    }
+        //});
 
         view.addJavascriptInterface(new WebAppInterface(view), "Android");
 

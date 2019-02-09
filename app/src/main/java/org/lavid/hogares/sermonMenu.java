@@ -20,16 +20,16 @@ public class sermonMenu extends AppCompatActivity {
     CardView cardSermon4; CardView cardSermon5; CardView cardSermon6;
     CardView cardSermon7; CardView cardSermon8; CardView cardSermon9;
     CardView cardSermon10; CardView cardSermon11; CardView cardSermon12;
-    CardView cardSermon13; CardView cardSermon14;
+    CardView cardSermon13; CardView cardSermon14; CardView cardSermon15;
     RelativeLayout cardLayout10; RelativeLayout cardLayout11;
     RelativeLayout cardLayout12; RelativeLayout cardLayout13;
-    RelativeLayout cardLayout14;
+    RelativeLayout cardLayout14;  RelativeLayout cardLayout15;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sermon_menu);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
+        //getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -176,6 +176,17 @@ public class sermonMenu extends AppCompatActivity {
         cardSermon14.setVisibility(View.GONE);
         cardLayout14 = findViewById(R.id.cardLayout14);
 
+        cardSermon15 = findViewById(R.id.card_view15);
+        cardSermon15.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                mainIntent.putExtra("cap", "enemigos.html");
+                startActivity(mainIntent);
+            }
+        });
+        cardSermon15.setVisibility(View.GONE);
+        cardLayout15 = findViewById(R.id.cardLayout15);
+
         switch (week) {
             case 2:
                 cardSermon10.setVisibility(View.VISIBLE);
@@ -206,6 +217,15 @@ public class sermonMenu extends AppCompatActivity {
                 cardSermon13.setVisibility(View.VISIBLE);
                 cardSermon14.setVisibility(View.VISIBLE);
                 cardLayout14.setBackgroundColor(Color.parseColor("#F5843F"));
+                break;
+            case 7:
+                cardSermon10.setVisibility(View.VISIBLE);
+                cardSermon11.setVisibility(View.VISIBLE);
+                cardSermon12.setVisibility(View.VISIBLE);
+                cardSermon13.setVisibility(View.VISIBLE);
+                cardSermon14.setVisibility(View.VISIBLE);
+                cardSermon15.setVisibility(View.VISIBLE);
+                cardLayout15.setBackgroundColor(Color.parseColor("#F5843F"));
                 break;
             default:
                 cardSermon10.setVisibility(View.VISIBLE);
