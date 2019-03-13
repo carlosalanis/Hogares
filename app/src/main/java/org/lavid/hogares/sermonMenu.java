@@ -22,11 +22,12 @@ public class sermonMenu extends AppCompatActivity {
     CardView cardSermon10; CardView cardSermon11; CardView cardSermon12;
     CardView cardSermon13; CardView cardSermon14; CardView cardSermon15;
     CardView cardSermon16; CardView cardSermon17; CardView cardSermon18;
+    CardView cardSermon19;
     RelativeLayout cardLayout10; RelativeLayout cardLayout11;
     RelativeLayout cardLayout12; RelativeLayout cardLayout13;
     RelativeLayout cardLayout14; RelativeLayout cardLayout15;
     RelativeLayout cardLayout16; RelativeLayout cardLayout17;
-    RelativeLayout cardLayout18;
+    RelativeLayout cardLayout18; RelativeLayout cardLayout19;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -223,6 +224,18 @@ public class sermonMenu extends AppCompatActivity {
         cardSermon18.setVisibility(View.GONE);
         cardLayout18 = findViewById(R.id.cardLayout18);
 
+
+        cardSermon19 = findViewById(R.id.card_view19);
+        cardSermon19.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                mainIntent.putExtra("cap", "comoorar2.html");
+                startActivity(mainIntent);
+            }
+        });
+        cardSermon19.setVisibility(View.GONE);
+        cardLayout19 = findViewById(R.id.cardLayout19);
+
         switch (week) {
             case 2:
                 cardSermon10.setVisibility(View.VISIBLE);
@@ -298,6 +311,20 @@ public class sermonMenu extends AppCompatActivity {
                 cardLayout18.setBackgroundColor(Color.parseColor("#F5843F"));
                 break;
 
+            case 11:
+                cardSermon10.setVisibility(View.VISIBLE);
+                cardSermon11.setVisibility(View.VISIBLE);
+                cardSermon12.setVisibility(View.VISIBLE);
+                cardSermon13.setVisibility(View.VISIBLE);
+                cardSermon14.setVisibility(View.VISIBLE);
+                cardSermon15.setVisibility(View.VISIBLE);
+                cardSermon16.setVisibility(View.VISIBLE);
+                cardSermon17.setVisibility(View.VISIBLE);
+                cardSermon18.setVisibility(View.VISIBLE);
+                cardSermon19.setVisibility(View.VISIBLE);
+                cardLayout19.setBackgroundColor(Color.parseColor("#F5843F"));
+                break;
+
             default:
                 cardSermon10.setVisibility(View.VISIBLE);
                 cardSermon11.setVisibility(View.VISIBLE);
@@ -308,7 +335,8 @@ public class sermonMenu extends AppCompatActivity {
                 cardSermon16.setVisibility(View.VISIBLE);
                 cardSermon17.setVisibility(View.VISIBLE);
                 cardSermon18.setVisibility(View.VISIBLE);
-                cardLayout18.setBackgroundColor(Color.parseColor("#F5843F"));
+                cardSermon19.setVisibility(View.VISIBLE);
+                cardLayout19.setBackgroundColor(Color.parseColor("#F5843F"));
                 break;
         }
 
