@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F3F3"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".sermonMenu"
+    tools:showIn="@layout/activity_oraciones_menu">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            card_view:cardBackgroundColor="@android:color/transparent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="#F5843F" />
+
+            <RelativeLayout
+                android:id="@+id/cardLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#bbc0c4"
+                android:padding="15dp">
+
+                <ImageView
+                    android:id="@+id/cardIcon2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/s2" />
+
+                <TextView
+                    android:id="@+id/bienaventurado2_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignEnd="@+id/cap2_text"
+                    android:layout_alignRight="@+id/cap2_text"
+                    android:text="ESTUDIO: 2"
+                    android:textSize="10sp" />
+
+
+                <TextView
+                    android:id="@+id/cap2_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bienaventurado2_text"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toEndOf="@+id/cardIcon2"
+                    android:layout_toRightOf="@+id/cardIcon2"
+                    android:gravity="end|top"
+                    android:text="LA ORACIÓN: NUESTRA COMUNICACIÓN CON DIOS (PARTE 2)"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/vers2_text"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cap2_text"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:gravity="end|top"
+                    android:text=""
+                    android:textSize="8sp"
+                    android:textStyle="italic" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            card_view:cardBackgroundColor="@android:color/transparent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="#F5843F" />
+
+            <RelativeLayout
+                android:id="@+id/cardLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#bbc0c4"
+                android:padding="15dp">
+
+                <ImageView
+                    android:id="@+id/cardIcon1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/s1" />
+
+                <TextView
+                    android:id="@+id/bienaventurado1_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignEnd="@+id/cap1_text"
+                    android:layout_alignRight="@+id/cap1_text"
+                    android:text="ESTUDIO: 1"
+                    android:textSize="10sp" />
+
+
+                <TextView
+                    android:id="@+id/cap1_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bienaventurado1_text"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toEndOf="@+id/cardIcon1"
+                    android:layout_toRightOf="@+id/cardIcon1"
+                    android:gravity="end|top"
+                    android:text="LA ORACIÓN: NUESTRA COMUNICACIÓN CON DIOS (PARTE 1)"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/vers1_text"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cap1_text"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:gravity="end|top"
+                    android:text=""
+                    android:textSize="8sp"
+                    android:textStyle="italic" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

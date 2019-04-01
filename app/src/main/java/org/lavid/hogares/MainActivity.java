@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity
         imgSermon = (ImageView) findViewById(R.id.imgSermon);
         imgSermon.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent mainIntent = new Intent(getApplicationContext(), sermonMenu.class);
+                Intent mainIntent = new Intent(getApplicationContext(), oracionesMenu.class);
                 startActivity(mainIntent);
             }
         });
