@@ -28,7 +28,7 @@
                 android:layout_marginTop="100dp"
                 android:background="@color/colorPrimary"
                 android:gravity="center_horizontal|bottom"
-                android:text="HOGARES LA VID\n\nCICLO DE ESTUDIOS\nMARZO 2019"
+                android:text="HOGARES LA VID\n\nCICLO DE ESTUDIOS 2019"
                 android:textColor="#FFFFFF" />
 
             <ImageView

@@ -13,7 +13,7 @@ import java.util.Date;
 
 public class oracionesMenu extends AppCompatActivity {
 
-    CardView cardOCR1; CardView cardOCR2;
+    CardView cardOCR1; CardView cardOCR2; CardView cardOCR3; CardView cardOCR4; CardView cardOCR5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +47,32 @@ public class oracionesMenu extends AppCompatActivity {
             }
         });
 
+        cardOCR3 = findViewById(R.id. card_view3);
+        cardOCR3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                mainIntent.putExtra("cap", "oracion_abraham_ismael.html");
+                startActivity(mainIntent);
+            }
+        });
+
+        cardOCR4 = findViewById(R.id. card_view4);
+        cardOCR4.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                mainIntent.putExtra("cap", "oracion_isaac.html");
+                startActivity(mainIntent);
+            }
+        });
+
+        cardOCR5 = findViewById(R.id. card_view5);
+        cardOCR5.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                mainIntent.putExtra("cap", "oracion_jacob.html");
+                startActivity(mainIntent);
+            }
+        });
 
     }
 }
