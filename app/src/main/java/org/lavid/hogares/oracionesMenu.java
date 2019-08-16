@@ -14,6 +14,7 @@ import java.util.Date;
 public class oracionesMenu extends AppCompatActivity {
 
     CardView cardOCR1; CardView cardOCR2; CardView cardOCR3; CardView cardOCR4; CardView cardOCR5;
+    CardView cardOCR9; CardView cardOCR10;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +29,7 @@ public class oracionesMenu extends AppCompatActivity {
         calendar.setTime(new Date());
         int week = calendar.get(calendar.WEEK_OF_YEAR);
 
-
+/*
         cardOCR1 = findViewById(R.id. card_view1);
         cardOCR1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -70,6 +71,24 @@ public class oracionesMenu extends AppCompatActivity {
             public void onClick(View v) {
                 Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
                 mainIntent.putExtra("cap", "oracion_jacob.html");
+                startActivity(mainIntent);
+            }
+        });
+*/
+        cardOCR9 = findViewById(R.id. card_view9);
+        cardOCR9.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                mainIntent.putExtra("cap", "oracion_sanson.html");
+                startActivity(mainIntent);
+            }
+        });
+
+        cardOCR10 = findViewById(R.id. card_view10);
+        cardOCR10.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                mainIntent.putExtra("cap", "oracion_eliseo.html");
                 startActivity(mainIntent);
             }
         });
