@@ -1,7 +1,6 @@
 package org.lavid.hogares;
 
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.view.PagerAdapter;
@@ -13,7 +12,6 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
-import android.view.WindowManager;
 import android.widget.ImageView;
 import android.view.MenuItem;
 import android.support.v4.view.ViewPager;
@@ -25,6 +23,7 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     ImageView imgSermon;
+    ImageView imgLectura;
 
     ViewPager viewPager;
     Integer[] imageId = {
@@ -37,7 +36,7 @@ public class MainActivity extends AppCompatActivity
     int NUM_PAGES = 27;
     Timer timer;
 
-    @Override
+     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setTheme(R.style.AppTheme_NoActionBar);
 
@@ -77,6 +76,15 @@ public class MainActivity extends AppCompatActivity
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+
+         imgLectura = (ImageView) findViewById(R.id.imgLectura);
+         imgLectura.setOnClickListener(new View.OnClickListener() {
+             public void onClick(View v) {
+                 Intent mainIntent = new Intent(getApplicationContext(), planActivity.class);
+                 startActivity(mainIntent);
+             }
+         });
+
 
         imgSermon = (ImageView) findViewById(R.id.imgSermon);
         imgSermon.setOnClickListener(new View.OnClickListener() {
@@ -141,4 +149,6 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
 }

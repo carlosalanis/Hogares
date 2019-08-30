@@ -1,0 +1,89 @@
+package org.lavid.hogares;
+
+
+import android.content.Context;
+import android.content.Intent;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+public class planAdapter extends RecyclerView.Adapter<planAdapter.ViewHolder> {
+    private String[] mDataset;
+    private TextView txtCita;
+
+
+    public planAdapter(String[] myDataset) {
+        mDataset = myDataset;
+    }
+
+    @Override
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+
+        View v = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.plan_lista, parent, false);
+
+        return new ViewHolder(v, mDataset);
+    }
+
+
+    @Override
+    public void onBindViewHolder(ViewHolder holder, int position) {
+        String cita;
+        txtCita = holder.itemView.findViewById(R.id.txtCita);
+
+        String vers = mDataset[position].split(":")[6];
+        if(vers.isEmpty())
+            cita = mDataset[position].split(":")[4] + " " + mDataset[position].split(":")[5];
+        else
+            cita = mDataset[position].split(":")[4] + " " + mDataset[position].split(":")[5] + ":" + vers;
+
+        txtCita.setText(cita);
+    }
+
+    // Return the size of your dataset (invoked by the layout manager)
+    @Override
+    public int getItemCount() {
+        return mDataset.length;
+    }
+
+
+
+    public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+        String[] mData;
+
+        public ViewHolder (View v, String[] data) {
+            super(v);
+            mData = data;
+            v.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            int versiculoini=0; int versiculofin=0;
+            int pos = getLayoutPosition();
+            int id = Integer.parseInt(mData[pos].split(":")[0]);
+            int idLibro = Integer.parseInt(mData[pos].split(":")[3]);
+            int capitulo = Integer.parseInt(mData[pos].split(":")[5]);
+            String versiculos = mData[pos].split(":")[6];
+
+            if(!versiculos.isEmpty()) { versiculoini = Integer.parseInt(versiculos.split("-")[0]); versiculofin = Integer.parseInt(versiculos.split("-")[1]); }
+
+            Context context = v.getContext();
+            Intent mainIntent = new Intent(context, readerActivity.class);
+            mainIntent.putExtra("ID", id);
+            mainIntent.putExtra("IDLIBRO", idLibro);
+            mainIntent.putExtra("CAPITULO", capitulo);
+            mainIntent.putExtra("VERSICULOINI", versiculoini);
+            mainIntent.putExtra("VERSICULOFIN", versiculofin);
+            context.startActivity(mainIntent);
+        }
+
+
+
+    }
+
+}
+
+

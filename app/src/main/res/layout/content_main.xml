@@ -22,25 +22,28 @@
             android:layout_marginBottom="30dp"
             android:background="@color/colorPrimary">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="100dp"
-                android:background="@color/colorPrimary"
-                android:gravity="center_horizontal|bottom"
-                android:text="HOGARES LA VID\n\nCICLO DE ESTUDIOS 2019"
-                android:textColor="#FFFFFF" />
+           <ImageView
+               android:id="@+id/imgLectura"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:clickable="true"
+               android:focusable="true"
+               android:layout_marginTop="20dp"
+               android:layout_centerHorizontal="true"
+               android:scaleType="fitCenter"
+               android:src="@drawable/lectura" />
 
             <ImageView
                 android:id="@+id/imgSermon"
                 android:layout_width="wrap_content"
                 android:layout_height="180dp"
-                android:layout_marginTop="150dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
                 android:clickable="true"
                 android:focusable="true"
                 android:scaleType="fitCenter"
+                android:layout_below="@id/imgLectura"
                 android:src="@drawable/oraciones" />
 
         </RelativeLayout>
