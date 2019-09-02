@@ -1,5 +1,6 @@
 package org.lavid.hogares;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -67,6 +68,18 @@ public class planActivity extends AppCompatActivity {
     public boolean onSupportNavigateUp() {
         onBackPressed();
         return true;
+    }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        // Extract data
+        dbHelper = new DatabaseHelper(this);
+        planDataset = dbHelper.getCitas();
+        recyclerView.setAdapter(new planAdapter(planDataset));
+
     }
 
 

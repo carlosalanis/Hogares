@@ -186,4 +186,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return array;
 
     }
+
+
+    public String GetNumVersiculos(int id) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String consulta = "SELECT count(versiculos) as versiculos FROM plan p,bible b ON p.idLibro = b.IdLibro AND p.Capitulo = b.capitulo WHERE p.id = " + id;
+
+        Cursor cursor = db.rawQuery(consulta,null);
+        cursor.moveToFirst();
+
+        String versiculos = cursor.getString(0);
+
+        cursor.close();
+        db.close();
+
+        return versiculos;
+
+    }
 }

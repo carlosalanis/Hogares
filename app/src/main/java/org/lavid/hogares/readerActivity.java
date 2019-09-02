@@ -3,7 +3,6 @@ package org.lavid.hogares;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -59,9 +58,9 @@ public class readerActivity extends AppCompatActivity {
 
         final FloatingActionButton fab = findViewById(R.id.fab);
         if(leido)
-            fab.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorBlue)));
+            fab.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorPurple)));
         else
-            fab.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorGray)));
+            fab.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorDarkGray)));
 
 
 
@@ -76,9 +75,9 @@ public class readerActivity extends AppCompatActivity {
 
                 Boolean leido = dbHelper.GetLeido(id);
                 if(leido)
-                    fab.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorBlue)));
+                    fab.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorPurple)));
                 else
-                    fab.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorGray)));
+                    fab.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorDarkGray)));
 
 
 

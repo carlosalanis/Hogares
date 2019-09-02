@@ -1,17 +1,24 @@
 package org.lavid.hogares;
 
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class planAdapter extends RecyclerView.Adapter<planAdapter.ViewHolder> {
     private String[] mDataset;
     private TextView txtCita;
+    private TextView txtSub;
+    private CardView card;
+    private ImageView img;
+    DatabaseHelper dbHelper = null;
 
 
     public planAdapter(String[] myDataset) {
@@ -32,6 +39,9 @@ public class planAdapter extends RecyclerView.Adapter<planAdapter.ViewHolder> {
     public void onBindViewHolder(ViewHolder holder, int position) {
         String cita;
         txtCita = holder.itemView.findViewById(R.id.txtCita);
+        txtSub = holder.itemView.findViewById(R.id.txtSub);
+        card = holder.itemView.findViewById(R.id.card_view);
+        img = holder.itemView.findViewById(R.id.imgBiblia);
 
         String vers = mDataset[position].split(":")[6];
         if(vers.isEmpty())
@@ -39,7 +49,42 @@ public class planAdapter extends RecyclerView.Adapter<planAdapter.ViewHolder> {
         else
             cita = mDataset[position].split(":")[4] + " " + mDataset[position].split(":")[5] + ":" + vers;
 
+
+
+        int id = Integer.parseInt(mDataset[position].split(":")[0]);
+        dbHelper = new DatabaseHelper(holder.itemView.getContext());
+        Boolean leido = dbHelper.GetLeido(id);
+
+        String numversiculos;
+        if(vers.isEmpty()) {
+            numversiculos = dbHelper.GetNumVersiculos(id);
+        }
+        else {
+            int verini = Integer.parseInt(vers.split("-")[0]);
+            int verfin = Integer.parseInt(vers.split("-")[1]);
+            int nv = verfin - verini + 1;
+            numversiculos = Integer.toString(nv);
+        }
+
+
+        if(leido) {
+            txtCita.setTextColor(holder.itemView.getContext().getResources().getColor(R.color.colorGray));
+            txtSub.setTextColor(holder.itemView.getContext().getResources().getColor(R.color.colorGray));
+            img.setBackgroundResource(R.drawable.bible_gray);
+            txtSub.setText(numversiculos + " versículos");
+        }
+        else {
+            txtCita.setTextColor(holder.itemView.getContext().getResources().getColor(R.color.colorWhite));
+            txtSub.setTextColor(holder.itemView.getContext().getResources().getColor(R.color.colorWhite));
+            card.setBackgroundResource(R.color.colorPurple);
+            img.setBackgroundResource(R.drawable.bible_purple);
+            txtSub.setText(numversiculos + " versículos");
+        }
+
+
         txtCita.setText(cita);
+
+
     }
 
     // Return the size of your dataset (invoked by the layout manager)
@@ -53,7 +98,7 @@ public class planAdapter extends RecyclerView.Adapter<planAdapter.ViewHolder> {
     public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         String[] mData;
 
-        public ViewHolder (View v, String[] data) {
+        private ViewHolder (View v, String[] data) {
             super(v);
             mData = data;
             v.setOnClickListener(this);
@@ -77,8 +122,10 @@ public class planAdapter extends RecyclerView.Adapter<planAdapter.ViewHolder> {
             mainIntent.putExtra("CAPITULO", capitulo);
             mainIntent.putExtra("VERSICULOINI", versiculoini);
             mainIntent.putExtra("VERSICULOFIN", versiculofin);
-            context.startActivity(mainIntent);
+            ((Activity) context).startActivityForResult(mainIntent,1002);
+
         }
+
 
 
 
