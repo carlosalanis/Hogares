@@ -71,6 +71,7 @@ public class planAdapter extends RecyclerView.Adapter<planAdapter.ViewHolder> {
         if(leido) {
             txtCita.setTextColor(holder.itemView.getContext().getResources().getColor(R.color.colorDarkGray));
             txtSub.setTextColor(holder.itemView.getContext().getResources().getColor(R.color.colorDarkGray));
+            card.setBackgroundResource(R.color.colorPurpleLight2);
             imgBiblia.setBackgroundResource(R.drawable.ic_24px);
             txtSub.setText(numversiculos + " versículos");
         }

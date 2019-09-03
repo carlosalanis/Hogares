@@ -9,4 +9,6 @@
     <color name="colorBlack">#000000</color>
     <color name="colorPurple">#5D3A76</color>
     <color name="colorWhite">#FFFFFF</color>
+    <color name="colorPurpleLight">#BBA0CB</color>
+    <color name="colorPurpleLight2">#937EA0</color>
 </resources>

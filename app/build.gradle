@@ -7,8 +7,8 @@ android {
         applicationId "org.lavid.hogares"
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 1125
-        versionName "1.1.1.12e"
+        versionCode 1126
+        versionName "1.1.1.12f"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

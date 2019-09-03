@@ -55,6 +55,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
             android:layout_marginBottom="40dp"
+            android:background="#BBA0CB"
             android:scrollbars="vertical">
 
 
