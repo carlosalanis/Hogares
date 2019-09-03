@@ -13,14 +13,15 @@
         <TextView android:id="@+id/numVersiculo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:maxLines="1"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:maxLines="1" />
 
         <TextView android:id="@+id/txtVersiculo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/numVersiculo"
-            android:paddingLeft="10dp" />
+            android:textIsSelectable="true"
+            android:layout_toEndOf="@id/numVersiculo"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"/>
 
     </RelativeLayout>
 

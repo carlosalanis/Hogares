@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 public class planAdapter extends RecyclerView.Adapter<planAdapter.ViewHolder> {
@@ -17,8 +18,8 @@ public class planAdapter extends RecyclerView.Adapter<planAdapter.ViewHolder> {
     private TextView txtCita;
     private TextView txtSub;
     private CardView card;
-    private ImageView img;
-    DatabaseHelper dbHelper = null;
+    private ImageView imgBiblia;
+    private DatabaseHelper dbHelper = null;
 
 
     public planAdapter(String[] myDataset) {
@@ -41,17 +42,17 @@ public class planAdapter extends RecyclerView.Adapter<planAdapter.ViewHolder> {
         txtCita = holder.itemView.findViewById(R.id.txtCita);
         txtSub = holder.itemView.findViewById(R.id.txtSub);
         card = holder.itemView.findViewById(R.id.card_view);
-        img = holder.itemView.findViewById(R.id.imgBiblia);
+        imgBiblia = holder.itemView.findViewById(R.id.imgBiblia);
 
-        String vers = mDataset[position].split(":")[6];
+        String vers = mDataset[position].split("/")[6];
         if(vers.isEmpty())
-            cita = mDataset[position].split(":")[4] + " " + mDataset[position].split(":")[5];
+            cita = mDataset[position].split("/")[4] + " " + mDataset[position].split("/")[5];
         else
-            cita = mDataset[position].split(":")[4] + " " + mDataset[position].split(":")[5] + ":" + vers;
+            cita = mDataset[position].split("/")[4] + " " + mDataset[position].split("/")[5] + ":" + vers;
 
 
 
-        int id = Integer.parseInt(mDataset[position].split(":")[0]);
+        int id = Integer.parseInt(mDataset[position].split("/")[0]);
         dbHelper = new DatabaseHelper(holder.itemView.getContext());
         Boolean leido = dbHelper.GetLeido(id);
 
@@ -68,16 +69,16 @@ public class planAdapter extends RecyclerView.Adapter<planAdapter.ViewHolder> {
 
 
         if(leido) {
-            txtCita.setTextColor(holder.itemView.getContext().getResources().getColor(R.color.colorGray));
-            txtSub.setTextColor(holder.itemView.getContext().getResources().getColor(R.color.colorGray));
-            img.setBackgroundResource(R.drawable.bible_gray);
+            txtCita.setTextColor(holder.itemView.getContext().getResources().getColor(R.color.colorDarkGray));
+            txtSub.setTextColor(holder.itemView.getContext().getResources().getColor(R.color.colorDarkGray));
+            imgBiblia.setBackgroundResource(R.drawable.ic_24px);
             txtSub.setText(numversiculos + " versículos");
         }
         else {
             txtCita.setTextColor(holder.itemView.getContext().getResources().getColor(R.color.colorWhite));
             txtSub.setTextColor(holder.itemView.getContext().getResources().getColor(R.color.colorWhite));
             card.setBackgroundResource(R.color.colorPurple);
-            img.setBackgroundResource(R.drawable.bible_purple);
+            imgBiblia.setBackgroundResource(R.drawable.bible_purple);
             txtSub.setText(numversiculos + " versículos");
         }
 
@@ -108,10 +109,10 @@ public class planAdapter extends RecyclerView.Adapter<planAdapter.ViewHolder> {
         public void onClick(View v) {
             int versiculoini=0; int versiculofin=0;
             int pos = getLayoutPosition();
-            int id = Integer.parseInt(mData[pos].split(":")[0]);
-            int idLibro = Integer.parseInt(mData[pos].split(":")[3]);
-            int capitulo = Integer.parseInt(mData[pos].split(":")[5]);
-            String versiculos = mData[pos].split(":")[6];
+            int id = Integer.parseInt(mData[pos].split("/")[0]);
+            int idLibro = Integer.parseInt(mData[pos].split("/")[3]);
+            int capitulo = Integer.parseInt(mData[pos].split("/")[5]);
+            String versiculos = mData[pos].split("/")[6];
 
             if(!versiculos.isEmpty()) { versiculoini = Integer.parseInt(versiculos.split("-")[0]); versiculofin = Integer.parseInt(versiculos.split("-")[1]); }
 

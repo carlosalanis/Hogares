@@ -3,13 +3,15 @@ package org.lavid.hogares;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
@@ -17,6 +19,12 @@ public class planActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerView.Adapter planAdapter;
     private RecyclerView.LayoutManager layoutManager;
+    private ProgressBar pBar;
+    private TextView txtBar;
+    private int month;
+    private int day;
+    private int dayCounter;
+
     String[] planDataset;
     DatabaseHelper dbHelper = null;
 
@@ -24,7 +32,11 @@ public class planActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_plan);
+
         Toolbar toolbar = findViewById(R.id.toolbar);
+        pBar = findViewById(R.id.pBar);
+        txtBar = findViewById(R.id.txtBar);
+
         toolbar.setTitle("Lecturas para hoy");
         setSupportActionBar(toolbar);
 
@@ -33,7 +45,6 @@ public class planActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.citasRView);
         recyclerView.setHasFixedSize(true);
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
 
         // use a linear layout manager
         layoutManager = new LinearLayoutManager(this);
@@ -50,6 +61,8 @@ public class planActivity extends AppCompatActivity {
 
         String fecha = formateadorfecha.format(fechaDate);
         String dia = formateadordia.format(fechaDate);
+        month = Calendar.getInstance().get(Calendar.MONTH) + 1;
+        day = Calendar.getInstance().get(Calendar.DAY_OF_MONTH);
 
         // Set controls
         TextView txtDia = findViewById(R.id.txtDia);
@@ -58,6 +71,10 @@ public class planActivity extends AppCompatActivity {
         txtDia.setText(dia);
 
         recyclerView.setAdapter(new planAdapter(planDataset));
+
+        int avance = dbHelper.getAvance();
+        txtBar.setText(Integer.toString(avance));
+        pBar.setProgress(avance);
 
 
     }
@@ -77,11 +94,70 @@ public class planActivity extends AppCompatActivity {
 
         // Extract data
         dbHelper = new DatabaseHelper(this);
-        planDataset = dbHelper.getCitas();
+        planDataset = dbHelper.getCitasDate(month,day);
         recyclerView.setAdapter(new planAdapter(planDataset));
 
     }
 
+
+    public void BackPressed(View view){
+        dayCounter--;
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.DATE, dayCounter);
+        Date fecha = cal.getTime();
+        month = cal.get(Calendar.MONTH) + 1;
+        day = cal.get(Calendar.DAY_OF_MONTH);
+
+        // Extract data
+        dbHelper = new DatabaseHelper(this);
+        planDataset = dbHelper.getCitasDate(month, day);
+
+        // Get actual date
+        SimpleDateFormat formateadorfecha = new SimpleDateFormat("dd 'de' MMMM 'de' yyyy", new Locale("MX"));
+        SimpleDateFormat formateadordia = new SimpleDateFormat("EEEE", new Locale("MX"));
+
+
+
+        String fechaTexto = formateadorfecha.format(fecha);
+        String diaTexto = formateadordia.format(fecha);
+
+        // Set controls
+        TextView txtDia = findViewById(R.id.txtDia);
+        TextView txtFecha = findViewById(R.id.txtFecha);
+        txtFecha.setText(fechaTexto);
+        txtDia.setText(diaTexto);
+
+        recyclerView.setAdapter(new planAdapter(planDataset));
+    }
+
+    public void FwdPressed(View view){
+        dayCounter++;
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.DATE, dayCounter);
+        Date fecha = cal.getTime();
+        month = cal.get(Calendar.MONTH) + 1;
+        day = cal.get(Calendar.DAY_OF_MONTH);
+
+        // Extract data
+        dbHelper = new DatabaseHelper(this);
+        planDataset = dbHelper.getCitasDate(month, day);
+
+        // Get actual date
+        SimpleDateFormat formateadorfecha = new SimpleDateFormat("dd 'de' MMMM 'de' yyyy", new Locale("MX"));
+        SimpleDateFormat formateadordia = new SimpleDateFormat("EEEE", new Locale("MX"));
+
+        String fechaTexto = formateadorfecha.format(fecha);
+        String diaTexto = formateadordia.format(fecha);
+
+        // Set controls
+        TextView txtDia = findViewById(R.id.txtDia);
+        TextView txtFecha = findViewById(R.id.txtFecha);
+        txtFecha.setText(fechaTexto);
+        txtDia.setText(diaTexto);
+
+        recyclerView.setAdapter(new planAdapter(planDataset));
+
+    }
 
 
 }

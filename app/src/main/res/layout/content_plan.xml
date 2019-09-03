@@ -8,43 +8,109 @@
     tools:context=".planActivity"
     tools:showIn="@layout/activity_plan">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="30dp"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/txtDia"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
             android:textAllCaps="true"
             android:textSize="30sp"
             android:text="Dia"/>
 
         <TextView
             android:id="@+id/txtFecha"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
+            android:layout_below="@id/txtDia"
+            android:layout_centerHorizontal="true"
             android:text="Fecha"/>
+
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:onClick="BackPressed"
+            app:srcCompat="@drawable/ic_chevron_left_black_24dp"/>
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/citasRView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scrollbars="vertical"
-            android:layout_margin="20dp"
-            android:layout_marginTop="20dp">
-
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtFecha"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="40dp"
+            android:scrollbars="vertical">
 
 
         </android.support.v7.widget.RecyclerView>
 
-    </LinearLayout>
+        <ImageView
+            android:id="@+id/imgFwd"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:onClick="FwdPressed"
+            app:srcCompat="@drawable/ic_chevron_right_black_24dp"/>
+
+        <TextView
+            android:id="@+id/txtAvLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/pBar"
+            android:layout_alignEnd="@id/pBar"
+            android:textSize="12sp"
+            android:text="Avance: " />
+
+        <TextView
+            android:id="@+id/txtBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf ="@id/txtAvLabel"
+            android:layout_above="@id/pBar"
+            android:textColor="@color/colorBlue"
+            android:text="0"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/pBar"
+            android:layout_toEndOf ="@id/txtBar"
+            android:textSize="12sp"
+            android:text=" %" />
+
+        <ProgressBar
+            android:id="@+id/pBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:max="100"
+            android:minWidth="250dp"
+            android:minHeight="50dp" />
+
+
+
+
+    </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

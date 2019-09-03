@@ -43,8 +43,8 @@ public class bibleAdapter extends RecyclerView.Adapter<bibleAdapter.ViewHolder> 
         TextView numVersiculo = holder.itemView.findViewById(R.id.numVersiculo);
         TextView txtVersiculo = holder.itemView.findViewById(R.id.txtVersiculo);
 
-        numVersiculo.setText(mDataset[position].split(":")[0]);
-        txtVersiculo.setText(mDataset[position].split(":")[1]);
+        numVersiculo.setText(mDataset[position].split("/")[0]);
+        txtVersiculo.setText(mDataset[position].split("/")[1]);
     }
 
     // Return the size of your dataset (invoked by the layout manager)

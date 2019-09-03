@@ -6,13 +6,14 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
-import android.widget.Toast;
-
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Locale;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
@@ -90,6 +91,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return exist;
     }
 
+
+
+
+
     //Select data for the given id
     public String[] getTextFromBible(int idLibro, int capitulo, int versiculoini, int versiculofin) {
         SQLiteDatabase db = this.getReadableDatabase();
@@ -103,7 +108,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ArrayList<String> list = new ArrayList<>();
 
         do {
-            list.add(cursor.getString(0) + ":" + cursor.getString(1));
+            list.add(cursor.getString(0) + "/" + cursor.getString(1));
         } while (cursor.moveToNext());
 
         cursor.close();
@@ -113,6 +118,64 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         array = list.toArray(array);
 
         return array;
+    }
+
+
+
+
+    public String[] getCitas() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Date fechaDate = new Date();
+        SimpleDateFormat formateadorMes = new SimpleDateFormat("MM", new Locale("MX"));
+        SimpleDateFormat formateadorDia = new SimpleDateFormat("dd", new Locale("MX"));
+        String mes = formateadorMes.format(fechaDate);
+        String dia = formateadorDia.format(fechaDate);
+
+        String consulta = "SELECT p.id,mes,dia, idLibro, l.nombre, capitulo, versiculos, p.leido FROM [plan] p, libros l ON p.idLibro = l.id WHERE mes = " + mes + " AND dia = "  +  dia;
+
+        Cursor cursor = db.rawQuery(consulta,null);
+        cursor.moveToFirst();
+
+        ArrayList<String> list = new ArrayList<>();
+
+        do {
+            list.add(cursor.getString(0) + "/" + cursor.getString(1) + "/" + cursor.getString(2) + "/" + cursor.getString(3) + "/" + cursor.getString(4) + "/" + cursor.getString(5) + "/" + cursor.getString(6) + "/" + cursor.getString(7));
+        } while (cursor.moveToNext());
+
+        cursor.close();
+        db.close();
+
+        String[] array = new String[list.size()];
+        list.toArray(array);
+
+        return array;
+
+    }
+
+
+
+    public String[] getCitasDate(int mes,int dia) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        String consulta = "SELECT p.id,mes,dia, idLibro, l.nombre, capitulo, versiculos, p.leido FROM [plan] p, libros l ON p.idLibro = l.id WHERE mes = " + mes + " AND dia = "  +  dia;
+
+        Cursor cursor = db.rawQuery(consulta,null);
+        cursor.moveToFirst();
+
+        ArrayList<String> list = new ArrayList<>();
+
+        do {
+            list.add(cursor.getString(0) + "/" + cursor.getString(1) + "/" + cursor.getString(2) + "/" + cursor.getString(3) + "/" + cursor.getString(4) + "/" + cursor.getString(5) + "/" + cursor.getString(6) + "/" + cursor.getString(7));
+        } while (cursor.moveToNext());
+
+        cursor.close();
+        db.close();
+
+        String[] array = new String[list.size()];
+        list.toArray(array);
+
+        return array;
+
     }
 
 
@@ -133,6 +196,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
+
     public Boolean GetLeido(int id) {
         SQLiteDatabase db = this.getReadableDatabase();
         String consulta = "SELECT leido FROM plan WHERE id = " + id;
@@ -148,8 +212,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return true;
         else
             return false;
-
     }
+
+
 
     public void SetLeido(int id) {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -163,29 +228,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
 
-
-    public String[] getCitas() {
+    public int getAvance() {
         SQLiteDatabase db = this.getReadableDatabase();
-        String consulta = "SELECT p.id,mes,dia, idLibro, l.nombre, capitulo, versiculos, p.leido FROM [plan] p, libros l ON p.idLibro = l.id WHERE mes = strftime('%m',date('now')) AND dia = strftime('%d',date('now'))";
+        String consulta = "SELECT AVG(leido = 1) * 100 AS Avance FROM plan";
 
         Cursor cursor = db.rawQuery(consulta,null);
         cursor.moveToFirst();
 
-        ArrayList<String> list = new ArrayList<>();
-
-        do {
-            list.add(cursor.getString(0) + ":" + cursor.getString(1) + ":" + cursor.getString(2) + ":" + cursor.getString(3) + ":" + cursor.getString(4) + ":" + cursor.getString(5) + ":" + cursor.getString(6) + ":" + cursor.getString(7));
-        } while (cursor.moveToNext());
+        int avance = cursor.getInt(0);
 
         cursor.close();
         db.close();
 
-        String[] array = new String[list.size()];
-        array = list.toArray(array);
-
-        return array;
-
+        return avance;
     }
+
 
 
     public String GetNumVersiculos(int id) {
