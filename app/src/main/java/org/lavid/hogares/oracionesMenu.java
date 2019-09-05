@@ -14,7 +14,7 @@ import java.util.Date;
 public class oracionesMenu extends AppCompatActivity {
 
     CardView cardOCR1; CardView cardOCR2; CardView cardOCR3; CardView cardOCR4; CardView cardOCR5;
-    CardView cardOCR9; CardView cardOCR10; CardView cardOCR11; CardView cardOCR12;
+    CardView cardOCR9; CardView cardOCR10; CardView cardOCR11; CardView cardOCR12; CardView cardOCR13;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -119,6 +119,20 @@ public class oracionesMenu extends AppCompatActivity {
                 }
             });
             cardOCR12.setVisibility(View.VISIBLE);
+        }
+
+
+        cardOCR13 = findViewById(R.id.card_view13); // week 37
+        cardOCR13.setVisibility(View.GONE);
+        if(week>=37) {
+            cardOCR13.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                    mainIntent.putExtra("cap", "oracion_creyentes.html");
+                    startActivity(mainIntent);
+                }
+            });
+            cardOCR13.setVisibility(View.VISIBLE);
         }
 
     }

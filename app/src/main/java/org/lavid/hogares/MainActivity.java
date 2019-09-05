@@ -1,8 +1,14 @@
 package org.lavid.hogares;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.PagerAdapter;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -15,6 +21,7 @@ import android.view.Menu;
 import android.widget.ImageView;
 import android.view.MenuItem;
 import android.support.v4.view.ViewPager;
+import android.widget.Toast;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -34,6 +41,7 @@ public class MainActivity extends AppCompatActivity
             R.drawable.img08, R.drawable.img18, R.drawable.img27, R.drawable.img01, R.drawable.img06 };
     int currentPage = 0;
     int NUM_PAGES = 27;
+    private static final int REQUEST = 112;
     Timer timer;
 
      @Override
@@ -47,6 +55,16 @@ public class MainActivity extends AppCompatActivity
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
+        // Permissions
+         if (Build.VERSION.SDK_INT >= 23) {
+             String[] PERMISSIONS = {android.Manifest.permission.WRITE_EXTERNAL_STORAGE};
+             if (!hasPermissions(this, PERMISSIONS)) {
+                 ActivityCompat.requestPermissions(this, PERMISSIONS, REQUEST );
+             }
+         }
+
 
         /* IMAGE PAGER */
         viewPager = findViewById(R.id.autoviewpager);
@@ -131,7 +149,7 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
+
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
@@ -147,6 +165,33 @@ public class MainActivity extends AppCompatActivity
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode) {
+            case REQUEST: {
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    //do here
+                } else {
+                    Toast.makeText(this, "Para utilizar el Plan Anual de Estudio Bíblico de manera correcta, favor de permitir a la aplicacion acceder al almacenamiento.", Toast.LENGTH_LONG).show();
+                }
+            }
+        }
+    }
+
+
+    private static boolean hasPermissions(Context context, String... permissions) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && context != null && permissions != null) {
+            for (String permission : permissions) {
+                if (ActivityCompat.checkSelfPermission(context, permission) != PackageManager.PERMISSION_GRANTED) {
+                    return false;
+                }
+            }
+        }
         return true;
     }
 
