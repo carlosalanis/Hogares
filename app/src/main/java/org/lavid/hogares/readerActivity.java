@@ -20,6 +20,7 @@ public class readerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reader);
         Toolbar toolbar = findViewById(R.id.toolbar);
+        Boolean leido = false;
 
 
         final int id =  getIntent().getIntExtra("ID", 0);
@@ -41,7 +42,7 @@ public class readerActivity extends AppCompatActivity {
         dbHelper = new DatabaseHelper(this);
         String nombreLibro = dbHelper.getBookName(idLibro);
         String[] capDataset = dbHelper.getTextFromBible(idLibro, capitulo, versiculoini , versiculofin);
-        Boolean leido = dbHelper.GetLeido(id);
+        if (id > 0) leido = dbHelper.GetLeido(id);
 
 
         if(versiculoini!=0) toolbar.setTitle(nombreLibro + " " + capitulo + ":" + versiculoini + "-" + versiculofin);
@@ -57,11 +58,15 @@ public class readerActivity extends AppCompatActivity {
 
 
         final FloatingActionButton fab = findViewById(R.id.fab);
-        if(leido)
-            fab.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorPurple)));
-        else
-            fab.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorDarkGray)));
-
+        if(id > 0) {
+            if (leido)
+                fab.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorPurple)));
+            else
+                fab.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorDarkGray)));
+        }
+        else {
+            fab.setVisibility(View.GONE);
+        }
 
 
 
@@ -70,16 +75,16 @@ public class readerActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 // Update data
-                dbHelper = new DatabaseHelper(view.getContext());
-                dbHelper.SetLeido(id);
+                if(id > 0) {
+                    dbHelper = new DatabaseHelper(view.getContext());
+                    dbHelper.SetLeido(id);
 
-                Boolean leido = dbHelper.GetLeido(id);
-                if(leido)
-                    fab.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorPurple)));
-                else
-                    fab.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorDarkGray)));
-
-
+                    Boolean leido = dbHelper.GetLeido(id);
+                    if (leido)
+                        fab.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorPurple)));
+                    else
+                        fab.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorDarkGray)));
+                }
 
             }
         });

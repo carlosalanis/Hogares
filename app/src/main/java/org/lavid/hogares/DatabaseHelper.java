@@ -230,7 +230,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public int getAvance() {
         SQLiteDatabase db = this.getReadableDatabase();
-        String consulta = "SELECT AVG(leido = 1) * 100 AS Avance FROM plan";
+        String consulta = "SELECT AVG(leido = 1) * 100 AS Avance FROM [plan]";
 
         Cursor cursor = db.rawQuery(consulta,null);
         cursor.moveToFirst();
@@ -247,7 +247,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public String GetNumVersiculos(int id) {
         SQLiteDatabase db = this.getReadableDatabase();
-        String consulta = "SELECT count(versiculos) as versiculos FROM plan p,bible b ON p.idLibro = b.IdLibro AND p.Capitulo = b.capitulo WHERE p.id = " + id;
+        String consulta = "SELECT count(versiculos) as versiculos FROM [plan] p,bible b ON p.idLibro = b.IdLibro AND p.Capitulo = b.capitulo WHERE p.id = " + id;
 
         Cursor cursor = db.rawQuery(consulta,null);
         cursor.moveToFirst();
@@ -260,4 +260,68 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return versiculos;
 
     }
+
+
+    public String[] getLibros(String tipo) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        String consulta = "SELECT id, nombre FROM [libros]";
+        switch(tipo) {
+            case "1":
+                consulta = consulta + " where id < 40";
+                break;
+            case "2":
+                consulta = consulta + " where id >= 40";
+                break;
+            default:
+                break;
+        }
+
+
+        Cursor cursor = db.rawQuery(consulta,null);
+        cursor.moveToFirst();
+
+        ArrayList<String> list = new ArrayList<>();
+
+        do {
+            list.add(cursor.getInt(0) + "/" + cursor.getString(1));
+        } while (cursor.moveToNext());
+
+        cursor.close();
+        db.close();
+
+        String[] array = new String[list.size()];
+        list.toArray(array);
+
+        return array;
+
+    }
+
+
+    public String[] getCaps(int idLibro) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        String consulta = "SELECT max(capitulo) FROM bible where idLibro = " + idLibro;
+
+        Cursor cursor = db.rawQuery(consulta,null);
+        cursor.moveToFirst();
+
+        int caps = cursor.getInt(0);
+
+        ArrayList<String> list = new ArrayList<>();
+        for(int i=0; i<caps;i++) {
+            list.add(String.valueOf(i+1));
+        }
+
+        String[] array = new String[list.size()];
+        list.toArray(array);
+
+        cursor.close();
+        db.close();
+
+        return array;
+
+    }
+
+
 }

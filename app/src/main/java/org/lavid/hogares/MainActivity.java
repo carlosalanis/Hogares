@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity
 
     ImageView imgSermon;
     ImageView imgLectura;
+    ImageView imgBiblia;
 
     ViewPager viewPager;
     Integer[] imageId = {
@@ -111,6 +112,15 @@ public class MainActivity extends AppCompatActivity
                 startActivity(mainIntent);
             }
         });
+
+
+         imgBiblia = (ImageView) findViewById(R.id.imgBiblia);
+         imgBiblia.setOnClickListener(new View.OnClickListener() {
+             public void onClick(View v) {
+                 Intent mainIntent = new Intent(getApplicationContext(), BookIndexActivity.class);
+                 startActivity(mainIntent);
+             }
+         });
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
