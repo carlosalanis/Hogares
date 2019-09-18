@@ -19,6 +19,81 @@
         android:orientation="vertical">
 
         <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            card_view:cardBackgroundColor="@android:color/transparent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="#F5843F" />
+
+            <RelativeLayout
+                android:id="@+id/cardLayout14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#bbc0c4"
+                android:padding="15dp">
+
+                <ImageView
+                    android:id="@+id/cardIcon14"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/s14" />
+
+                <TextView
+                    android:id="@+id/bienaventurado14_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignEnd="@+id/cap14_text"
+                    android:layout_alignRight="@+id/cap14_text"
+                    android:text="ESTUDIO: 14"
+                    android:textSize="10sp" />
+
+
+                <TextView
+                    android:id="@+id/cap14_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bienaventurado14_text"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toEndOf="@+id/cardIcon14"
+                    android:layout_toRightOf="@+id/cardIcon14"
+                    android:gravity="end|top"
+                    android:text="PABLO POR EL AGUIJÓN EN LA CARNE"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/vers14_text"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cap14_text"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:gravity="end|top"
+                    android:text=""
+                    android:textSize="8sp"
+                    android:textStyle="italic" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
