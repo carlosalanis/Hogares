@@ -51,6 +51,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_alignEnd="@+id/cap17_text"
+                    android:textColor="@color/colorDarkGray"
                     android:text="ESTUDIO: 17"
                     android:textSize="10sp" />
 
@@ -63,6 +64,8 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="50dp"
+                    android:textColor="#9EA08A"
+                    android:textStyle="bold"
                     android:text="ESTEBAN"
                     android:textSize="40sp" />
 
@@ -70,7 +73,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginTop="15dp"
+                    android:layout_centerVertical="true"
                     android:layout_marginEnd="0dp"
                     android:src="@drawable/more" />
 
@@ -83,7 +86,7 @@
                     android:layout_marginEnd="50dp"
                     android:gravity="end|top"
                     android:text="POR SU MUERTE"
-                    android:textSize="15sp" />
+                    android:textSize="10sp" />
             </RelativeLayout>
         </android.support.v7.widget.CardView>
 
@@ -120,6 +123,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_alignEnd="@+id/cap16_text"
+                    android:textColor="@color/colorDarkGray"
                     android:text="ESTUDIO: 16"
                     android:textSize="10sp" />
 
@@ -134,6 +138,8 @@
                     android:layout_toEndOf="@+id/cardIcon16"
                     android:gravity="end|top"
                     android:layout_marginEnd="50dp"
+                    android:textColor="#9EA08A"
+                    android:textStyle="bold"
                     android:text="CORNELIO"
                     android:textSize="40sp" />
 
@@ -141,7 +147,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginTop="15dp"
+                    android:layout_centerVertical="true"
                     android:layout_marginEnd="0dp"
                     android:src="@drawable/more" />
 
@@ -154,7 +160,7 @@
                     android:layout_marginEnd="50dp"
                     android:gravity="end|top"
                     android:text="POR GUÍA"
-                    android:textSize="15sp" />
+                    android:textSize="10sp" />
             </RelativeLayout>
         </android.support.v7.widget.CardView>
 
@@ -192,6 +198,7 @@
                     android:layout_height="match_parent"
                     android:layout_alignEnd="@+id/cap15_text"
                     android:layout_alignRight="@+id/cap15_text"
+                    android:textColor="@color/colorDarkGray"
                     android:text="ESTUDIO: 15"
                     android:textSize="10sp" />
 
@@ -208,6 +215,8 @@
                     android:layout_toEndOf="@+id/cardIcon15"
                     android:layout_marginEnd="50dp"
                     android:gravity="end|top"
+                    android:textColor="#9EA08A"
+                    android:textStyle="bold"
                     android:text="PABLO"
                     android:textSize="40sp" />
 
@@ -215,7 +224,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginTop="15dp"
+                    android:layout_centerVertical="true"
                     android:layout_marginEnd="0dp"
                     android:src="@drawable/more" />
 
@@ -228,7 +237,7 @@
                     android:layout_marginEnd="50dp"
                     android:gravity="end|top"
                     android:text="POR LA SALUD DEL PADRE DE PUBLIO"
-                    android:textSize="15sp" />
+                    android:textSize="10sp" />
             </RelativeLayout>
         </android.support.v7.widget.CardView>
 
@@ -267,6 +276,7 @@
                     android:layout_height="match_parent"
                     android:layout_alignEnd="@+id/cap14_text"
                     android:layout_alignRight="@+id/cap14_text"
+                    android:textColor="@color/colorDarkGray"
                     android:text="ESTUDIO: 14"
                     android:textSize="10sp" />
 
@@ -280,6 +290,8 @@
                     android:layout_marginStart="20dp"
                     android:gravity="end|top"
                     android:layout_marginEnd="50dp"
+                    android:textColor="#9EA08A"
+                    android:textStyle="bold"
                     android:text="PABLO"
                     android:textSize="40sp" />
 
@@ -287,7 +299,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginTop="15dp"
+                    android:layout_centerVertical="true"
                     android:layout_marginEnd="0dp"
                     android:src="@drawable/more" />
 
@@ -300,7 +312,7 @@
                     android:layout_marginEnd="50dp"
                     android:gravity="end|top"
                     android:text="POR EL AGUIJÓN EN LA CARNE"
-                    android:textSize="15sp" />
+                    android:textSize="10sp" />
             </RelativeLayout>
         </android.support.v7.widget.CardView>
 
@@ -339,6 +351,7 @@
                     android:layout_height="match_parent"
                     android:layout_alignEnd="@+id/cap13_text"
                     android:layout_alignRight="@+id/cap13_text"
+                    android:textColor="@color/colorDarkGray"
                     android:text="ESTUDIO: 13"
                     android:textSize="10sp" />
 
@@ -349,9 +362,11 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/bienaventurado13_text"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginEnd="50dp"
                     android:gravity="end|top"
+                    android:textColor="#9EA08A"
+                    android:textStyle="bold"
                     android:text="CREYENTES"
                     android:textSize="40sp" />
 
@@ -359,7 +374,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginTop="15dp"
+                    android:layout_centerVertical="true"
                     android:layout_marginEnd="0dp"
                     android:src="@drawable/more" />
 
@@ -372,7 +387,7 @@
                     android:layout_marginEnd="50dp"
                     android:gravity="end|top"
                     android:text="POR LA SEGURIDAD DE PEDRO"
-                    android:textSize="15sp" />
+                    android:textSize="10sp" />
             </RelativeLayout>
         </android.support.v7.widget.CardView>
 
@@ -410,6 +425,7 @@
                     android:layout_height="match_parent"
                     android:layout_alignEnd="@+id/cap12_text"
                     android:layout_alignRight="@+id/cap12_text"
+                    android:textColor="@color/colorDarkGray"
                     android:text="ESTUDIO: 12"
                     android:textSize="10sp" />
 
@@ -423,6 +439,8 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="50dp"
                     android:gravity="end|top"
+                    android:textColor="#9EA08A"
+                    android:textStyle="bold"
                     android:text="PEDRO"
                     android:textSize="40sp" />
 
@@ -430,7 +448,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginTop="15dp"
+                    android:layout_centerVertical="true"
                     android:layout_marginEnd="0dp"
                     android:src="@drawable/more" />
 
@@ -443,7 +461,7 @@
                     android:layout_marginEnd="50dp"
                     android:gravity="end|top"
                     android:text="POR LA RESURRECCIÓN DE DORCAS (TABITA)"
-                    android:textSize="15sp" />
+                    android:textSize="10sp" />
             </RelativeLayout>
         </android.support.v7.widget.CardView>
 
@@ -479,6 +497,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_alignEnd="@+id/cap11_text"
+                    android:textColor="@color/colorDarkGray"
                     android:text="ESTUDIO: 11"
                     android:textSize="10sp" />
 
@@ -492,6 +511,8 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="50dp"
                     android:gravity="end|top"
+                    android:textColor="#9EA08A"
+                    android:textStyle="bold"
                     android:text="JABES"
                     android:textSize="40sp" />
 
@@ -499,7 +520,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginTop="15dp"
+                    android:layout_centerVertical="true"
                     android:layout_marginEnd="0dp"
                     android:src="@drawable/more" />
 
@@ -512,7 +533,7 @@
                     android:layout_marginEnd="50dp"
                     android:gravity="end|top"
                     android:text="POR BENDICIÓN"
-                    android:textSize="16sp" />
+                    android:textSize="10sp" />
             </RelativeLayout>
         </android.support.v7.widget.CardView>
 
@@ -549,6 +570,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_alignEnd="@+id/cap10_text"
+                    android:textColor="@color/colorDarkGray"
                     android:text="ESTUDIO: 10"
                     android:textSize="10sp" />
 
@@ -562,6 +584,8 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="50dp"
                     android:gravity="end|top"
+                    android:textColor="#9EA08A"
+                    android:textStyle="bold"
                     android:text="ELISEO"
                     android:textSize="40sp" />
 
@@ -569,7 +593,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginTop="15dp"
+                    android:layout_centerVertical="true"
                     android:layout_marginEnd="0dp"
                     android:src="@drawable/more" />
 
@@ -582,7 +606,7 @@
                     android:layout_marginEnd="50dp"
                     android:gravity="end|top"
                     android:text="POR VISIÓN, CEGUERA Y VISTA"
-                    android:textSize="15sp" />
+                    android:textSize="10sp" />
             </RelativeLayout>
         </android.support.v7.widget.CardView>
 
@@ -619,6 +643,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_alignEnd="@+id/cap9_text"
+                    android:textColor="@color/colorDarkGray"
                     android:text="ESTUDIO: 9"
                     android:textSize="10sp" />
 
@@ -632,6 +657,8 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="50dp"
                     android:gravity="end|top"
+                    android:textColor="#9EA08A"
+                    android:textStyle="bold"
                     android:text="SANSÓN"
                     android:textSize="40sp" />
 
@@ -639,7 +666,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginTop="15dp"
+                    android:layout_centerVertical="true"
                     android:layout_marginEnd="0dp"
                     android:src="@drawable/more" />
 
@@ -652,7 +679,7 @@
                     android:layout_marginEnd="50dp"
                     android:gravity="end|top"
                     android:text="POR FUERZA"
-                    android:textSize="15sp" />
+                    android:textSize="10sp" />
             </RelativeLayout>
         </android.support.v7.widget.CardView>
 
