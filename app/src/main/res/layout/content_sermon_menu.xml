@@ -51,8 +51,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/s18" />
+                    android:layout_marginRight="10dp" />
 
                 <TextView
                     android:id="@+id/bienaventurado20_text"
@@ -126,8 +125,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/s18" />
+                    android:layout_marginRight="10dp" />
 
                 <TextView
                     android:id="@+id/bienaventurado19_text"
@@ -201,8 +199,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/s18" />
+                    android:layout_marginRight="10dp" />
 
                 <TextView
                     android:id="@+id/bienaventurado18_text"
@@ -276,8 +273,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/s17" />
+                    android:layout_marginRight="10dp" />
 
                 <TextView
                     android:id="@+id/bienaventurado17_text"
@@ -351,8 +347,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/s16" />
+                    android:layout_marginRight="10dp" />
 
                 <TextView
                     android:id="@+id/bienaventurado16_text"
@@ -426,8 +421,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/s15" />
+                    android:layout_marginRight="10dp" />
 
                 <TextView
                     android:id="@+id/bienaventurado15_text"
@@ -501,8 +495,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/s14" />
+                    android:layout_marginRight="10dp" />
 
                 <TextView
                     android:id="@+id/bienaventurado14_text"
@@ -576,8 +569,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/s13" />
+                    android:layout_marginRight="10dp" />
 
                 <TextView
                     android:id="@+id/bienaventurado13_text"
@@ -651,8 +643,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/s12" />
+                    android:layout_marginRight="10dp" />
 
                 <TextView
                     android:id="@+id/bienaventurado12_text"
@@ -726,8 +717,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/s11" />
+                    android:layout_marginRight="10dp" />
 
                 <TextView
                     android:id="@+id/bienaventurado11_text"
@@ -801,8 +791,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/s10" />
+                    android:layout_marginRight="10dp" />
 
                 <TextView
                     android:id="@+id/bienaventurado10_text"
@@ -875,8 +864,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/s9" />
+                    android:layout_marginRight="10dp" />
 
                 <TextView
                     android:id="@+id/bienaventurado9_text"
@@ -949,8 +937,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/s8" />
+                    android:layout_marginRight="10dp" />
 
                 <TextView
                     android:id="@+id/bienaventurado8_text"
@@ -1023,8 +1010,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/s7" />
+                    android:layout_marginRight="10dp" />
 
                 <TextView
                     android:id="@+id/bienaventurado7_text"
@@ -1096,8 +1082,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/s6" />
+                    android:layout_marginRight="10dp" />
 
                 <TextView
                     android:id="@+id/bienaventurado6_text"
@@ -1169,8 +1154,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/s5" />
+                    android:layout_marginRight="10dp" />
 
                 <TextView
                     android:id="@+id/bienaventurado5_text"
@@ -1242,8 +1226,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/s4" />
+                    android:layout_marginRight="10dp" />
 
                 <TextView
                     android:id="@+id/bienaventurado4_text"
@@ -1316,8 +1299,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/s3" />
+                    android:layout_marginRight="10dp" />
 
                 <TextView
                     android:id="@+id/bienaventurado3_text"
@@ -1389,8 +1371,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/s2" />
+                    android:layout_marginRight="10dp" />
 
                 <TextView
                     android:id="@+id/bienaventurado2_text"
@@ -1464,8 +1445,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/s1" />
+                    android:layout_marginRight="10dp" />
 
 
                 <TextView

@@ -31,10 +31,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:scaleType="centerCrop"
-                android:fitsSystemWindows="true"
-                android:src="@drawable/monte"
-                app:layout_collapseMode="parallax" />
+                android:src="@drawable/ocr2" />
 
 
             <android.support.v7.widget.Toolbar

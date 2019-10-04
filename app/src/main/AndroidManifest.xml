@@ -36,7 +36,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".oracionesMenu"
-            android:label="@string/title_activity_oraciones_menu"
+            android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".chapters"
