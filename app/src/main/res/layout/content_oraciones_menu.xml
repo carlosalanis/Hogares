@@ -19,12 +19,84 @@
         android:orientation="vertical">
 
         <android.support.v7.widget.CardView
+            android:id="@+id/card_view19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@android:color/transparent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="#F5843F" />
+
+            <RelativeLayout
+                android:id="@+id/cardLayout19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:padding="15dp">
+
+
+                <TextView
+                    android:id="@+id/bienaventurado19_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignEnd="@+id/cap19_text"
+                    android:layout_marginEnd="0dp"
+                    android:text="ESTUDIO: 19"
+                    android:textColor="@color/colorDarkGray"
+                    android:textSize="10sp" />
+
+
+                <TextView
+                    android:id="@+id/cap19_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bienaventurado19_text"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="50dp"
+                    android:textColor="#9EA08A"
+                    android:textStyle="bold"
+                    android:text="PUBLICANO"
+                    android:textSize="40sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="0dp"
+                    android:src="@drawable/more" />
+
+                <TextView
+                    android:id="@+id/vers19_text"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cap19_text"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="50dp"
+                    android:gravity="end|top"
+                    android:text="POR JUSTIFICACIÓN"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
             android:id="@+id/card_view18"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="30dp"
+            android:layout_marginEnd="0dp"
             android:clickable="true"
             android:focusable="true"
             app:cardElevation="0dp"
@@ -96,7 +168,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="30dp"
+            android:layout_marginEnd="0dp"
             android:clickable="true"
             android:focusable="true"
             app:cardElevation="0dp"
@@ -169,7 +241,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="30dp"
+            android:layout_marginEnd="0dp"
             android:clickable="true"
             android:focusable="true"
             card_view:cardElevation="0dp"
@@ -243,7 +315,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="30dp"
+            android:layout_marginEnd="0dp"
             android:clickable="true"
             android:focusable="true"
             card_view:cardElevation="0dp"
@@ -320,7 +392,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="30dp"
+            android:layout_marginEnd="0dp"
             android:clickable="true"
             android:focusable="true"
             card_view:cardElevation="0dp"
@@ -395,7 +467,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="30dp"
+            android:layout_marginEnd="0dp"
             android:clickable="true"
             android:focusable="true"
             card_view:cardElevation="0dp"
@@ -470,7 +542,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="30dp"
+            android:layout_marginEnd="0dp"
             android:clickable="true"
             android:focusable="true"
             card_view:cardElevation="0dp"
@@ -544,7 +616,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="30dp"
+            android:layout_marginEnd="0dp"
             android:clickable="true"
             android:focusable="true"
             card_view:cardElevation="0dp"
@@ -616,7 +688,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="30dp"
+            android:layout_marginEnd="0dp"
             android:clickable="true"
             android:focusable="true"
             card_view:cardElevation="0dp"
@@ -689,7 +761,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="30dp"
+            android:layout_marginEnd="0dp"
             android:clickable="true"
             android:focusable="true"
             card_view:cardElevation="0dp"
