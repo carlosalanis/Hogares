@@ -1,21 +1,17 @@
 package org.lavid.hogares;
 
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.viewpager.widget.ViewPager;
+import androidx.recyclerview.widget.*;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
-import android.support.design.widget.TabLayout;
-import android.widget.ProgressBar;
-import android.widget.TextView;
+import com.google.android.material.tabs.TabLayout;
 
 
 public class BookIndexActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerView.Adapter booksAdapter;
     private RecyclerView.LayoutManager layoutManager;
-    private ProgressBar pBar;
-    private TextView txtBar;
 
     String[] booksDataset;
     DatabaseHelper dbHelper = null;
@@ -26,8 +22,6 @@ public class BookIndexActivity extends AppCompatActivity {
         setContentView(R.layout.activity_book_index);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
-        pBar = findViewById(R.id.pBar);
-        txtBar = findViewById(R.id.txtBar);
 
         SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
         ViewPager viewPager = findViewById(R.id.view_pager);

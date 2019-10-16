@@ -10,55 +10,51 @@
     tools:showIn="@layout/app_bar_main">
 
 
-        <RelativeLayout
+        <ImageView
+            android:id="@+id/imgLogo"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_centerVertical="true">
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/logohogares"
+            tools:ignore="ContentDescription"/>
 
-            <ImageView
-                android:id="@+id/imgLogo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="50dp"
-                android:src="@drawable/logohogares"/>
+        <ImageView
+            android:id="@+id/imgSermon"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginTop="50dp"
+            android:layout_below="@id/imgLogo"
+            android:clickable="true"
+            android:focusable="true"
+            android:scaleType="fitCenter"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ocr3"
+            android:contentDescription="@string/OCR_ContentDescription"/>
 
-            <ImageView
-                android:id="@+id/imgSermon"
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginTop="50dp"
-                android:layout_below="@id/imgLogo"
-                android:clickable="true"
-                android:focusable="true"
-                android:scaleType="fitCenter"
-                android:layout_centerHorizontal="true"
-                android:src="@drawable/ocr3" />
-
-           <ImageView
-               android:id="@+id/imgLectura"
-               android:layout_width="match_parent"
-               android:layout_height="50dp"
-               android:clickable="true"
-               android:focusable="true"
-               android:layout_above="@id/imgBiblia"
-               android:scaleType="fitCenter"
-               android:src="@drawable/lectura" />
+       <ImageView
+           android:id="@+id/imgLectura"
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:clickable="true"
+           android:focusable="true"
+           android:layout_above="@id/imgBiblia"
+           android:scaleType="fitCenter"
+           android:src="@drawable/lectura"
+           android:contentDescription="@string/Plan_ContentDescription"/>
 
 
 
-            <ImageView
-                android:id="@+id/imgBiblia"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="50dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:scaleType="fitCenter"
-                android:layout_alignParentBottom="true"
-                android:src="@drawable/lbla2" />
-
-        </RelativeLayout>
+        <ImageView
+            android:id="@+id/imgBiblia"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="50dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:scaleType="fitCenter"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/lbla2" />
 
 </RelativeLayout>

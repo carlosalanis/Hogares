@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -18,7 +18,7 @@
         android:layout_marginBottom="10dp"
         android:orientation="vertical">
 
-        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -32,9 +32,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:background="#F5843F" />
+                android:background="#F5843F"
+                android:contentDescription="@string/estudio_20"/>
 
             <RelativeLayout
                 android:id="@+id/cardLayout20"
@@ -48,17 +48,14 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp" />
+                    android:layout_marginEnd="10dp" />
 
                 <TextView
                     android:id="@+id/bienaventurado20_text"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_alignEnd="@+id/cap20_text"
-                    android:layout_alignRight="@+id/cap20_text"
                     android:text="ESTUDIO: 20"
                     android:textSize="10sp" />
 
@@ -69,11 +66,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/bienaventurado20_text"
                     android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
                     android:layout_marginStart="40dp"
-                    android:layout_marginLeft="40dp"
                     android:layout_toEndOf="@+id/cardIcon20"
-                    android:layout_toRightOf="@+id/cardIcon20"
                     android:gravity="end|top"
                     android:text="Santificado sea tu nombre"
                     android:textSize="20sp" />
@@ -84,15 +78,14 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/cap20_text"
                     android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
                     android:gravity="end|top"
                     android:text="... Santificado sea tu nombre."
                     android:textSize="8sp"
                     android:textStyle="italic" />
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view19"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -106,7 +99,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:background="#F5843F" />
 
@@ -122,17 +114,14 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp" />
+                    android:layout_marginEnd="10dp" />
 
                 <TextView
                     android:id="@+id/bienaventurado19_text"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_alignEnd="@+id/cap19_text"
-                    android:layout_alignRight="@+id/cap19_text"
                     android:text="ESTUDIO: 19"
                     android:textSize="10sp" />
 
@@ -143,11 +132,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/bienaventurado19_text"
                     android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
                     android:layout_marginStart="40dp"
-                    android:layout_marginLeft="40dp"
                     android:layout_toEndOf="@+id/cardIcon19"
-                    android:layout_toRightOf="@+id/cardIcon19"
                     android:gravity="end|top"
                     android:text="Como orar (Parte 2)"
                     android:textSize="20sp" />
@@ -158,15 +144,14 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/cap19_text"
                     android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
                     android:gravity="end|top"
                     android:text="... Padre nuestro que estás en los cielos."
                     android:textSize="8sp"
                     android:textStyle="italic" />
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view18"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -180,7 +165,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:background="#F5843F" />
 
@@ -196,17 +180,14 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp" />
+                    android:layout_marginEnd="10dp" />
 
                 <TextView
                     android:id="@+id/bienaventurado18_text"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_alignEnd="@+id/cap18_text"
-                    android:layout_alignRight="@+id/cap18_text"
                     android:text="ESTUDIO: 18"
                     android:textSize="10sp" />
 
@@ -217,11 +198,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/bienaventurado18_text"
                     android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
                     android:layout_marginStart="40dp"
-                    android:layout_marginLeft="40dp"
                     android:layout_toEndOf="@+id/cardIcon18"
-                    android:layout_toRightOf="@+id/cardIcon18"
                     android:gravity="end|top"
                     android:text="Como orar"
                     android:textSize="20sp" />
@@ -232,15 +210,14 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/cap18_text"
                     android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
                     android:gravity="end|top"
                     android:text="... porque vuestro Padre sabe lo que necesitáis antes que vosotros le pidáis."
                     android:textSize="8sp"
                     android:textStyle="italic" />
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view17"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -254,7 +231,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:background="#F5843F" />
 
@@ -270,7 +246,6 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginEnd="10dp"
                     android:layout_marginRight="10dp" />
@@ -280,7 +255,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_alignEnd="@+id/cap17_text"
-                    android:layout_alignRight="@+id/cap17_text"
                     android:text="ESTUDIO: 17"
                     android:textSize="10sp" />
 
@@ -291,11 +265,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/bienaventurado17_text"
                     android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
                     android:layout_marginStart="40dp"
-                    android:layout_marginLeft="40dp"
                     android:layout_toEndOf="@+id/cardIcon17"
-                    android:layout_toRightOf="@+id/cardIcon17"
                     android:gravity="end|top"
                     android:text="Como dar"
                     android:textSize="20sp" />
@@ -306,15 +277,14 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/cap17_text"
                     android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
                     android:gravity="end|top"
                     android:text="... y tu Padre, que ve en lo secreto, te recompensará."
                     android:textSize="8sp"
                     android:textStyle="italic" />
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -328,7 +298,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:background="#F5843F" />
 
@@ -344,18 +313,15 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp" />
+                    android:layout_marginEnd="10dp" />
 
                 <TextView
                     android:id="@+id/bienaventurado16_text"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_alignEnd="@+id/cap16_text"
-                    android:layout_alignRight="@+id/cap16_text"
-                    android:text="ESTUDIO: 16"
+                    android:text="@string/estudio_16"
                     android:textSize="10sp" />
 
 
@@ -365,13 +331,10 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/bienaventurado16_text"
                     android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
                     android:layout_marginStart="40dp"
-                    android:layout_marginLeft="40dp"
                     android:layout_toEndOf="@+id/cardIcon16"
-                    android:layout_toRightOf="@+id/cardIcon16"
                     android:gravity="end|top"
-                    android:text="La hipocresía"
+                    android:text="@string/la_hipocres_a"
                     android:textSize="20sp" />
 
                 <TextView
@@ -380,15 +343,14 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/cap16_text"
                     android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
                     android:gravity="end|top"
-                    android:text="... no tendréis recompensa de vuestro Padre que está en los cielos."
+                    android:text="@string/no_tendr_is_recompensa_de_vuestro_padre_que_est_en_los_cielos"
                     android:textSize="8sp"
                     android:textStyle="italic" />
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view15"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -402,7 +364,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:background="#F5843F" />
 
@@ -418,10 +379,8 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp" />
+                    android:layout_marginEnd="10dp" />
 
                 <TextView
                     android:id="@+id/bienaventurado15_text"
@@ -429,7 +388,7 @@
                     android:layout_height="match_parent"
                     android:layout_alignEnd="@+id/cap15_text"
                     android:layout_alignRight="@+id/cap15_text"
-                    android:text="ESTUDIO: 15"
+                    android:text="@string/estudio_15"
                     android:textSize="10sp" />
 
 
@@ -439,13 +398,10 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/bienaventurado15_text"
                     android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
                     android:layout_marginStart="40dp"
-                    android:layout_marginLeft="40dp"
                     android:layout_toEndOf="@+id/cardIcon15"
-                    android:layout_toRightOf="@+id/cardIcon15"
                     android:gravity="end|top"
-                    android:text="Amad a vuestros enemigos"
+                    android:text="@string/amad_a_vuestros_enemigos"
                     android:textSize="20sp" />
 
                 <TextView
@@ -454,15 +410,14 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/cap15_text"
                     android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
                     android:gravity="end|top"
-                    android:text="... y orad por los que os persiguen."
+                    android:text="@string/y_orad_por_los_que_os_persiguen"
                     android:textSize="8sp"
                     android:textStyle="italic" />
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -476,7 +431,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:background="#F5843F" />
 
@@ -492,18 +446,15 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp" />
+                    android:layout_marginEnd="10dp" />
 
                 <TextView
                     android:id="@+id/bienaventurado14_text"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_alignEnd="@+id/cap14_text"
-                    android:layout_alignRight="@+id/cap14_text"
-                    android:text="ESTUDIO: 14"
+                    android:text="@string/estudio_14"
                     android:textSize="10sp" />
 
 
@@ -513,13 +464,10 @@
                     android:layout_height="match_parent"
                     android:layout_below="@+id/bienaventurado14_text"
                     android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
                     android:layout_marginStart="40dp"
-                    android:layout_marginLeft="40dp"
                     android:layout_toEndOf="@+id/cardIcon14"
-                    android:layout_toRightOf="@+id/cardIcon14"
                     android:gravity="end|top"
-                    android:text="La venganza y el egoísmo"
+                    android:text="@string/la_venganza_y_el_ego_smo"
                     android:textSize="20sp" />
 
                 <TextView
@@ -528,15 +476,14 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/cap14_text"
                     android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
                     android:gravity="end|top"
-                    android:text="... No resistáis al que es malo."
+                    android:text="@string/no_resist_is_al_que_es_malo"
                     android:textSize="8sp"
                     android:textStyle="italic" />
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -550,7 +497,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:background="#F5843F" />
 
@@ -566,10 +512,8 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp" />
+                    android:layout_marginEnd="10dp" />
 
                 <TextView
                     android:id="@+id/bienaventurado13_text"
@@ -577,7 +521,7 @@
                     android:layout_height="match_parent"
                     android:layout_alignEnd="@+id/cap13_text"
                     android:layout_alignRight="@+id/cap13_text"
-                    android:text="ESTUDIO: 13"
+                    android:text="@string/estudio_13"
                     android:textSize="10sp" />
 
 
@@ -587,13 +531,10 @@
                     android:layout_height="match_parent"
                     android:layout_below="@+id/bienaventurado13_text"
                     android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
                     android:layout_marginStart="40dp"
-                    android:layout_marginLeft="40dp"
                     android:layout_toEndOf="@+id/cardIcon13"
-                    android:layout_toRightOf="@+id/cardIcon13"
                     android:gravity="end|top"
-                    android:text="Una vida de veracidad"
+                    android:text="@string/una_vida_de_veracidad"
                     android:textSize="20sp" />
 
                 <TextView
@@ -602,15 +543,14 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/cap13_text"
                     android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
                     android:gravity="end|top"
-                    android:text="... Sea vuestro hablar 'Si, si' o 'No, no'."
+                    android:text="@string/sea_vuestro_hablar_si_si_o_no_no"
                     android:textSize="8sp"
                     android:textStyle="italic" />
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -624,7 +564,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:background="#F5843F" />
 
@@ -640,18 +579,15 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp" />
+                    android:layout_marginEnd="10dp" />
 
                 <TextView
                     android:id="@+id/bienaventurado12_text"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_alignEnd="@+id/cap12_text"
-                    android:layout_alignRight="@+id/cap12_text"
-                    android:text="ESTUDIO: 12"
+                    android:text="@string/estudio_12"
                     android:textSize="10sp" />
 
 
@@ -661,13 +597,10 @@
                     android:layout_height="match_parent"
                     android:layout_below="@+id/bienaventurado12_text"
                     android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
                     android:layout_marginStart="40dp"
-                    android:layout_marginLeft="40dp"
                     android:layout_toEndOf="@+id/cardIcon12"
-                    android:layout_toRightOf="@+id/cardIcon12"
                     android:gravity="end|top"
-                    android:text="El adulterio"
+                    android:text="@string/el_adulterio"
                     android:textSize="20sp" />
 
                 <TextView
@@ -676,15 +609,14 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/cap12_text"
                     android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
                     android:gravity="end|top"
-                    android:text="... que todo el que mire a una mujer para codiciarla ya cometió adulterio con ella en su corazón."
+                    android:text="@string/que_todo_el_que_mire_a_una_mujer_para_codiciarla_ya_cometi_adulterio_con_ella_en_su_coraz_n"
                     android:textSize="8sp"
                     android:textStyle="italic" />
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -698,7 +630,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:background="#F5843F" />
 
@@ -714,18 +645,15 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp" />
+                    android:layout_marginEnd="10dp" />
 
                 <TextView
                     android:id="@+id/bienaventurado11_text"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_alignEnd="@+id/cap11_text"
-                    android:layout_alignRight="@+id/cap11_text"
-                    android:text="ESTUDIO: 11"
+                    android:text="@string/estudio_11"
                     android:textSize="10sp" />
 
 
@@ -735,13 +663,10 @@
                     android:layout_height="match_parent"
                     android:layout_below="@+id/bienaventurado11_text"
                     android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
                     android:layout_marginStart="40dp"
-                    android:layout_marginLeft="40dp"
                     android:layout_toEndOf="@+id/cardIcon11"
-                    android:layout_toRightOf="@+id/cardIcon11"
                     android:gravity="end|top"
-                    android:text="La ira"
+                    android:text="@string/la_ira"
                     android:textSize="20sp" />
 
                 <TextView
@@ -756,9 +681,9 @@
                     android:textSize="8sp"
                     android:textStyle="italic" />
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -830,9 +755,9 @@
                     android:textSize="8sp"
                     android:textStyle="italic" />
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -903,9 +828,9 @@
                     android:textSize="8sp"
                     android:textStyle="italic" />
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -976,9 +901,9 @@
                     android:textSize="8sp"
                     android:textStyle="italic" />
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -986,7 +911,7 @@
             android:layout_marginTop="10dp"
             android:clickable="true"
             android:focusable="true"
-            card_view:cardBackgroundColor="@android:color/transparent">>
+            card_view:cardBackgroundColor="@android:color/transparent">
 
             <ImageView
                 android:layout_width="match_parent"
@@ -1048,9 +973,9 @@
                     android:textSize="8sp"
                     android:textStyle="italic" />
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -1058,7 +983,7 @@
             android:layout_marginTop="10dp"
             android:clickable="true"
             android:focusable="true"
-            card_view:cardBackgroundColor="@android:color/transparent">>
+            card_view:cardBackgroundColor="@android:color/transparent">
 
             <ImageView
                 android:layout_width="match_parent"
@@ -1120,9 +1045,9 @@
                     android:textSize="8sp"
                     android:textStyle="italic" />
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -1192,9 +1117,9 @@
                     android:textSize="8sp"
                     android:textStyle="italic" />
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -1265,9 +1190,9 @@
                     android:textSize="8sp"
                     android:textStyle="italic" />
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -1337,9 +1262,9 @@
                     android:textSize="8sp"
                     android:textStyle="italic" />
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -1409,9 +1334,9 @@
                     android:textSize="8sp"
                     android:textStyle="italic" />
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -1488,9 +1413,9 @@
 
             </RelativeLayout>
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
 
     </LinearLayout>
 
-</android.support.v4.widget.NestedScrollView>
+</androidx.core.widget.NestedScrollView>

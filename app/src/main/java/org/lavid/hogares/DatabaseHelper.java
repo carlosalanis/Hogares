@@ -21,7 +21,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private final static String DATABASE_PATH = "/data/data/org.lavid.hogares/databases/";
     private static final int DATABASE_VERSION = 1;
 
-    private SQLiteDatabase dataBase;
     private final Context dbContext;
 
     public DatabaseHelper(Context context) {
@@ -70,7 +69,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public void openDataBase() {
         String dbPath = DATABASE_PATH + DATABASE_NAME;
-        dataBase = SQLiteDatabase.openDatabase(dbPath, null, SQLiteDatabase.OPEN_READONLY);
+        SQLiteDatabase dataBase = SQLiteDatabase.openDatabase(dbPath, null, SQLiteDatabase.OPEN_READONLY);
     }
 
     private boolean checkDataBase() {
@@ -208,10 +207,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         cursor.close();
         db.close();
-        if(leido.equals("1"))
-            return true;
-        else
-            return false;
+        return leido.equals("1");
     }
 
 

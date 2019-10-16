@@ -4,21 +4,17 @@ package org.lavid.hogares;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.widget.CardView;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.RecyclerView;
+
 public class planAdapter extends RecyclerView.Adapter<planAdapter.ViewHolder> {
     private String[] mDataset;
-    private TextView txtCita;
-    private TextView txtSub;
-    private CardView card;
-    private ImageView imgBiblia;
-    private DatabaseHelper dbHelper = null;
 
 
     public planAdapter(String[] myDataset) {
@@ -38,10 +34,10 @@ public class planAdapter extends RecyclerView.Adapter<planAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         String cita;
-        txtCita = holder.itemView.findViewById(R.id.txtCita);
-        txtSub = holder.itemView.findViewById(R.id.txtSub);
-        card = holder.itemView.findViewById(R.id.card_view);
-        imgBiblia = holder.itemView.findViewById(R.id.imgBiblia);
+        TextView txtCita = holder.itemView.findViewById(R.id.txtCita);
+        TextView txtSub = holder.itemView.findViewById(R.id.txtSub);
+        CardView card = holder.itemView.findViewById(R.id.card_view);
+        ImageView imgBiblia = holder.itemView.findViewById(R.id.imgBiblia);
 
         String vers = mDataset[position].split("/")[6];
         if(vers.isEmpty())
@@ -52,7 +48,7 @@ public class planAdapter extends RecyclerView.Adapter<planAdapter.ViewHolder> {
 
 
         int id = Integer.parseInt(mDataset[position].split("/")[0]);
-        dbHelper = new DatabaseHelper(holder.itemView.getContext());
+        DatabaseHelper dbHelper = new DatabaseHelper(holder.itemView.getContext());
         Boolean leido = dbHelper.GetLeido(id);
 
         String numversiculos;

@@ -3,22 +3,18 @@ package org.lavid.hogares;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.widget.CardView;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.RecyclerView;
+
 
 public class chaptersAdapter extends RecyclerView.Adapter<chaptersAdapter.ViewHolder> {
     private String[] mDataset;
     private int midLibro;
-
-    private TextView txtCapitulo;
-    private TextView txtSub;
-    private CardView card;
-    private DatabaseHelper dbHelper = null;
 
 
     public chaptersAdapter(String[] myDataset,int idLibro) {
@@ -38,8 +34,8 @@ public class chaptersAdapter extends RecyclerView.Adapter<chaptersAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(chaptersAdapter.ViewHolder holder, int position) {
-        txtCapitulo = holder.itemView.findViewById(R.id.txtCap);
-        card = holder.itemView.findViewById(R.id.card_view);
+        TextView txtCapitulo = holder.itemView.findViewById(R.id.txtCap);
+        CardView card = holder.itemView.findViewById(R.id.card_view);
 
         String cap = mDataset[position].split("/")[0];
         txtCapitulo.setText(cap);

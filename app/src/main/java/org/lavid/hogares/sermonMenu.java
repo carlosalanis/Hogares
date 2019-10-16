@@ -1,16 +1,12 @@
 package org.lavid.hogares;
 
 import android.content.Intent;
-import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.RelativeLayout;
-
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+import androidx.appcompat.widget.Toolbar;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -41,7 +37,7 @@ public class sermonMenu extends AppCompatActivity {
 
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(new Date());
-        int week = calendar.get(calendar.WEEK_OF_YEAR);
+        int week = calendar.get(Calendar.WEEK_OF_YEAR);
 
 
         cardSermon1 = findViewById(R.id.card_view);

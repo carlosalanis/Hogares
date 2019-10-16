@@ -2,14 +2,14 @@ package org.lavid.hogares;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.widget.Toolbar;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -17,10 +17,6 @@ import java.util.Locale;
 
 public class planActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
-    private RecyclerView.Adapter planAdapter;
-    private RecyclerView.LayoutManager layoutManager;
-    private ProgressBar pBar;
-    private TextView txtBar;
     private int month;
     private int day;
     private int dayCounter;
@@ -34,8 +30,8 @@ public class planActivity extends AppCompatActivity {
         setContentView(R.layout.activity_plan);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
-        pBar = findViewById(R.id.pBar);
-        txtBar = findViewById(R.id.txtBar);
+        ProgressBar pBar = findViewById(R.id.pBar);
+        TextView txtBar = findViewById(R.id.txtBar);
 
         toolbar.setTitle("Lecturas para hoy");
         setSupportActionBar(toolbar);
@@ -47,7 +43,7 @@ public class planActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
 
         // use a linear layout manager
-        layoutManager = new LinearLayoutManager(this);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
         // Extract data

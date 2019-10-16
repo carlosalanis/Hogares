@@ -1,10 +1,8 @@
 package org.lavid.hogares;
 
 import android.content.DialogInterface;
-import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.webkit.JavascriptInterface;
-import android.widget.TextView;
 import android.app.AlertDialog;
 import android.os.Build;
 

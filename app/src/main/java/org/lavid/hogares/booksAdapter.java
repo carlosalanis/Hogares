@@ -4,19 +4,15 @@ package org.lavid.hogares;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.widget.CardView;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class booksAdapter extends RecyclerView.Adapter<booksAdapter.ViewHolder> {
     private String[] mDataset;
-    private TextView txtLibro;
-    private TextView txtSub;
-    private CardView card;
-    private DatabaseHelper dbHelper = null;
 
 
     public booksAdapter(String[] myDataset) {
@@ -36,9 +32,9 @@ public class booksAdapter extends RecyclerView.Adapter<booksAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         String cita;
-        txtLibro = holder.itemView.findViewById(R.id.txtLibro);
-        txtSub = holder.itemView.findViewById(R.id.txtSub);
-        card = holder.itemView.findViewById(R.id.card_view);
+        TextView txtLibro = holder.itemView.findViewById(R.id.txtLibro);
+        TextView txtSub = holder.itemView.findViewById(R.id.txtSub);
+        CardView card = holder.itemView.findViewById(R.id.card_view);
 
         String id = mDataset[position].split("/")[0];
         String nombre = mDataset[position].split("/")[1];

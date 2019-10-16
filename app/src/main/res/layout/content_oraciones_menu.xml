@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -18,7 +18,7 @@
         android:layout_marginBottom="10dp"
         android:orientation="vertical">
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:id="@+id/card_view19"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -66,7 +66,7 @@
                     android:layout_marginEnd="50dp"
                     android:textColor="#9EA08A"
                     android:textStyle="bold"
-                    android:text="PUBLICANO"
+                    android:text="@string/publicano"
                     android:textSize="40sp" />
 
                 <ImageView
@@ -85,12 +85,12 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="50dp"
                     android:gravity="end|top"
-                    android:text="POR JUSTIFICACIÓN"
+                    android:text="@string/por_justificaci_n"
                     android:textSize="10sp" />
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:id="@+id/card_view18"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -123,7 +123,7 @@
                     android:layout_height="match_parent"
                     android:layout_alignEnd="@+id/cap18_text"
                     android:layout_marginEnd="0dp"
-                    android:text="ESTUDIO: 18"
+                    android:text="@string/estudio_18"
                     android:textColor="@color/colorDarkGray"
                     android:textSize="10sp" />
 
@@ -138,7 +138,7 @@
                     android:layout_marginEnd="50dp"
                     android:textColor="#9EA08A"
                     android:textStyle="bold"
-                    android:text="PABLO"
+                    android:text="@string/pablo"
                     android:textSize="40sp" />
 
                 <ImageView
@@ -157,12 +157,12 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="50dp"
                     android:gravity="end|top"
-                    android:text="POR PROTECCIÓN EN LA TEMPESTAD"
+                    android:text="@string/tempestad"
                     android:textSize="10sp" />
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:id="@+id/card_view17"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -196,7 +196,7 @@
                     android:layout_height="match_parent"
                     android:layout_alignEnd="@+id/cap17_text"
                     android:textColor="@color/colorDarkGray"
-                    android:text="ESTUDIO: 17"
+                    android:text="@string/estudio_17"
                     android:textSize="10sp" />
 
 
@@ -210,7 +210,7 @@
                     android:layout_marginEnd="50dp"
                     android:textColor="#9EA08A"
                     android:textStyle="bold"
-                    android:text="ESTEBAN"
+                    android:text="@string/esteban"
                     android:textSize="40sp" />
 
                 <ImageView
@@ -229,12 +229,12 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="50dp"
                     android:gravity="end|top"
-                    android:text="POR SU MUERTE"
+                    android:text="@string/por_su_muerte"
                     android:textSize="10sp" />
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view16"
             android:layout_width="wrap_content"
@@ -268,7 +268,7 @@
                     android:layout_height="match_parent"
                     android:layout_alignEnd="@+id/cap16_text"
                     android:textColor="@color/colorDarkGray"
-                    android:text="ESTUDIO: 16"
+                    android:text="@string/estudio_16"
                     android:textSize="10sp" />
 
 
@@ -279,12 +279,11 @@
                     android:layout_below="@+id/bienaventurado16_text"
                     android:layout_alignParentEnd="true"
                     android:layout_marginStart="20dp"
-                    android:layout_toEndOf="@+id/cardIcon16"
                     android:gravity="end|top"
                     android:layout_marginEnd="50dp"
                     android:textColor="#9EA08A"
                     android:textStyle="bold"
-                    android:text="CORNELIO"
+                    android:text="@string/cornelio"
                     android:textSize="40sp" />
 
                 <ImageView
@@ -303,12 +302,12 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="50dp"
                     android:gravity="end|top"
-                    android:text="POR GUÍA"
+                    android:text="@string/por_gu_a"
                     android:textSize="10sp" />
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view15"
             android:layout_width="wrap_content"
@@ -341,9 +340,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_alignEnd="@+id/cap15_text"
-                    android:layout_alignRight="@+id/cap15_text"
                     android:textColor="@color/colorDarkGray"
-                    android:text="ESTUDIO: 15"
+                    android:text="@string/estudio_15"
                     android:textSize="10sp" />
 
 
@@ -353,15 +351,12 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/bienaventurado15_text"
                     android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
                     android:layout_marginStart="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_toEndOf="@+id/cardIcon15"
                     android:layout_marginEnd="50dp"
                     android:gravity="end|top"
                     android:textColor="#9EA08A"
                     android:textStyle="bold"
-                    android:text="PABLO"
+                    android:text="@string/pablo"
                     android:textSize="40sp" />
 
                 <ImageView
@@ -380,12 +375,12 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="50dp"
                     android:gravity="end|top"
-                    android:text="POR LA SALUD DEL PADRE DE PUBLIO"
+                    android:text="@string/por_la_salud_del_padre_de_publio"
                     android:textSize="10sp" />
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view14"
             android:layout_width="wrap_content"
@@ -402,7 +397,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:background="#F5843F" />
 
@@ -419,9 +413,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_alignEnd="@+id/cap14_text"
-                    android:layout_alignRight="@+id/cap14_text"
                     android:textColor="@color/colorDarkGray"
-                    android:text="ESTUDIO: 14"
+                    android:text="@string/estudio_14"
                     android:textSize="10sp" />
 
 
@@ -436,7 +429,7 @@
                     android:layout_marginEnd="50dp"
                     android:textColor="#9EA08A"
                     android:textStyle="bold"
-                    android:text="PABLO"
+                    android:text="@string/pablo"
                     android:textSize="40sp" />
 
                 <ImageView
@@ -455,12 +448,12 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="50dp"
                     android:gravity="end|top"
-                    android:text="POR EL AGUIJÓN EN LA CARNE"
+                    android:text="@string/por_el_aguij_n_en_la_carne"
                     android:textSize="10sp" />
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view13"
             android:layout_width="wrap_content"
@@ -477,7 +470,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:background="#F5843F" />
 
@@ -494,9 +486,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_alignEnd="@+id/cap13_text"
-                    android:layout_alignRight="@+id/cap13_text"
                     android:textColor="@color/colorDarkGray"
-                    android:text="ESTUDIO: 13"
+                    android:text="@string/estudio_13"
                     android:textSize="10sp" />
 
 
@@ -511,7 +502,7 @@
                     android:gravity="end|top"
                     android:textColor="#9EA08A"
                     android:textStyle="bold"
-                    android:text="CREYENTES"
+                    android:text="@string/creyentes"
                     android:textSize="40sp" />
 
                 <ImageView
@@ -530,12 +521,12 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="50dp"
                     android:gravity="end|top"
-                    android:text="POR LA SEGURIDAD DE PEDRO"
+                    android:text="@string/por_la_seguridad_de_pedro"
                     android:textSize="10sp" />
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view12"
             android:layout_width="wrap_content"
@@ -552,7 +543,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:background="#F5843F" />
 
@@ -568,9 +558,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_alignEnd="@+id/cap12_text"
-                    android:layout_alignRight="@+id/cap12_text"
                     android:textColor="@color/colorDarkGray"
-                    android:text="ESTUDIO: 12"
+                    android:text="@string/estudio_12"
                     android:textSize="10sp" />
 
 
@@ -585,7 +574,7 @@
                     android:gravity="end|top"
                     android:textColor="#9EA08A"
                     android:textStyle="bold"
-                    android:text="PEDRO"
+                    android:text="@string/pedro"
                     android:textSize="40sp" />
 
                 <ImageView
@@ -604,12 +593,12 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="50dp"
                     android:gravity="end|top"
-                    android:text="POR LA RESURRECCIÓN DE DORCAS (TABITA)"
+                    android:text="@string/por_la_resurrecci_n_de_dorcas_tabita"
                     android:textSize="10sp" />
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view11"
             android:layout_width="wrap_content"
@@ -642,7 +631,7 @@
                     android:layout_height="match_parent"
                     android:layout_alignEnd="@+id/cap11_text"
                     android:textColor="@color/colorDarkGray"
-                    android:text="ESTUDIO: 11"
+                    android:text="@string/estudio_11"
                     android:textSize="10sp" />
 
 
@@ -657,7 +646,7 @@
                     android:gravity="end|top"
                     android:textColor="#9EA08A"
                     android:textStyle="bold"
-                    android:text="JABES"
+                    android:text="@string/jabes"
                     android:textSize="40sp" />
 
                 <ImageView
@@ -676,12 +665,12 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="50dp"
                     android:gravity="end|top"
-                    android:text="POR BENDICIÓN"
+                    android:text="@string/por_bendici_n"
                     android:textSize="10sp" />
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view10"
             android:layout_width="wrap_content"
@@ -715,7 +704,7 @@
                     android:layout_height="match_parent"
                     android:layout_alignEnd="@+id/cap10_text"
                     android:textColor="@color/colorDarkGray"
-                    android:text="ESTUDIO: 10"
+                    android:text="@string/estudio_10"
                     android:textSize="10sp" />
 
 
@@ -730,7 +719,7 @@
                     android:gravity="end|top"
                     android:textColor="#9EA08A"
                     android:textStyle="bold"
-                    android:text="ELISEO"
+                    android:text="@string/eliseo"
                     android:textSize="40sp" />
 
                 <ImageView
@@ -749,12 +738,12 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="50dp"
                     android:gravity="end|top"
-                    android:text="POR VISIÓN, CEGUERA Y VISTA"
+                    android:text="@string/por_visi_n_ceguera_y_vista"
                     android:textSize="10sp" />
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view9"
             android:layout_width="wrap_content"
@@ -788,7 +777,7 @@
                     android:layout_height="match_parent"
                     android:layout_alignEnd="@+id/cap9_text"
                     android:textColor="@color/colorDarkGray"
-                    android:text="ESTUDIO: 9"
+                    android:text="@string/estudio_9"
                     android:textSize="10sp" />
 
 
@@ -803,7 +792,7 @@
                     android:gravity="end|top"
                     android:textColor="#9EA08A"
                     android:textStyle="bold"
-                    android:text="SANSÓN"
+                    android:text="@string/sans_n"
                     android:textSize="40sp" />
 
                 <ImageView
@@ -822,14 +811,14 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="50dp"
                     android:gravity="end|top"
-                    android:text="POR FUERZA"
+                    android:text="@string/por_fuerza"
                     android:textSize="10sp" />
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
 
         <!--
-        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -903,9 +892,9 @@
                     android:textSize="8sp"
                     android:textStyle="italic" />
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -979,9 +968,9 @@
                     android:textSize="8sp"
                     android:textStyle="italic" />
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -1055,9 +1044,9 @@
                     android:textSize="8sp"
                     android:textStyle="italic" />
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -1131,9 +1120,9 @@
                     android:textSize="8sp"
                     android:textStyle="italic" />
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -1207,9 +1196,9 @@
                     android:textSize="8sp"
                     android:textStyle="italic" />
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 -->
 
     </LinearLayout>
 
-</android.support.v4.widget.NestedScrollView>
+</androidx.core.widget.NestedScrollView>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -25,7 +25,7 @@
             android:layout_centerHorizontal="true"
             android:textAllCaps="true"
             android:textSize="30sp"
-            android:text="Dia"/>
+            android:text="@string/dia"/>
 
         <TextView
             android:id="@+id/txtFecha"
@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/txtDia"
             android:layout_centerHorizontal="true"
-            android:text="Fecha"/>
+            android:text="@string/fecha"/>
 
 
         <ImageView
@@ -46,7 +46,7 @@
             android:onClick="BackPressed"
             app:srcCompat="@drawable/ic_chevron_left_black_24dp"/>
 
-        <android.support.v7.widget.RecyclerView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/citasRView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -59,7 +59,7 @@
             android:scrollbars="vertical">
 
 
-        </android.support.v7.widget.RecyclerView>
+        </androidx.recyclerview.widget.RecyclerView>
 
         <ImageView
             android:id="@+id/imgFwd"
@@ -78,7 +78,7 @@
             android:layout_above="@id/pBar"
             android:layout_alignEnd="@id/pBar"
             android:textSize="12sp"
-            android:text="Avance: " />
+            android:text="@string/avance" />
 
         <TextView
             android:id="@+id/txtBar"
@@ -87,7 +87,7 @@
             android:layout_toEndOf ="@id/txtAvLabel"
             android:layout_above="@id/pBar"
             android:textColor="@color/colorBlue"
-            android:text="0"
+            android:text="@string/_0"
             android:textSize="12sp" />
 
         <TextView
@@ -96,7 +96,7 @@
             android:layout_above="@id/pBar"
             android:layout_toEndOf ="@id/txtBar"
             android:textSize="12sp"
-            android:text=" %" />
+            android:text="@string/percent" />
 
         <ProgressBar
             android:id="@+id/pBar"
@@ -114,4 +114,4 @@
 
     </RelativeLayout>
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
