@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "722721893496",
+    "firebase_url": "https://hogares-la-vid.firebaseio.com",
+    "project_id": "hogares-la-vid",
+    "storage_bucket": "hogares-la-vid.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:722721893496:android:d020c81d1f1d8ebd",
+        "android_client_info": {
+          "package_name": "org.lavid.hogares"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "722721893496-akr2taaoiv04cqvn2er9oaubl1ij6su8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.lavid.hogares",
+            "certificate_hash": "9fd40399b197a1a2dee4f40acb35679b8bf82b81"
+          }
+        },
+        {
+          "client_id": "722721893496-td5pfdh3jt6p5vks5kc5fpra5u7vlbdn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfYSnsO3r6jS_mCKpbYgtE-gRgJAKM4Kk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "722721893496-td5pfdh3jt6p5vks5kc5fpra5u7vlbdn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-         imgLectura = (ImageView) findViewById(R.id.imgLectura);
+         imgLectura = findViewById(R.id.imgLectura);
          imgLectura.setOnClickListener(new View.OnClickListener() {
              public void onClick(View v) {
                  Intent mainIntent = new Intent(getApplicationContext(), planActivity.class);
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
          });
 
 
-        imgSermon = (ImageView) findViewById(R.id.imgSermon);
+        imgSermon = findViewById(R.id.imgSermon);
         imgSermon.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent mainIntent = new Intent(getApplicationContext(), oracionesMenu.class);
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-         imgBiblia = (ImageView) findViewById(R.id.imgBiblia);
+         imgBiblia = findViewById(R.id.imgBiblia);
          imgBiblia.setOnClickListener(new View.OnClickListener() {
              public void onClick(View v) {
                  Intent mainIntent = new Intent(getApplicationContext(), BookIndexActivity.class);
@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {

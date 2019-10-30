@@ -19,6 +19,78 @@
         android:orientation="vertical">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/card_view20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@android:color/transparent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="#F5843F" />
+
+            <RelativeLayout
+                android:id="@+id/cardLayout20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:padding="15dp">
+
+
+                <TextView
+                    android:id="@+id/bienaventurado20_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignEnd="@+id/cap20_text"
+                    android:layout_marginEnd="0dp"
+                    android:text="@string/estudio_20"
+                    android:textColor="@color/colorDarkGray"
+                    android:textSize="12sp" />
+
+
+                <TextView
+                    android:id="@+id/cap20_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bienaventurado20_text"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="50dp"
+                    android:textColor="#9EA08A"
+                    android:textStyle="bold"
+                    android:text="@string/dos_ciegos"
+                    android:textSize="40sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="0dp"
+                    android:src="@drawable/more" />
+
+                <TextView
+                    android:id="@+id/vers20_text"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cap20_text"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="50dp"
+                    android:gravity="end|top"
+                    android:text="@string/por_vista"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
             android:id="@+id/card_view19"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -51,10 +123,9 @@
                     android:layout_height="match_parent"
                     android:layout_alignEnd="@+id/cap19_text"
                     android:layout_marginEnd="0dp"
-                    android:text="ESTUDIO: 19"
+                    android:text="@string/estudio_19"
                     android:textColor="@color/colorDarkGray"
-                    android:textSize="10sp" />
-
+                    android:textSize="12sp" />
 
                 <TextView
                     android:id="@+id/cap19_text"
@@ -86,7 +157,7 @@
                     android:layout_marginEnd="50dp"
                     android:gravity="end|top"
                     android:text="@string/por_justificaci_n"
-                    android:textSize="10sp" />
+                    android:textSize="12sp" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -125,7 +196,7 @@
                     android:layout_marginEnd="0dp"
                     android:text="@string/estudio_18"
                     android:textColor="@color/colorDarkGray"
-                    android:textSize="10sp" />
+                    android:textSize="12sp" />
 
 
                 <TextView
@@ -158,7 +229,7 @@
                     android:layout_marginEnd="50dp"
                     android:gravity="end|top"
                     android:text="@string/tempestad"
-                    android:textSize="10sp" />
+                    android:textSize="12sp" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -197,7 +268,7 @@
                     android:layout_alignEnd="@+id/cap17_text"
                     android:textColor="@color/colorDarkGray"
                     android:text="@string/estudio_17"
-                    android:textSize="10sp" />
+                    android:textSize="12sp" />
 
 
                 <TextView
@@ -230,7 +301,7 @@
                     android:layout_marginEnd="50dp"
                     android:gravity="end|top"
                     android:text="@string/por_su_muerte"
-                    android:textSize="10sp" />
+                    android:textSize="12sp" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -269,7 +340,7 @@
                     android:layout_alignEnd="@+id/cap16_text"
                     android:textColor="@color/colorDarkGray"
                     android:text="@string/estudio_16"
-                    android:textSize="10sp" />
+                    android:textSize="12sp" />
 
 
                 <TextView
@@ -303,7 +374,7 @@
                     android:layout_marginEnd="50dp"
                     android:gravity="end|top"
                     android:text="@string/por_gu_a"
-                    android:textSize="10sp" />
+                    android:textSize="12sp" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -342,7 +413,7 @@
                     android:layout_alignEnd="@+id/cap15_text"
                     android:textColor="@color/colorDarkGray"
                     android:text="@string/estudio_15"
-                    android:textSize="10sp" />
+                    android:textSize="12sp" />
 
 
                 <TextView
@@ -376,7 +447,7 @@
                     android:layout_marginEnd="50dp"
                     android:gravity="end|top"
                     android:text="@string/por_la_salud_del_padre_de_publio"
-                    android:textSize="10sp" />
+                    android:textSize="12sp" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -415,7 +486,7 @@
                     android:layout_alignEnd="@+id/cap14_text"
                     android:textColor="@color/colorDarkGray"
                     android:text="@string/estudio_14"
-                    android:textSize="10sp" />
+                    android:textSize="12sp" />
 
 
                 <TextView
@@ -449,7 +520,7 @@
                     android:layout_marginEnd="50dp"
                     android:gravity="end|top"
                     android:text="@string/por_el_aguij_n_en_la_carne"
-                    android:textSize="10sp" />
+                    android:textSize="12sp" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -488,7 +559,7 @@
                     android:layout_alignEnd="@+id/cap13_text"
                     android:textColor="@color/colorDarkGray"
                     android:text="@string/estudio_13"
-                    android:textSize="10sp" />
+                    android:textSize="12sp" />
 
 
                 <TextView
@@ -522,7 +593,7 @@
                     android:layout_marginEnd="50dp"
                     android:gravity="end|top"
                     android:text="@string/por_la_seguridad_de_pedro"
-                    android:textSize="10sp" />
+                    android:textSize="12sp" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -560,7 +631,7 @@
                     android:layout_alignEnd="@+id/cap12_text"
                     android:textColor="@color/colorDarkGray"
                     android:text="@string/estudio_12"
-                    android:textSize="10sp" />
+                    android:textSize="12sp" />
 
 
                 <TextView
@@ -594,7 +665,7 @@
                     android:layout_marginEnd="50dp"
                     android:gravity="end|top"
                     android:text="@string/por_la_resurrecci_n_de_dorcas_tabita"
-                    android:textSize="10sp" />
+                    android:textSize="12sp" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -632,7 +703,7 @@
                     android:layout_alignEnd="@+id/cap11_text"
                     android:textColor="@color/colorDarkGray"
                     android:text="@string/estudio_11"
-                    android:textSize="10sp" />
+                    android:textSize="12sp" />
 
 
                 <TextView
@@ -666,7 +737,7 @@
                     android:layout_marginEnd="50dp"
                     android:gravity="end|top"
                     android:text="@string/por_bendici_n"
-                    android:textSize="10sp" />
+                    android:textSize="12sp" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -705,7 +776,7 @@
                     android:layout_alignEnd="@+id/cap10_text"
                     android:textColor="@color/colorDarkGray"
                     android:text="@string/estudio_10"
-                    android:textSize="10sp" />
+                    android:textSize="12sp" />
 
 
                 <TextView
@@ -739,7 +810,7 @@
                     android:layout_marginEnd="50dp"
                     android:gravity="end|top"
                     android:text="@string/por_visi_n_ceguera_y_vista"
-                    android:textSize="10sp" />
+                    android:textSize="12sp" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -778,7 +849,7 @@
                     android:layout_alignEnd="@+id/cap9_text"
                     android:textColor="@color/colorDarkGray"
                     android:text="@string/estudio_9"
-                    android:textSize="10sp" />
+                    android:textSize="12sp" />
 
 
                 <TextView
@@ -812,7 +883,7 @@
                     android:layout_marginEnd="50dp"
                     android:gravity="end|top"
                     android:text="@string/por_fuerza"
-                    android:textSize="10sp" />
+                    android:textSize="12sp" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -862,7 +933,7 @@
                     android:layout_alignEnd="@+id/cap5_text"
                     android:layout_alignRight="@+id/cap5_text"
                     android:text="ESTUDIO: 5"
-                    android:textSize="10sp" />
+                    android:textSize="12sp" />
 
 
                 <TextView
@@ -938,7 +1009,7 @@
                     android:layout_alignEnd="@+id/cap4_text"
                     android:layout_alignRight="@+id/cap4_text"
                     android:text="ESTUDIO: 4"
-                    android:textSize="10sp" />
+                    android:textSize="12sp" />
 
 
                 <TextView
@@ -1014,7 +1085,7 @@
                     android:layout_alignEnd="@+id/cap3_text"
                     android:layout_alignRight="@+id/cap3_text"
                     android:text="ESTUDIO: 3"
-                    android:textSize="10sp" />
+                    android:textSize="12sp" />
 
 
                 <TextView
@@ -1090,7 +1161,7 @@
                     android:layout_alignEnd="@+id/cap2_text"
                     android:layout_alignRight="@+id/cap2_text"
                     android:text="ESTUDIO: 2"
-                    android:textSize="10sp" />
+                    android:textSize="12sp" />
 
 
                 <TextView
@@ -1166,7 +1237,7 @@
                     android:layout_alignEnd="@+id/cap1_text"
                     android:layout_alignRight="@+id/cap1_text"
                     android:text="ESTUDIO: 1"
-                    android:textSize="10sp" />
+                    android:textSize="12sp" />
 
 
                 <TextView

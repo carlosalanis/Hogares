@@ -10,12 +10,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+
 public class readerActivity extends AppCompatActivity {
     DatabaseHelper dbHelper = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_reader);
         Toolbar toolbar = findViewById(R.id.toolbar);
         Boolean leido = false;
@@ -63,7 +65,7 @@ public class readerActivity extends AppCompatActivity {
                 fab.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorDarkGray)));
         }
         else {
-            fab.setVisibility(View.GONE);
+            fab.hide();
         }
 
 
