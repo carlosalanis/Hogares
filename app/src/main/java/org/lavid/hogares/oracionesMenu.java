@@ -1,8 +1,12 @@
 package org.lavid.hogares;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
@@ -17,6 +21,8 @@ public class oracionesMenu extends AppCompatActivity {
     CardView cardOCR14; CardView cardOCR15; CardView cardOCR16; CardView cardOCR17; CardView cardOCR18;
     CardView cardOCR19; CardView cardOCR20; CardView cardOCR21; CardView cardOCR22; CardView cardOCR23;
     CardView cardOCR24;
+    ImageView imgOCR;
+    int counter = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,12 +30,32 @@ public class oracionesMenu extends AppCompatActivity {
         setContentView(R.layout.activity_oraciones_menu);
         //getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
 
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(new Date());
         int week = calendar.get(Calendar.WEEK_OF_YEAR);
+
+        // Get from the SharedPreferences
+        SharedPreferences settings = getApplicationContext().getSharedPreferences("HOGARES_PREFS", 0);
+        boolean isAdmin = settings.getBoolean("isAdmin", false);
+
+        imgOCR = findViewById(R.id.imgOCR);
+        imgOCR.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                counter++;
+                if((counter == 10) && !isAdmin) {
+                    SharedPreferences settings = getApplicationContext().getSharedPreferences("HOGARES_PREFS", 0);
+                    SharedPreferences.Editor editor = settings.edit();
+                    editor.putBoolean("isAdmin", true);
+                    editor.apply();
+
+                    Toast.makeText(oracionesMenu.this, "Listo", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
 /*
         cardOCR1 = findViewById(R.id. card_view1);
@@ -195,7 +221,7 @@ public class oracionesMenu extends AppCompatActivity {
 
         cardOCR20 = findViewById(R.id. card_view20);
         cardOCR20.setVisibility(View.GONE);
-        if(week>=44) {
+        if(week>=44 || isAdmin) {
             cardOCR20.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
@@ -208,7 +234,7 @@ public class oracionesMenu extends AppCompatActivity {
 
         cardOCR21 = findViewById(R.id. card_view21);
         cardOCR21.setVisibility(View.GONE);
-        if(week>=45) {
+        if(week>=45 || isAdmin) {
             cardOCR21.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
@@ -221,7 +247,7 @@ public class oracionesMenu extends AppCompatActivity {
 
         cardOCR22 = findViewById(R.id. card_view22);
         cardOCR22.setVisibility(View.GONE);
-        if(week>=46) {
+        if(week>=46 || isAdmin) {
             cardOCR22.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
@@ -234,7 +260,7 @@ public class oracionesMenu extends AppCompatActivity {
 
         cardOCR23 = findViewById(R.id. card_view23);
         cardOCR23.setVisibility(View.GONE);
-        if(week>=47) {
+        if(week>=47 || isAdmin) {
             cardOCR23.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
@@ -247,7 +273,7 @@ public class oracionesMenu extends AppCompatActivity {
 
         cardOCR24 = findViewById(R.id. card_view24);
         cardOCR24.setVisibility(View.GONE);
-        if(week>=48) {
+        if(week>=48 || isAdmin) {
             cardOCR24.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     Intent mainIntent = new Intent(getApplicationContext(), chapters.class);

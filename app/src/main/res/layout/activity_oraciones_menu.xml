@@ -29,8 +29,11 @@
             app:toolbarId="@+id/toolbar">
 
             <ImageView
+                android:id="@+id/imgOCR"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
                 android:src="@drawable/ocr2"
                 android:contentDescription="@string/OCR_ContentDescription"/>
 
