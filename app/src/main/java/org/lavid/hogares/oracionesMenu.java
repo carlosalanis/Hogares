@@ -15,7 +15,8 @@ public class oracionesMenu extends AppCompatActivity {
     CardView cardOCR1; CardView cardOCR2; CardView cardOCR3; CardView cardOCR4; CardView cardOCR5;
     CardView cardOCR9; CardView cardOCR10; CardView cardOCR11; CardView cardOCR12; CardView cardOCR13;
     CardView cardOCR14; CardView cardOCR15; CardView cardOCR16; CardView cardOCR17; CardView cardOCR18;
-    CardView cardOCR19; CardView cardOCR20; CardView cardOCR21; CardView cardOCR22;
+    CardView cardOCR19; CardView cardOCR20; CardView cardOCR21; CardView cardOCR22; CardView cardOCR23;
+    CardView cardOCR24;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -229,6 +230,32 @@ public class oracionesMenu extends AppCompatActivity {
                 }
             });
             cardOCR22.setVisibility(View.VISIBLE);
+        }
+
+        cardOCR23 = findViewById(R.id. card_view23);
+        cardOCR23.setVisibility(View.GONE);
+        if(week>=47) {
+            cardOCR23.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                    mainIntent.putExtra("cap", "oracion_jesus.html");
+                    startActivity(mainIntent);
+                }
+            });
+            cardOCR23.setVisibility(View.VISIBLE);
+        }
+
+        cardOCR24 = findViewById(R.id. card_view24);
+        cardOCR24.setVisibility(View.GONE);
+        if(week>=48) {
+            cardOCR24.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                    mainIntent.putExtra("cap", "oracion_navidad.html");
+                    startActivity(mainIntent);
+                }
+            });
+            cardOCR24.setVisibility(View.VISIBLE);
         }
 
     }
