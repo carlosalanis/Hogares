@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     android:fitsSystemWindows="true"
-    tools:context=".oracionesMenu">
+    tools:context=".mujeresMenu">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar"
@@ -48,7 +48,7 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_oraciones_menu" />
+    <include layout="@layout/content_mujeres_menu" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

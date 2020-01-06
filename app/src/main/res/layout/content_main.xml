@@ -19,11 +19,25 @@
             android:src="@drawable/logohogares"
             tools:ignore="ContentDescription"/>
 
+
         <ImageView
-            android:id="@+id/imgSermon"
-            android:layout_width="wrap_content"
+            android:id="@+id/imgMujeres"
+            android:layout_width="300dp"
             android:layout_height="100dp"
             android:layout_marginTop="50dp"
+            android:layout_below="@id/imgLogo"
+            android:clickable="true"
+            android:focusable="true"
+            android:scaleType="fitCenter"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/vem"
+            android:contentDescription="@string/OCR_ContentDescription"/>
+
+        <ImageView
+            android:id="@+id/imgOraciones"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginTop="150dp"
             android:layout_below="@id/imgLogo"
             android:clickable="true"
             android:focusable="true"

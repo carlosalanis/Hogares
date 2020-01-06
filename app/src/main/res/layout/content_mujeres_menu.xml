@@ -6,17 +6,19 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".oracionesMenu"
-    tools:showIn="@layout/activity_oraciones_menu">
+    tools:context=".mujeresMenu"
+    tools:showIn="@layout/activity_mujeres_menu">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/oracionesRView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbars="vertical"
-        android:background="#FFFFFF" />
+            android:id="@+id/mujeresRView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:background="#FFFFFF" />
 
 
 
 
 </androidx.core.widget.NestedScrollView>
+
+
