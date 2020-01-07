@@ -11,57 +11,59 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
-            <RelativeLayout
-                android:id="@+id/cardLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FFFFFF"
-                android:padding="15dp">
+    <RelativeLayout
+        android:id="@+id/cardLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:padding="15dp">
 
 
-                <TextView
-                    android:id="@+id/txtEstudio"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignEnd="@+id/txtTitulo"
-                    android:layout_marginEnd="0dp"
-                    android:text="Numero de Estudio"
-                    android:textColor="@color/colorDarkGray"
-                    android:textSize="12sp" />
+        <TextView
+            android:id="@+id/txtEstudio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/txtTitulo"
+            android:layout_marginEnd="0dp"
+            android:text="Numero de Estudio"
+            android:textColor="@color/colorDarkGray"
+            android:textSize="12sp" />
 
 
-                <TextView
-                    android:id="@+id/txtTitulo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/txtEstudio"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="50dp"
-                    android:textColor="#9EA08A"
-                    android:textStyle="bold"
-                    android:text="TITULO"
-                    android:textSize="40sp" />
+        <TextView
+            android:id="@+id/txtTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtEstudio"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="50dp"
+            android:textColor="#68004E"
+            android:textStyle="bold"
+            android:text="TITULO"
+            android:textAlignment="textEnd"
+            android:textSize="40sp" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginEnd="0dp"
-                    android:src="@drawable/more" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="0dp"
+            android:src="@drawable/more" />
 
-                <TextView
-                    android:id="@+id/txtSubtitulo"
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/txtTitulo"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="50dp"
-                    android:gravity="end|top"
-                    android:text="SUBTITULO"
-                    android:textSize="12sp" />
-            </RelativeLayout>
+        <TextView
+            android:id="@+id/txtSubtitulo"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtTitulo"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="50dp"
+            android:gravity="end|top"
+            android:text="SUBTITULO"
+            android:textColor="#22002F"
+            android:textSize="12sp" />
+    </RelativeLayout>
 
-        </androidx.cardview.widget.CardView>
+</androidx.cardview.widget.CardView>
 

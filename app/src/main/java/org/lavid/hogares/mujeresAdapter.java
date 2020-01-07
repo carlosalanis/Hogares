@@ -1,14 +1,21 @@
 package org.lavid.hogares;
 
-
 import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.textfield.TextInputLayout;
 
 public class mujeresAdapter extends RecyclerView.Adapter<mujeresAdapter.ViewHolder> {
     private String[] mDataset;
@@ -62,14 +69,62 @@ public class mujeresAdapter extends RecyclerView.Adapter<mujeresAdapter.ViewHold
         public void onClick(View v) {
             int pos = getLayoutPosition();
             int idEstudio = Integer.parseInt(mData[pos].split("/")[0]);
-            String clave = mData[pos].split("/")[3];
+            String clave = mData[pos].split("/")[3].toLowerCase().trim();
 
             Context context = v.getContext();
 
-            Intent mainIntent = new Intent(context, chapters.class);
-            mainIntent.putExtra("cap", "VEM\\VEM_" + idEstudio + ".html");
-            ((Activity) context).startActivityForResult(mainIntent,1002);
+            SharedPreferences settings = v.getContext().getSharedPreferences("HOGARES_PREFS", 0);
+            SharedPreferences.Editor editor = settings.edit();
+            boolean isMDLBChapterAdmin = settings.getBoolean("isMDLBChapterAdmin" + idEstudio, false);
 
+            if(isMDLBChapterAdmin) {
+                Intent mainIntent = new Intent(context, chapters.class);
+                mainIntent.putExtra("cap", "MDLB\\MDLB_" + idEstudio + ".html");
+                ((Activity) context).startActivityForResult(mainIntent,1002);
+            }
+            else {
+                AlertDialog.Builder b = new AlertDialog.Builder(v.getContext());
+                b.setMessage("Para acceder al contenido, es necesario ingresar la palabra clave, su líder de grupo puede proporcionársela.");
+                final EditText input = new EditText(v.getContext());
+                input.setSingleLine();
+
+                LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.MATCH_PARENT,
+                        LinearLayout.LayoutParams.MATCH_PARENT);
+                lp.topMargin = 100;
+                lp.setMarginStart(50);
+                lp.setMarginEnd(50);
+                lp.bottomMargin = 50;
+                TextInputLayout textInputLayout = new TextInputLayout(v.getContext());
+                LinearLayout.LayoutParams textInputLayoutParams = new LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.MATCH_PARENT,
+                        LinearLayout.LayoutParams.WRAP_CONTENT);
+
+                textInputLayout.setLayoutParams(textInputLayoutParams);
+                textInputLayout.addView(input, lp);
+                textInputLayout.setHint("Palabra clave");
+
+                b.setView(textInputLayout);
+                b.setPositiveButton("Aceptar", ((DialogInterface dialog, int which) -> {
+                    final String result;
+                    result = input.getText().toString();
+                    if(result.toLowerCase().trim().equals(clave)) {
+                        editor.putBoolean("isMDLBChapterAdmin" + idEstudio, true);
+                        editor.apply();
+
+                        Intent mainIntent = new Intent(context, chapters.class);
+                        mainIntent.putExtra("cap", "MDLB\\MDLB_" + idEstudio + ".html");
+                        ((Activity) context).startActivityForResult(mainIntent,1002);
+
+                        dialog.dismiss();
+                    }
+                    else {
+                        dialog.dismiss();
+                    }
+                }));
+
+                b.create().show();
+            }
         }
 
 

@@ -30,40 +30,55 @@
             android:focusable="true"
             android:scaleType="fitCenter"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/vem"
-            android:contentDescription="@string/OCR_ContentDescription"/>
+            android:src="@drawable/mdlb"
+            android:contentDescription="Mujeres de la Biblia"/>
 
         <ImageView
             android:id="@+id/imgOraciones"
             android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:layout_marginTop="150dp"
-            android:layout_below="@id/imgLogo"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom ="10dp"
+            android:layout_above="@id/imgEspeciales"
             android:clickable="true"
             android:focusable="true"
             android:scaleType="fitCenter"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/ocr3"
+            android:src="@drawable/ocrlinea"
             android:contentDescription="@string/OCR_ContentDescription"/>
 
-       <ImageView
-           android:id="@+id/imgLectura"
-           android:layout_width="match_parent"
-           android:layout_height="50dp"
-           android:clickable="true"
-           android:focusable="true"
-           android:layout_above="@id/imgBiblia"
-           android:scaleType="fitCenter"
-           android:src="@drawable/lectura"
-           android:contentDescription="@string/Plan_ContentDescription"/>
 
+    <ImageView
+        android:id="@+id/imgEspeciales"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@id/imgLectura"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="fitCenter"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/esp3"
+        android:contentDescription="Estudios Especiales"/>
 
+    <ImageView
+        android:id="@+id/imgLectura"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="50dp"
+        android:clickable="true"
+        android:contentDescription="@string/Plan_ContentDescription"
+        android:focusable="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/lectura" />
 
-        <ImageView
+    <ImageView
             android:id="@+id/imgBiblia"
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
             android:layout_height="50dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginStart="50dp"
             android:layout_marginBottom="50dp"
             android:clickable="true"
             android:focusable="true"

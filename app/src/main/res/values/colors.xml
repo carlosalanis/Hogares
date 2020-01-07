@@ -11,4 +11,5 @@
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorPurpleLight">#BBA0CB</color>
     <color name="colorPurpleLight2">#937EA0</color>
+    <color name="colorPrimaryRed">#7F0000</color>
 </resources>

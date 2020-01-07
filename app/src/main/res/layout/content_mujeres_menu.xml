@@ -10,15 +10,13 @@
     tools:showIn="@layout/activity_mujeres_menu">
 
     <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/mujeresRView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scrollbars="vertical"
-            android:background="#FFFFFF" />
+        android:id="@+id/mujeresRView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:background="#FFFFFF" />
 
 
 
 
 </androidx.core.widget.NestedScrollView>
-
-

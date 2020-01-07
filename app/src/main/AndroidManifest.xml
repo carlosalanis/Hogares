@@ -47,6 +47,10 @@
             android:label="Libros"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:name=".especialesMenu"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".mujeresMenu"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar" />

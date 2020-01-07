@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="@android:color/transparent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+            <RelativeLayout
+                android:id="@+id/cardLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:padding="15dp">
+
+
+                <TextView
+                    android:id="@+id/txtEstudio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/txtTitulo"
+                    android:layout_marginEnd="0dp"
+                    android:text="Numero de Estudio"
+                    android:textColor="#7F0000"
+                    android:textSize="12sp" />
+
+
+                <TextView
+                    android:id="@+id/txtTitulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtEstudio"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="50dp"
+                    android:textColor="#ED6D2E"
+                    android:textStyle="bold"
+                    android:text="TITULO"
+                    android:textAlignment="textEnd"
+                    android:textSize="40sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="0dp"
+                    android:src="@drawable/more" />
+
+                <TextView
+                    android:id="@+id/txtSubtitulo"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtTitulo"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="50dp"
+                    android:gravity="end|top"
+                    android:text="SUBTITULO"
+                    android:textColor="#7F0000"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
