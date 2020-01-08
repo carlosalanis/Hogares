@@ -52,13 +52,13 @@ public class mujeresMenu extends AppCompatActivity {
         });
 
         ArrayList<String> list = new ArrayList<>();
-        list.add("1/EVA/Madre de todos los vivientes/vida eterna");
+        list.add("1/EVA/MADRE DE TODOS LOS VIVIENTES/vida eterna");
 
         if(week>=3 || isAdmin) list.add(0,"2/SARA/HEROÍNA DE LA FE/promesa cumplida");
         if(week>=4 || isAdmin) list.add(0,"3/REBECA/MATRIARCA DEL PUEBLO DE DIOS/pueblo escogido");
         if(week>=5 || isAdmin) list.add(0,"4/LEA Y RAQUEL/EDIFICARON LA CASA DE ISRAEL/servicio");
-        if(week>=6 || isAdmin) list.add(0,"5/RAHAB/UNA VIDA REDIMIDA/cristo te ama");
-        if(week>=7 || isAdmin) list.add(0,"6/DÉBORA/MADRE Y JUEZ DE ISRAEL/alabanza");
+        if(week>=6 || isAdmin) list.add(0,"5/RAHAB/UNA VIDA REDIMIDA/generosidad");
+        if(week>=7 || isAdmin) list.add(0,"6/DÉBORA/LA MADRE Y JUEZ DE ISRAEL/alabanza");
 
         String[] estudiosDataset = new String[list.size()];
         list.toArray(estudiosDataset);
