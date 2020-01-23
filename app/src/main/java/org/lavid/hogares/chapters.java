@@ -83,6 +83,14 @@ public class chapters extends AppCompatActivity {
             }
         });
 
+        FloatingActionButton bible = findViewById(R.id.bible);
+        bible.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goBible();
+            }
+        });
+
         FloatingActionButton big = findViewById(R.id.big);
         big.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,6 +115,11 @@ public class chapters extends AppCompatActivity {
         WebSettings settings = view.getSettings();
         if (settings.getTextZoom() >= 20)
             settings.setTextZoom(settings.getTextZoom() - 10);
+    }
+
+    private void goBible() {
+        Intent mainIntent = new Intent(getApplicationContext(), BookIndexActivity.class);
+        startActivity(mainIntent);
     }
 
 
