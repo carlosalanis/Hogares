@@ -80,6 +80,7 @@ public class mujeresAdapter extends RecyclerView.Adapter<mujeresAdapter.ViewHold
             if(isMDLBChapterAdmin) {
                 Intent mainIntent = new Intent(context, chapters.class);
                 mainIntent.putExtra("cap", "MDLB\\MDLB_" + idEstudio + ".html");
+                mainIntent.putExtra("bible", true);
                 ((Activity) context).startActivityForResult(mainIntent,1002);
             }
             else {
@@ -114,6 +115,7 @@ public class mujeresAdapter extends RecyclerView.Adapter<mujeresAdapter.ViewHold
 
                         Intent mainIntent = new Intent(context, chapters.class);
                         mainIntent.putExtra("cap", "MDLB\\MDLB_" + idEstudio + ".html");
+                        mainIntent.putExtra("bible", true);
                         ((Activity) context).startActivityForResult(mainIntent,1002);
 
                         dialog.dismiss();

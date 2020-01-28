@@ -1,0 +1,19 @@
+    body {
+        font-family: Helvetica, Times, serif;
+    }
+    h1 {
+        margin:0;
+        padding: 0;
+        line-height:1em;
+    }
+    .drop-cap p:first-child::first-letter {
+      float: left;
+      font-family:times;
+      font-size: 3.3em;
+      line-height: 1;
+      margin-right: .2rem;
+    }
+    p {
+      text-align: justify;
+      text-justify: inter-word;
+    }

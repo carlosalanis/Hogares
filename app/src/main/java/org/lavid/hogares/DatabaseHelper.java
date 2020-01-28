@@ -19,7 +19,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static String DATABASE_NAME = "LBLA.db";
     private final static String DATABASE_PATH = "/data/data/org.lavid.hogares/databases/";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 9;
 
     private final Context dbContext;
 
@@ -27,11 +27,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
         this.dbContext = context;
         // checking database and open it if exists
-        if (checkDataBase()) {
-            openDataBase();
-        } else {
+        if (!checkDataBase()) {
             try {
-                this.getReadableDatabase();
+                //this.getReadableDatabase();
                 copyDataBase();
                 this.close();
                 openDataBase();
@@ -48,6 +46,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        try {
+            if(newVersion>oldVersion) {
+                copyDataBase();
+            }
+        } catch (IOException e) {
+            throw new Error("Error copying database");
+        }
 
     }
 
@@ -77,8 +82,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         boolean exist = false;
         try {
             String dbPath = DATABASE_PATH + DATABASE_NAME;
-            checkDB = SQLiteDatabase.openDatabase(dbPath, null,
-                    SQLiteDatabase.OPEN_READONLY);
+            checkDB = SQLiteDatabase.openDatabase(dbPath, null, SQLiteDatabase.OPEN_READWRITE);
         } catch (SQLiteException e) {
             Log.v("db log", "database does't exist");
         }
@@ -94,7 +98,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
 
-    //Select data for the given id
+
     public String[] getTextFromBible(int idLibro, int capitulo, int versiculoini, int versiculofin) {
         SQLiteDatabase db = this.getReadableDatabase();
         String consulta = "SELECT versiculo, texto FROM bible WHERE idlibro = " + idLibro +  " and capitulo = " + capitulo;
@@ -121,19 +125,47 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
 
+    public String[] getTextFromBibleRVR(int idLibro, int capitulo, int versiculoini, int versiculofin) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String consulta = "SELECT versiculo, texto FROM bibleRVR WHERE idlibro = " + idLibro +  " and capitulo = " + capitulo;
+
+        if(versiculoini != 0) consulta = consulta + " and versiculo >= " + versiculoini;
+        if(versiculofin != 0) consulta = consulta + " and versiculo <= " + versiculofin;
+
+        Cursor cursor = db.rawQuery(consulta,null);
+        cursor.moveToFirst();
+        ArrayList<String> list = new ArrayList<>();
+
+        do {
+            list.add(cursor.getString(0) + "/" + cursor.getString(1));
+        } while (cursor.moveToNext());
+
+        cursor.close();
+        db.close();
+
+        String[] array = new String[list.size()];
+        array = list.toArray(array);
+
+        return array;
+    }
+
+
 
     public String[] getCitas() {
         SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor;
         Date fechaDate = new Date();
         SimpleDateFormat formateadorMes = new SimpleDateFormat("MM", new Locale("MX"));
         SimpleDateFormat formateadorDia = new SimpleDateFormat("dd", new Locale("MX"));
         String mes = formateadorMes.format(fechaDate);
         String dia = formateadorDia.format(fechaDate);
+        String[] array = null;
 
         String consulta = "SELECT p.id,mes,dia, idLibro, l.nombre, capitulo, versiculos, p.leido FROM [plan] p, libros l ON p.idLibro = l.id WHERE mes = " + mes + " AND dia = "  +  dia;
 
-        Cursor cursor = db.rawQuery(consulta,null);
+        cursor = db.rawQuery(consulta, null);
         cursor.moveToFirst();
+
 
         ArrayList<String> list = new ArrayList<>();
 
@@ -144,7 +176,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         cursor.close();
         db.close();
 
-        String[] array = new String[list.size()];
+        array = new String[list.size()];
         list.toArray(array);
 
         return array;
@@ -224,20 +256,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
 
-    public int getAvance() {
-        SQLiteDatabase db = this.getReadableDatabase();
-        String consulta = "SELECT AVG(leido = 1) * 100 AS Avance FROM [plan]";
-
-        Cursor cursor = db.rawQuery(consulta,null);
-        cursor.moveToFirst();
-
-        int avance = cursor.getInt(0);
-
-        cursor.close();
-        db.close();
-
-        return avance;
-    }
+//    public int getAvance() {
+//        SQLiteDatabase db = this.getReadableDatabase();
+//        String consulta = "SELECT AVG(leido = 1) * 100 AS Avance FROM [plan]";
+//
+//        Cursor cursor = db.rawQuery(consulta,null);
+//        cursor.moveToFirst();
+//
+//        int avance = cursor.getInt(0);
+//
+//        cursor.close();
+//        db.close();
+//
+//        return avance;
+//    }
 
 
 

@@ -69,6 +69,7 @@ public class oracionesAdapter extends RecyclerView.Adapter<oracionesAdapter.View
 
             Intent mainIntent = new Intent(context, chapters.class);
             mainIntent.putExtra("cap", "OCR_" + idEstudio + ".html");
+            mainIntent.putExtra("bible", true);
             ((Activity) context).startActivityForResult(mainIntent,1002);
 
         }

@@ -43,8 +43,7 @@
             android:focusable="true"
             android:scaleType="fitCenter"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/ocrlinea"
-            android:contentDescription="@string/OCR_ContentDescription"/>
+            android:src="@drawable/rec3" />
 
 
     <ImageView

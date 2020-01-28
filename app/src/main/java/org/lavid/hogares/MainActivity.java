@@ -73,6 +73,14 @@ public class MainActivity extends AppCompatActivity {
              }
          });
 
+         imgOraciones = findViewById(R.id.imgOraciones);
+         imgOraciones.setOnClickListener(new View.OnClickListener() {
+             public void onClick(View v) {
+                 Intent mainIntent = new Intent(getApplicationContext(), recoMenu.class);
+                 startActivity(mainIntent);
+             }
+         });
+
          imgEspeciales = findViewById(R.id.imgEspeciales);
          imgEspeciales.setOnClickListener(new View.OnClickListener() {
              public void onClick(View v) {
@@ -81,14 +89,6 @@ public class MainActivity extends AppCompatActivity {
              }
          });
 
-
-         imgOraciones = findViewById(R.id.imgOraciones);
-         imgOraciones.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent mainIntent = new Intent(getApplicationContext(), oracionesMenu.class);
-                startActivity(mainIntent);
-            }
-         });
 
 
          imgBiblia = findViewById(R.id.imgBiblia);

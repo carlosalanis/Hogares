@@ -44,7 +44,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".BookIndexActivity"
-            android:label="Libros"
+            android:label="La Biblia de Las Americas"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ChapterIndexActivity"
@@ -58,6 +58,11 @@
             android:name=".mujeresMenu"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".recoMenu"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar" />
+
     </application>
 
 </manifest>

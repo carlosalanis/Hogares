@@ -71,46 +71,6 @@
             android:onClick="FwdPressed"
             app:srcCompat="@drawable/ic_chevron_right_black_24dp"/>
 
-        <TextView
-            android:id="@+id/txtAvLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/pBar"
-            android:layout_alignEnd="@id/pBar"
-            android:textSize="12sp"
-            android:text="@string/avance" />
-
-        <TextView
-            android:id="@+id/txtBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf ="@id/txtAvLabel"
-            android:layout_above="@id/pBar"
-            android:textColor="@color/colorBlue"
-            android:text="@string/_0"
-            android:textSize="12sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/pBar"
-            android:layout_toEndOf ="@id/txtBar"
-            android:textSize="12sp"
-            android:text="@string/percent" />
-
-        <ProgressBar
-            android:id="@+id/pBar"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
-            android:max="100"
-            android:minWidth="250dp"
-            android:minHeight="50dp" />
-
-
-
 
     </RelativeLayout>
 

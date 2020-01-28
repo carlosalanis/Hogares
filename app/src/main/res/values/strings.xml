@@ -24,7 +24,7 @@
     <string name="title_activity_reader">reader</string>
     <string name="title_activity_plan">planActivity</string>
     <string name="title_activity_add">addActivity</string>
-    <string name="title_activity_book_index">Libros</string>
+    <string name="title_activity_book_index">La Biblia de Las Americas</string>
     <string name="tab_text_1">Antiguo Testamento</string>
     <string name="tab_text_2">Nuevo Testamento</string>
     <string name="OCR_ContentDescription">Oraciones con Respuesta</string>

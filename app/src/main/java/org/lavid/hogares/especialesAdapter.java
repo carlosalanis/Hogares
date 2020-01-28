@@ -81,6 +81,7 @@ public class especialesAdapter extends RecyclerView.Adapter<especialesAdapter.Vi
             if (isESPChapterAdmin) {
                 Intent mainIntent = new Intent(context, chapters.class);
                 mainIntent.putExtra("cap", "ESP\\ESP_" + idEstudio + ".html");
+                mainIntent.putExtra("bible", true);
                 ((Activity) context).startActivityForResult(mainIntent, 1002);
             } else {
                 AlertDialog.Builder b = new AlertDialog.Builder(v.getContext());
@@ -114,6 +115,7 @@ public class especialesAdapter extends RecyclerView.Adapter<especialesAdapter.Vi
 
                         Intent mainIntent = new Intent(context, chapters.class);
                         mainIntent.putExtra("cap", "ESP\\ESP_" + idEstudio + ".html");
+                        mainIntent.putExtra("bible", true);
                         ((Activity) context).startActivityForResult(mainIntent, 1002);
 
                         dialog.dismiss();

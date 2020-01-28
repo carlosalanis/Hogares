@@ -62,6 +62,8 @@ public class chapters extends AppCompatActivity {
         //view.loadData(getString(R.string.sermon1_text), "text/html", "UTF-8");
         Intent intent = getIntent();
         String cap = intent.getStringExtra("cap");
+        Boolean bible = intent.getBooleanExtra("bible", false);
+
         view.loadUrl("file:///android_asset/" + cap);
 
         view.setLongClickable(true);
@@ -83,13 +85,16 @@ public class chapters extends AppCompatActivity {
             }
         });
 
-        FloatingActionButton bible = findViewById(R.id.bible);
-        bible.setOnClickListener(new View.OnClickListener() {
+        FloatingActionButton cbible = findViewById(R.id.bible);
+        cbible.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 goBible();
             }
         });
+
+        if(bible) cbible.show();
+        else cbible.hide();
 
         FloatingActionButton big = findViewById(R.id.big);
         big.setOnClickListener(new View.OnClickListener() {

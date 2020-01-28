@@ -30,8 +30,8 @@ public class planActivity extends AppCompatActivity {
         setContentView(R.layout.activity_plan);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
-        ProgressBar pBar = findViewById(R.id.pBar);
-        TextView txtBar = findViewById(R.id.txtBar);
+        //ProgressBar pBar = findViewById(R.id.pBar);
+        //TextView txtBar = findViewById(R.id.txtBar);
 
         toolbar.setTitle("Lecturas para hoy");
         setSupportActionBar(toolbar);
@@ -68,9 +68,9 @@ public class planActivity extends AppCompatActivity {
 
         recyclerView.setAdapter(new planAdapter(planDataset));
 
-        int avance = dbHelper.getAvance();
-        txtBar.setText(Integer.toString(avance));
-        pBar.setProgress(avance);
+        //int avance = dbHelper.getAvance();
+        //txtBar.setText(Integer.toString(avance));
+        //pBar.setProgress(avance);
 
 
     }

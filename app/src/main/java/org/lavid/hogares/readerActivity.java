@@ -3,6 +3,9 @@ package org.lavid.hogares;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -14,6 +17,11 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 public class readerActivity extends AppCompatActivity {
     DatabaseHelper dbHelper = null;
 
+    int idLibro;
+    int capitulo;
+    int versiculoini;
+    int versiculofin;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,12 +30,12 @@ public class readerActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         Boolean leido = false;
 
-
         final int id =  getIntent().getIntExtra("ID", 0);
-        int idLibro =  getIntent().getIntExtra("IDLIBRO", 1);
-        int capitulo =  getIntent().getIntExtra("CAPITULO", 1);
-        int versiculoini =  getIntent().getIntExtra("VERSICULOINI",0);
-        int versiculofin =  getIntent().getIntExtra("VERSICULOFIN",0);
+        idLibro =  getIntent().getIntExtra("IDLIBRO", 1);
+        capitulo =  getIntent().getIntExtra("CAPITULO", 1);
+        versiculoini =  getIntent().getIntExtra("VERSICULOINI",0);
+        versiculofin =  getIntent().getIntExtra("VERSICULOFIN",0);
+
 
 
         RecyclerView recyclerView = findViewById(R.id.versesRView);
@@ -44,7 +52,6 @@ public class readerActivity extends AppCompatActivity {
         String[] capDataset = dbHelper.getTextFromBible(idLibro, capitulo, versiculoini , versiculofin);
         if (id > 0) leido = dbHelper.GetLeido(id);
 
-
         if(versiculoini!=0) toolbar.setTitle(nombreLibro + " " + capitulo + ":" + versiculoini + "-" + versiculofin);
         else toolbar.setTitle(nombreLibro + " " + capitulo);
 
@@ -55,6 +62,8 @@ public class readerActivity extends AppCompatActivity {
         // Set controls
         RecyclerView.Adapter capAdapter = new bibleAdapter(capDataset);
         recyclerView.setAdapter(capAdapter);
+
+
 
 
         final FloatingActionButton fab = findViewById(R.id.fab);
@@ -88,6 +97,36 @@ public class readerActivity extends AppCompatActivity {
 
             }
         });
+
+
+        ImageButton btnLBLA = findViewById(R.id.btnLBLA);
+        btnLBLA.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Extract data
+                dbHelper = new DatabaseHelper(getApplicationContext());
+                String[] capDataset = dbHelper.getTextFromBible(idLibro, capitulo, versiculoini , versiculofin);
+                // Set controls
+                RecyclerView recyclerView = findViewById(R.id.versesRView);
+                RecyclerView.Adapter capAdapter = new bibleAdapter(capDataset);
+                recyclerView.setAdapter(capAdapter);
+            }
+        });
+
+        ImageButton btnRVR = findViewById(R.id.btnRVR);
+        btnRVR.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Extract data
+                dbHelper = new DatabaseHelper(getApplicationContext());
+                String[] capDataset = dbHelper.getTextFromBibleRVR(idLibro, capitulo, versiculoini , versiculofin);
+                // Set controls
+                RecyclerView recyclerView = findViewById(R.id.versesRView);
+                RecyclerView.Adapter capAdapter = new bibleAdapter(capDataset);
+                recyclerView.setAdapter(capAdapter);
+            }
+        });
+
 
 
     }
