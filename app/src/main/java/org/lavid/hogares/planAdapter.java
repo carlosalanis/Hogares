@@ -66,15 +66,15 @@ public class planAdapter extends RecyclerView.Adapter<planAdapter.ViewHolder> {
         if(leido) {
             txtCita.setTextColor(holder.itemView.getContext().getResources().getColor(R.color.colorDarkGray));
             txtSub.setTextColor(holder.itemView.getContext().getResources().getColor(R.color.colorDarkGray));
-            card.setBackgroundResource(R.color.colorPurpleLight2);
+            card.setBackgroundResource(R.color.colorNewRedLight);
             imgBiblia.setBackgroundResource(R.drawable.ic_24px);
             txtSub.setText(numversiculos + " versículos");
         }
         else {
             txtCita.setTextColor(holder.itemView.getContext().getResources().getColor(R.color.colorWhite));
             txtSub.setTextColor(holder.itemView.getContext().getResources().getColor(R.color.colorWhite));
-            card.setBackgroundResource(R.color.colorPurple);
-            imgBiblia.setBackgroundResource(R.drawable.bible_purple);
+            card.setBackgroundResource(R.color.colorNewRed);
+            imgBiblia.setBackgroundResource(R.drawable.bible_red);
             txtSub.setText(numversiculos + " versículos");
         }
 

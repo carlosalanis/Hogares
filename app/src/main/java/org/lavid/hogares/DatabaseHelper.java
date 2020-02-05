@@ -17,20 +17,32 @@ import java.util.Locale;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    private static String DATABASE_NAME = "LBLA.db";
+    private static String OLD_DATABASE_NAME = "LBLA.db";
+    private static String DATABASE_NAME = "Bible.db";
     private final static String DATABASE_PATH = "/data/data/org.lavid.hogares/databases/";
-    private static final int DATABASE_VERSION = 9;
+    private static final int DATABASE_VERSION = 4;
 
     private final Context dbContext;
+
+
+    public DatabaseHelper(Context context, boolean clear) {
+        super(context, DATABASE_NAME, null, DATABASE_VERSION);
+        this.dbContext = context;
+
+        context.deleteDatabase(OLD_DATABASE_NAME);
+        context.deleteDatabase(DATABASE_NAME);
+
+    }
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
         this.dbContext = context;
+
         // checking database and open it if exists
         if (!checkDataBase()) {
             try {
                 //this.getReadableDatabase();
-                copyDataBase();
+                copyDataBaseFromAsset();
                 this.close();
                 openDataBase();
 
@@ -48,7 +60,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         try {
             if(newVersion>oldVersion) {
-                copyDataBase();
+                copyDataBaseFromAsset();
             }
         } catch (IOException e) {
             throw new Error("Error copying database");
@@ -56,7 +68,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    private void copyDataBase() throws IOException {
+    private void copyDataBaseFromAsset() throws IOException {
         InputStream myInput = dbContext.getAssets().open(DATABASE_NAME);
         String outFileName = DATABASE_PATH + DATABASE_NAME;
         OutputStream myOutput = new FileOutputStream(outFileName);
@@ -99,9 +111,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
 
-    public String[] getTextFromBible(int idLibro, int capitulo, int versiculoini, int versiculofin) {
+    public String[] getTextFromBibleLBLA(int idLibro, int capitulo, int versiculoini, int versiculofin) {
         SQLiteDatabase db = this.getReadableDatabase();
-        String consulta = "SELECT versiculo, texto FROM bible WHERE idlibro = " + idLibro +  " and capitulo = " + capitulo;
+        String consulta = "SELECT versiculo, texto FROM bibleLBLA WHERE idlibro = " + idLibro +  " and capitulo = " + capitulo;
 
         if(versiculoini != 0) consulta = consulta + " and versiculo >= " + versiculoini;
         if(versiculofin != 0) consulta = consulta + " and versiculo <= " + versiculofin;
@@ -128,6 +140,56 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public String[] getTextFromBibleRVR(int idLibro, int capitulo, int versiculoini, int versiculofin) {
         SQLiteDatabase db = this.getReadableDatabase();
         String consulta = "SELECT versiculo, texto FROM bibleRVR WHERE idlibro = " + idLibro +  " and capitulo = " + capitulo;
+
+        if(versiculoini != 0) consulta = consulta + " and versiculo >= " + versiculoini;
+        if(versiculofin != 0) consulta = consulta + " and versiculo <= " + versiculofin;
+
+        Cursor cursor = db.rawQuery(consulta,null);
+        cursor.moveToFirst();
+        ArrayList<String> list = new ArrayList<>();
+
+        do {
+            list.add(cursor.getString(0) + "/" + cursor.getString(1));
+        } while (cursor.moveToNext());
+
+        cursor.close();
+        db.close();
+
+        String[] array = new String[list.size()];
+        array = list.toArray(array);
+
+        return array;
+    }
+
+
+    public String[] getTextFromBibleNTV(int idLibro, int capitulo, int versiculoini, int versiculofin) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String consulta = "SELECT versiculo, texto FROM bibleNTV WHERE idlibro = " + idLibro +  " and capitulo = " + capitulo;
+
+        if(versiculoini != 0) consulta = consulta + " and versiculo >= " + versiculoini;
+        if(versiculofin != 0) consulta = consulta + " and versiculo <= " + versiculofin;
+
+        Cursor cursor = db.rawQuery(consulta,null);
+        cursor.moveToFirst();
+        ArrayList<String> list = new ArrayList<>();
+
+        do {
+            list.add(cursor.getString(0) + "/" + cursor.getString(1));
+        } while (cursor.moveToNext());
+
+        cursor.close();
+        db.close();
+
+        String[] array = new String[list.size()];
+        array = list.toArray(array);
+
+        return array;
+    }
+
+
+    public String[] getTextFromBibleRVA(int idLibro, int capitulo, int versiculoini, int versiculofin) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String consulta = "SELECT versiculo, texto FROM bibleRVR15 WHERE idlibro = " + idLibro +  " and capitulo = " + capitulo;
 
         if(versiculoini != 0) consulta = consulta + " and versiculo >= " + versiculoini;
         if(versiculofin != 0) consulta = consulta + " and versiculo <= " + versiculofin;
@@ -275,7 +337,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public String GetNumVersiculos(int id) {
         SQLiteDatabase db = this.getReadableDatabase();
-        String consulta = "SELECT count(versiculos) as versiculos FROM [plan] p,bible b ON p.idLibro = b.IdLibro AND p.Capitulo = b.capitulo WHERE p.id = " + id;
+        String consulta = "SELECT count(versiculos) as versiculos FROM [plan] p, bibleLBLA b ON p.idLibro = b.IdLibro AND p.Capitulo = b.capitulo WHERE p.id = " + id;
 
         Cursor cursor = db.rawQuery(consulta,null);
         cursor.moveToFirst();
@@ -329,7 +391,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public String[] getCaps(int idLibro) {
         SQLiteDatabase db = this.getReadableDatabase();
 
-        String consulta = "SELECT max(capitulo) FROM bible where idLibro = " + idLibro;
+        String consulta = "SELECT max(capitulo) FROM bibleLBLA where idLibro = " + idLibro;
 
         Cursor cursor = db.rawQuery(consulta,null);
         cursor.moveToFirst();

@@ -13,14 +13,14 @@
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:background="#BBA0CB"
+        android:background="#FFFFFF"
         android:orientation="vertical">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/chaptersRView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#BBA0CB"
+            android:background="#FFFFFF"
             android:scrollbars="vertical">
 
 

@@ -29,14 +29,15 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#5D3A76"
+            android:background="#983122"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:background="#5D3A76"
+            android:background="#FAF9F8"
+            app:tabTextColor="@color/colorBlack"
             app:tabContentStart="40dp"
             app:tabMode="scrollable" />
 

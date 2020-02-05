@@ -3,10 +3,12 @@ package org.lavid.hogares;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
@@ -16,19 +18,23 @@ import android.view.View;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-
 import android.widget.ImageView;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.google.android.material.navigation.NavigationView;
+
 public class MainActivity extends AppCompatActivity {
 
     ImageView imgMujeres;
-    ImageView imgOraciones;
-    ImageView imgEspeciales;
     ImageView imgLectura;
     ImageView imgBiblia;
+    ImageView imgReco;
 
+    private DrawerLayout mDrawer;
+    private NavigationView nvDrawer;
+    private ActionBarDrawerToggle drawerToggle;
+    private Toolbar toolbar;
 
     private static final int REQUEST = 112;
 
@@ -40,11 +46,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
+        //toolbar = findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+         // Find our drawer view
+         //mDrawer = findViewById(R.id.drawer_layout);
+         //drawerToggle = setupDrawerToggle();
+         // Setup toggle to display hamburger icon with nice animation
+         //drawerToggle.setDrawerIndicatorEnabled(true);
+         //drawerToggle.syncState();
 
+         // Tie DrawerLayout events to the ActionBarToggle
+         //mDrawer.addDrawerListener(drawerToggle);
 
         // Permissions
          if (Build.VERSION.SDK_INT >= 23) {
@@ -54,7 +68,9 @@ public class MainActivity extends AppCompatActivity {
              }
          }
 
-
+         // Find and setup drawer view
+         //nvDrawer = findViewById(R.id.nvView);
+         //setupDrawerContent(nvDrawer);
 
 
          imgLectura = findViewById(R.id.imgLectura);
@@ -73,24 +89,6 @@ public class MainActivity extends AppCompatActivity {
              }
          });
 
-         imgOraciones = findViewById(R.id.imgOraciones);
-         imgOraciones.setOnClickListener(new View.OnClickListener() {
-             public void onClick(View v) {
-                 Intent mainIntent = new Intent(getApplicationContext(), recoMenu.class);
-                 startActivity(mainIntent);
-             }
-         });
-
-         imgEspeciales = findViewById(R.id.imgEspeciales);
-         imgEspeciales.setOnClickListener(new View.OnClickListener() {
-             public void onClick(View v) {
-                 Intent mainIntent = new Intent(getApplicationContext(), especialesMenu.class);
-                 startActivity(mainIntent);
-             }
-         });
-
-
-
          imgBiblia = findViewById(R.id.imgBiblia);
          imgBiblia.setOnClickListener(new View.OnClickListener() {
              public void onClick(View v) {
@@ -99,6 +97,29 @@ public class MainActivity extends AppCompatActivity {
              }
          });
 
+
+         imgReco = findViewById(R.id.imgReco);
+         imgReco.setOnClickListener(new View.OnClickListener() {
+             public void onClick(View v) {
+                 Intent mainIntent = new Intent(getApplicationContext(), recoMenu.class);
+                 startActivity(mainIntent);
+             }
+         });
+
+         DatabaseHelper dbHelper = new DatabaseHelper(getApplicationContext(), true);
+
+    }
+
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        //drawerToggle.syncState();
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        //drawerToggle.onConfigurationChanged(newConfig);
     }
 
     @Override
@@ -114,21 +135,12 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (drawerToggle.onOptionsItemSelected(item)) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
+
     }
-
-
-
 
 
     @Override
@@ -141,6 +153,44 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private ActionBarDrawerToggle setupDrawerToggle() {
+        return new ActionBarDrawerToggle(this, mDrawer, toolbar, R.string.navigation_drawer_open,  R.string.navigation_drawer_close);
+    }
+
+    private void setupDrawerContent(NavigationView navigationView) {
+        navigationView.setNavigationItemSelectedListener(
+                new NavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(MenuItem menuItem) {
+                        selectDrawerItem(menuItem);
+                        return true;
+                    }
+                });
+    }
+
+
+    public void selectDrawerItem(MenuItem menuItem) {
+        Intent mainIntent;
+        //switch(menuItem.getItemId()) {
+            //case R.id.nav_mujeres:
+            //    mainIntent = new Intent(getApplicationContext(), mujeresMenu.class);
+            //    startActivity(mainIntent);
+            //    break;
+            //case R.id.nav_recomendados:
+            //    mainIntent = new Intent(getApplicationContext(), planActivity.class);
+            //    startActivity(mainIntent);
+            //    break;
+            //case R.id.nav_especiales:
+            //    mainIntent = new Intent(getApplicationContext(), especialesMenu.class);
+            //    startActivity(mainIntent);
+            //    break;
+        //}
+
+        // Highlight the selected item has been done by NavigationView
+        menuItem.setChecked(true);
+        // Close the navigation drawer
+        mDrawer.closeDrawers();
+    }
 
     private static boolean hasPermissions(Context context, String... permissions) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && context != null && permissions != null) {
@@ -153,12 +203,6 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-
-    private void showAlertbox(String erroMessage){
-
-
-
-    }
 
 
 }

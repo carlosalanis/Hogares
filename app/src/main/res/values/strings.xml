@@ -1,11 +1,13 @@
 <resources>
     <string name="app_name">Hogares La Vid</string>
     <string name="title_activity_main">Hogares La Vid</string>
+
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Hogares La Vid</string>
+    <string name="nav_header_title">La Vid</string>
     <string name="nav_header_subtitle">hogares@lavid.org.mx</string>
     <string name="nav_header_desc">Navigation header</string>
+
     <string name="action_settings">Configuración</string>
     <string name="red">RED</string>
     <string name="blue">BLUE</string>
@@ -85,5 +87,12 @@
     <string name="dos_ciegos">DOS CIEGOS</string>
     <string name="por_vista">POR VISTA</string>
     <string name="estudio_19">Estudio 19</string>
-    <string name="title_activity_mujeres_menu">mujeresMenu</string>
+    <string name="title_activity_agenda_menu">Agenda</string>
+    <string name="title_activity_devocional_menu">Devocional</string>
+    <string name="title_activity_grupos_menu">Grupos</string>
+    <string name="title_activity_mensajes_menu">Mensajes</string>
+    <string name="title_activity_recomendados_menu">Estudios Especiales</string>
+    <string name="title_activity_especiales_menu">Libros Recomendados</string>
+    <string name="title_activity_biblia_menu">La Biblia</string>
+    <string name="title_activity_plan_menu">Plan de Lectura</string>
 </resources>

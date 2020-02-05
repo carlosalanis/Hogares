@@ -50,6 +50,7 @@ public class recoAdapter extends RecyclerView.Adapter<recoAdapter.ViewHolder> {
 
         if(image.equals("elpresagio")) imgReco.setImageResource(R.drawable.elpresagio);
         if(image.equals("hacedordecirculos")) imgReco.setImageResource(R.drawable.hacedordecirculos);
+        if(image.equals("comoadorar")) imgReco.setImageResource(R.drawable.comoadorar);
 
         txtTitulo.setText(titulo);
         txtSubtitulo.setText(subtitulo);

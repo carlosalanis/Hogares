@@ -30,7 +30,7 @@ public class BookIndexActivity extends AppCompatActivity {
         TabLayout tabs = findViewById(R.id.tabs);
         tabs.setupWithViewPager(viewPager);
 
-        toolbar.setTitle("La Biblia de Las Americas");
+        toolbar.setTitle("La Biblia");
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

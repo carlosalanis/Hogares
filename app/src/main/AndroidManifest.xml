@@ -20,9 +20,9 @@
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation"
-            android:label="@string/title_activity_main"
+            android:label="Hogares La Vid"
             android:screenOrientation="portrait"
-            android:theme="@style/SplashTheme">
+            android:theme="@style/AppTheme.TransparentTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
@@ -44,7 +44,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".BookIndexActivity"
-            android:label="La Biblia de Las Americas"
+            android:label="La Biblia"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ChapterIndexActivity"

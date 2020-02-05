@@ -49,7 +49,7 @@ public class readerActivity extends AppCompatActivity {
         // Extract data
         dbHelper = new DatabaseHelper(this);
         String nombreLibro = dbHelper.getBookName(idLibro);
-        String[] capDataset = dbHelper.getTextFromBible(idLibro, capitulo, versiculoini , versiculofin);
+        String[] capDataset = dbHelper.getTextFromBibleLBLA(idLibro, capitulo, versiculoini , versiculofin);
         if (id > 0) leido = dbHelper.GetLeido(id);
 
         if(versiculoini!=0) toolbar.setTitle(nombreLibro + " " + capitulo + ":" + versiculoini + "-" + versiculofin);
@@ -69,7 +69,7 @@ public class readerActivity extends AppCompatActivity {
         final FloatingActionButton fab = findViewById(R.id.fab);
         if(id > 0) {
             if (leido)
-                fab.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorPurple)));
+                fab.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorNewRedLight)));
             else
                 fab.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorDarkGray)));
         }
@@ -90,7 +90,7 @@ public class readerActivity extends AppCompatActivity {
 
                     Boolean leido = dbHelper.GetLeido(id);
                     if (leido)
-                        fab.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorPurple)));
+                        fab.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorNewRedLight)));
                     else
                         fab.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorDarkGray)));
                 }
@@ -100,20 +100,27 @@ public class readerActivity extends AppCompatActivity {
 
 
         ImageButton btnLBLA = findViewById(R.id.btnLBLA);
+        ImageButton btnRVR = findViewById(R.id.btnRVR);
+        ImageButton btnNTV = findViewById(R.id.btnNTV);
+        ImageButton btnRVA = findViewById(R.id.btnRVA);
+
+        btnLBLA.setImageResource(R.drawable.lbla_sel);
         btnLBLA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Extract data
                 dbHelper = new DatabaseHelper(getApplicationContext());
-                String[] capDataset = dbHelper.getTextFromBible(idLibro, capitulo, versiculoini , versiculofin);
+                String[] capDataset = dbHelper.getTextFromBibleLBLA(idLibro, capitulo, versiculoini , versiculofin);
                 // Set controls
                 RecyclerView recyclerView = findViewById(R.id.versesRView);
                 RecyclerView.Adapter capAdapter = new bibleAdapter(capDataset);
                 recyclerView.setAdapter(capAdapter);
+                RestartButtons();
+                btnLBLA.setImageResource(R.drawable.lbla_sel);
             }
         });
 
-        ImageButton btnRVR = findViewById(R.id.btnRVR);
+
         btnRVR.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -124,10 +131,41 @@ public class readerActivity extends AppCompatActivity {
                 RecyclerView recyclerView = findViewById(R.id.versesRView);
                 RecyclerView.Adapter capAdapter = new bibleAdapter(capDataset);
                 recyclerView.setAdapter(capAdapter);
+                RestartButtons();
+                btnRVR.setImageResource(R.drawable.rvr_sel);
             }
         });
 
 
+        btnNTV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Extract data
+                dbHelper = new DatabaseHelper(getApplicationContext());
+                String[] capDataset = dbHelper.getTextFromBibleNTV(idLibro, capitulo, versiculoini , versiculofin);
+                // Set controls
+                RecyclerView recyclerView = findViewById(R.id.versesRView);
+                RecyclerView.Adapter capAdapter = new bibleAdapter(capDataset);
+                recyclerView.setAdapter(capAdapter);
+                RestartButtons();
+                btnNTV.setImageResource(R.drawable.ntv_sel);
+            }
+        });
+
+        btnRVA.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Extract data
+                dbHelper = new DatabaseHelper(getApplicationContext());
+                String[] capDataset = dbHelper.getTextFromBibleRVA(idLibro, capitulo, versiculoini , versiculofin);
+                // Set controls
+                RecyclerView recyclerView = findViewById(R.id.versesRView);
+                RecyclerView.Adapter capAdapter = new bibleAdapter(capDataset);
+                recyclerView.setAdapter(capAdapter);
+                RestartButtons();
+                btnRVA.setImageResource(R.drawable.rva_sel);
+            }
+        });
 
     }
 
@@ -135,6 +173,19 @@ public class readerActivity extends AppCompatActivity {
     public boolean onSupportNavigateUp() {
         onBackPressed();
         return true;
+    }
+
+    private void RestartButtons() {
+        ImageButton btnLBLA = findViewById(R.id.btnLBLA);
+        ImageButton btnRVR = findViewById(R.id.btnRVR);
+        ImageButton btnNTV = findViewById(R.id.btnNTV);
+        ImageButton btnRVA = findViewById(R.id.btnRVA);
+
+        btnLBLA.setImageResource(R.drawable.lbla);
+        btnRVR.setImageResource(R.drawable.rvr);
+        btnNTV.setImageResource(R.drawable.ntv);
+        btnRVA.setImageResource(R.drawable.rva);
+
     }
 
 }

@@ -26,6 +26,7 @@ public class recoMenu extends AppCompatActivity {
         ArrayList<String> list = new ArrayList<>();
         list.add("1/elpresagio/El Presagio/Jonathan Cahn");
         list.add("2/hacedordecirculos/El Hacedor de Circulos/Mark Batterson");
+        list.add("3/comoadorar/Cómo adorar al Rey/Zach Neese");
 
         String[] recoDataset = new String[list.size()];
         list.toArray(recoDataset);

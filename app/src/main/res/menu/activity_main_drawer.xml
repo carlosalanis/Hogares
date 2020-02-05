@@ -5,17 +5,25 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_estudio"
-            android:title="@string/estudios" />
+            android:id="@+id/nav_agenda"
+            android:icon="@drawable/ic_agenda"
+            android:title="@string/title_activity_agenda_menu" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_directorio"
-            android:title="@string/directorio" />
+            android:id="@+id/nav_devocional"
+            android:icon="@drawable/ic_book"
+            android:title="@string/title_activity_devocional_menu" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_grupos"
+            android:icon="@drawable/ic_group"
+            android:title="@string/title_activity_grupos_menu" />
+        <item
+            android:id="@+id/nav_mensajes"
+            android:icon="@drawable/ic_mensajes"
+            android:title="@string/title_activity_mensajes_menu" />
+        <item
+            android:id="@+id/nav_especiales"
             android:icon="@drawable/ic_anuncios"
-            android:title="@string/anuncios" />
+            android:title="@string/title_activity_especiales_menu" />
 
     </group>
 

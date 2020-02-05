@@ -4,28 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo"
+    android:background="@drawable/vintage"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
     tools:showIn="@layout/app_bar_main">
 
+    <!-- The ActionBar displayed at the top -->
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
         <ImageView
             android:id="@+id/imgLogo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp"
-            android:src="@drawable/logohogares"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/logoplay"
             tools:ignore="ContentDescription"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hogares La Vid"
+            android:textColor="@color/colorWhite"
+            android:textSize="15sp"
+            android:layout_marginBottom="10dp"
+            android:layout_above="@id/imgMujeres"
+            android:layout_centerHorizontal="true" />
 
         <ImageView
             android:id="@+id/imgMujeres"
-            android:layout_width="300dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="50dp"
-            android:layout_below="@id/imgLogo"
+            android:layout_width="200dp"
+            android:layout_height="66dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="120dp"
             android:clickable="true"
             android:focusable="true"
             android:scaleType="fitCenter"
@@ -33,31 +47,8 @@
             android:src="@drawable/mdlb"
             android:contentDescription="Mujeres de la Biblia"/>
 
-        <ImageView
-            android:id="@+id/imgOraciones"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom ="10dp"
-            android:layout_above="@id/imgEspeciales"
-            android:clickable="true"
-            android:focusable="true"
-            android:scaleType="fitCenter"
-            android:layout_centerHorizontal="true"
-            android:src="@drawable/rec3" />
 
 
-    <ImageView
-        android:id="@+id/imgEspeciales"
-        android:layout_width="200dp"
-        android:layout_height="30dp"
-        android:layout_marginBottom="10dp"
-        android:layout_above="@id/imgLectura"
-        android:clickable="true"
-        android:focusable="true"
-        android:scaleType="fitCenter"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/esp3"
-        android:contentDescription="Estudios Especiales"/>
 
     <ImageView
         android:id="@+id/imgLectura"
@@ -65,24 +56,37 @@
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="60dp"
         android:layout_marginEnd="50dp"
         android:clickable="true"
         android:contentDescription="@string/Plan_ContentDescription"
         android:focusable="true"
         android:scaleType="fitCenter"
-        android:src="@drawable/lectura" />
+        android:src="@drawable/lectura_green" />
 
     <ImageView
             android:id="@+id/imgBiblia"
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:layout_marginStart="50dp"
-            android:layout_marginBottom="50dp"
+            android:layout_marginBottom="60dp"
             android:clickable="true"
             android:focusable="true"
             android:scaleType="fitCenter"
             android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
             android:src="@drawable/lbla2" />
+
+    <ImageView
+        android:id="@+id/imgReco"
+        android:layout_width="2000dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="fitCenter"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/rec3" />
 
 </RelativeLayout>
