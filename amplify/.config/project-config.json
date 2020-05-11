@@ -1,0 +1,13 @@
+{
+    "projectName": "Hogares",
+    "version": "3.0",
+    "frontend": "android",
+    "android": {
+        "config": {
+            "ResDir": "res"
+        }
+    },
+    "providers": [
+        "awscloudformation"
+    ]
+}

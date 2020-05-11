@@ -43,7 +43,7 @@ public class sermonMenu extends AppCompatActivity {
         cardSermon1 = findViewById(R.id.card_view);
         cardSermon1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                Intent mainIntent = new Intent(getApplicationContext(), estudios.class);
                 mainIntent.putExtra("cap", "lospobres.html");
                 startActivity(mainIntent);
             }
@@ -52,7 +52,7 @@ public class sermonMenu extends AppCompatActivity {
         cardSermon2 = findViewById(R.id.card_view2);
         cardSermon2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                Intent mainIntent = new Intent(getApplicationContext(), estudios.class);
                 mainIntent.putExtra("cap", "losquelloran.html");
                 startActivity(mainIntent);
             }
@@ -61,7 +61,7 @@ public class sermonMenu extends AppCompatActivity {
         cardSermon3 = findViewById(R.id.card_view3);
         cardSermon3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                Intent mainIntent = new Intent(getApplicationContext(), estudios.class);
                 mainIntent.putExtra("cap", "loshumildes.html");
                 startActivity(mainIntent);
             }
@@ -70,7 +70,7 @@ public class sermonMenu extends AppCompatActivity {
         cardSermon4 = findViewById(R.id.card_view4);
         cardSermon4.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                Intent mainIntent = new Intent(getApplicationContext(), estudios.class);
                 mainIntent.putExtra("cap", "losquetienenhambre.html");
                 startActivity(mainIntent);
             }
@@ -79,7 +79,7 @@ public class sermonMenu extends AppCompatActivity {
         cardSermon5 = findViewById(R.id.card_view5);
         cardSermon5.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                Intent mainIntent = new Intent(getApplicationContext(), estudios.class);
                 mainIntent.putExtra("cap", "losmisericordiosos.html");
                 startActivity(mainIntent);
             }
@@ -88,7 +88,7 @@ public class sermonMenu extends AppCompatActivity {
         cardSermon6 = findViewById(R.id.card_view6);
         cardSermon6.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                Intent mainIntent = new Intent(getApplicationContext(), estudios.class);
                 mainIntent.putExtra("cap", "losdelimpio.html");
                 startActivity(mainIntent);
             }
@@ -97,7 +97,7 @@ public class sermonMenu extends AppCompatActivity {
         cardSermon7 = findViewById(R.id.card_view7);
         cardSermon7.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                Intent mainIntent = new Intent(getApplicationContext(), estudios.class);
                 mainIntent.putExtra("cap", "losqueprocuran.html");
                 startActivity(mainIntent);
             }
@@ -106,7 +106,7 @@ public class sermonMenu extends AppCompatActivity {
         cardSermon8 = findViewById(R.id.card_view8);
         cardSermon8.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                Intent mainIntent = new Intent(getApplicationContext(), estudios.class);
                 mainIntent.putExtra("cap", "losperseguidos.html");
                 startActivity(mainIntent);
             }
@@ -116,7 +116,7 @@ public class sermonMenu extends AppCompatActivity {
         cardSermon9 = findViewById(R.id.card_view9);
         cardSermon9.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                Intent mainIntent = new Intent(getApplicationContext(), estudios.class);
                 mainIntent.putExtra("cap", "lasal.html");
                 startActivity(mainIntent);
             }
@@ -125,7 +125,7 @@ public class sermonMenu extends AppCompatActivity {
         cardSermon10 = findViewById(R.id.card_view10);
         cardSermon10.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                Intent mainIntent = new Intent(getApplicationContext(), estudios.class);
                 mainIntent.putExtra("cap", "laconsumacion.html");
                 startActivity(mainIntent);
             }
@@ -135,7 +135,7 @@ public class sermonMenu extends AppCompatActivity {
         cardSermon11 = findViewById(R.id.card_view11);
         cardSermon11.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                Intent mainIntent = new Intent(getApplicationContext(), estudios.class);
                 mainIntent.putExtra("cap", "laira.html");
                 startActivity(mainIntent);
             }
@@ -145,7 +145,7 @@ public class sermonMenu extends AppCompatActivity {
         cardSermon12 = findViewById(R.id.card_view12);
         cardSermon12.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                Intent mainIntent = new Intent(getApplicationContext(), estudios.class);
                 mainIntent.putExtra("cap", "eladulterio.html");
                 startActivity(mainIntent);
             }
@@ -155,7 +155,7 @@ public class sermonMenu extends AppCompatActivity {
         cardSermon13 = findViewById(R.id.card_view13);
         cardSermon13.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                Intent mainIntent = new Intent(getApplicationContext(), estudios.class);
                 mainIntent.putExtra("cap", "unavida.html");
                 startActivity(mainIntent);
             }
@@ -165,7 +165,7 @@ public class sermonMenu extends AppCompatActivity {
         cardSermon14 = findViewById(R.id.card_view14);
         cardSermon14.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                Intent mainIntent = new Intent(getApplicationContext(), estudios.class);
                 mainIntent.putExtra("cap", "lavenganza.html");
                 startActivity(mainIntent);
             }
@@ -175,7 +175,7 @@ public class sermonMenu extends AppCompatActivity {
         cardSermon15 = findViewById(R.id.card_view15);
         cardSermon15.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                Intent mainIntent = new Intent(getApplicationContext(), estudios.class);
                 mainIntent.putExtra("cap", "enemigos.html");
                 startActivity(mainIntent);
             }
@@ -185,7 +185,7 @@ public class sermonMenu extends AppCompatActivity {
         cardSermon16 = findViewById(R.id.card_view16);
         cardSermon16.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                Intent mainIntent = new Intent(getApplicationContext(), estudios.class);
                 mainIntent.putExtra("cap", "hipocresia.html");
                 startActivity(mainIntent);
             }
@@ -195,7 +195,7 @@ public class sermonMenu extends AppCompatActivity {
         cardSermon17 = findViewById(R.id.card_view17);
         cardSermon17.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                Intent mainIntent = new Intent(getApplicationContext(), estudios.class);
                 mainIntent.putExtra("cap", "comodar.html");
                 startActivity(mainIntent);
             }
@@ -205,7 +205,7 @@ public class sermonMenu extends AppCompatActivity {
         cardSermon18 = findViewById(R.id.card_view18);
         cardSermon18.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                Intent mainIntent = new Intent(getApplicationContext(), estudios.class);
                 mainIntent.putExtra("cap", "comoorar.html");
                 startActivity(mainIntent);
             }
@@ -216,7 +216,7 @@ public class sermonMenu extends AppCompatActivity {
         cardSermon19 = findViewById(R.id.card_view19);
         cardSermon19.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                Intent mainIntent = new Intent(getApplicationContext(), estudios.class);
                 mainIntent.putExtra("cap", "comoorar2.html");
                 startActivity(mainIntent);
             }
@@ -227,7 +227,7 @@ public class sermonMenu extends AppCompatActivity {
         cardSermon20 = findViewById(R.id.card_view20);
         cardSermon20.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent mainIntent = new Intent(getApplicationContext(), chapters.class);
+                Intent mainIntent = new Intent(getApplicationContext(), estudios.class);
                 mainIntent.putExtra("cap", "santificado.html");
                 startActivity(mainIntent);
             }

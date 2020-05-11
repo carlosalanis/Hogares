@@ -1,5 +1,6 @@
 package org.lavid.hogares;
 
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -13,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 
+import android.util.Log;
 import android.view.View;
 
 import androidx.core.view.GravityCompat;
@@ -22,7 +24,17 @@ import android.widget.ImageView;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.amazonaws.mobile.client.AWSMobileClient;
+import com.amazonaws.mobile.client.Callback;
+import com.amazonaws.mobile.client.UserStateDetails;
+import com.amplifyframework.core.Amplify;
+import com.amplifyframework.storage.s3.AWSS3StoragePlugin;
 import com.google.android.material.navigation.NavigationView;
+
+import android.speech.tts.TextToSpeech;
+
+import java.util.HashMap;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
     ImageView imgLectura;
     ImageView imgBiblia;
     ImageView imgReco;
+
+    TextToSpeech tts;
+    String text;
 
     private DrawerLayout mDrawer;
     private NavigationView nvDrawer;
@@ -45,6 +60,25 @@ public class MainActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // AWS Amplify init
+         AWSMobileClient.getInstance().initialize(getApplicationContext(), new Callback<UserStateDetails>() {
+             @Override
+             public void onResult(UserStateDetails userStateDetails) {
+                 try {
+                     Amplify.addPlugin(new AWSS3StoragePlugin());
+                     Amplify.configure(getApplicationContext());
+                     Log.i("StorageQuickstart", "All set and ready to go!");
+                 } catch (Exception exception) {
+                     Log.e("StorageQuickstart", exception.getMessage(), exception);
+                 }
+             }
+
+             @Override
+             public void onError(Exception exception) {
+                 Log.e("StorageQuickstart", "Initialization error.", exception);
+             }
+         });
 
         //toolbar = findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
@@ -108,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
 
          DatabaseHelper dbHelper = new DatabaseHelper(getApplicationContext(), true);
 
-    }
+     }
 
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {

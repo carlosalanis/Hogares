@@ -79,7 +79,7 @@ public class especialesAdapter extends RecyclerView.Adapter<especialesAdapter.Vi
             boolean isESPChapterAdmin = settings.getBoolean("isESPChapterAdmin" + idEstudio, false);
 
             if (isESPChapterAdmin) {
-                Intent mainIntent = new Intent(context, chapters.class);
+                Intent mainIntent = new Intent(context, estudios.class);
                 mainIntent.putExtra("cap", "ESP\\ESP_" + idEstudio + ".html");
                 mainIntent.putExtra("bible", true);
                 ((Activity) context).startActivityForResult(mainIntent, 1002);
@@ -113,7 +113,7 @@ public class especialesAdapter extends RecyclerView.Adapter<especialesAdapter.Vi
                         editor.putBoolean("isESPChapterAdmin" + idEstudio, true);
                         editor.apply();
 
-                        Intent mainIntent = new Intent(context, chapters.class);
+                        Intent mainIntent = new Intent(context, estudios.class);
                         mainIntent.putExtra("cap", "ESP\\ESP_" + idEstudio + ".html");
                         mainIntent.putExtra("bible", true);
                         ((Activity) context).startActivityForResult(mainIntent, 1002);

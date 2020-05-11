@@ -1,0 +1,15 @@
+{
+	"auth": {
+		"hogares2fefc2d6": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	},
+	"storage": {
+		"S3Res": {
+			"service": "S3",
+			"providerPlugin": "awscloudformation"
+		}
+	}
+}

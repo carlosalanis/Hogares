@@ -76,9 +76,10 @@ public class mujeresAdapter extends RecyclerView.Adapter<mujeresAdapter.ViewHold
             SharedPreferences settings = v.getContext().getSharedPreferences("HOGARES_PREFS", 0);
             SharedPreferences.Editor editor = settings.edit();
             boolean isMDLBChapterAdmin = settings.getBoolean("isMDLBChapterAdmin" + idEstudio, false);
+            int MDLBLastOpenChapter = settings.getInt("MDLBLastOpenChapter", 0);
 
-            if(isMDLBChapterAdmin) {
-                Intent mainIntent = new Intent(context, chapters.class);
+            if(isMDLBChapterAdmin || MDLBLastOpenChapter >= idEstudio) {
+                Intent mainIntent = new Intent(context, estudios.class);
                 mainIntent.putExtra("cap", "MDLB\\MDLB_" + idEstudio + ".html");
                 mainIntent.putExtra("bible", true);
                 ((Activity) context).startActivityForResult(mainIntent,1002);
@@ -110,10 +111,10 @@ public class mujeresAdapter extends RecyclerView.Adapter<mujeresAdapter.ViewHold
                     final String result;
                     result = input.getText().toString();
                     if(result.toLowerCase().trim().equals(clave)) {
-                        editor.putBoolean("isMDLBChapterAdmin" + idEstudio, true);
+                        editor.putInt("MDLBLastOpenChapter", idEstudio);
                         editor.apply();
 
-                        Intent mainIntent = new Intent(context, chapters.class);
+                        Intent mainIntent = new Intent(context, estudios.class);
                         mainIntent.putExtra("cap", "MDLB\\MDLB_" + idEstudio + ".html");
                         mainIntent.putExtra("bible", true);
                         ((Activity) context).startActivityForResult(mainIntent,1002);

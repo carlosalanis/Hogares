@@ -316,6 +316,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
+    public int getMaxChapter(int idLibro) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String consulta = "select max(capitulo) from bibleLBLA where idLibro = " + idLibro;
+
+        Cursor cursor = db.rawQuery(consulta,null);
+        cursor.moveToFirst();
+
+        int max = cursor.getInt(0);
+
+        cursor.close();
+        db.close();
+        return max;
+    }
+
 
 
 //    public int getAvance() {

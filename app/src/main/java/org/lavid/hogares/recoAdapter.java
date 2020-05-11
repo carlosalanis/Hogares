@@ -3,24 +3,14 @@ package org.lavid.hogares;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.google.android.material.textfield.TextInputLayout;
-
-import java.io.File;
 
 public class recoAdapter extends RecyclerView.Adapter<recoAdapter.ViewHolder> {
     private String[] mDataset;
@@ -51,6 +41,7 @@ public class recoAdapter extends RecyclerView.Adapter<recoAdapter.ViewHolder> {
         if(image.equals("elpresagio")) imgReco.setImageResource(R.drawable.elpresagio);
         if(image.equals("hacedordecirculos")) imgReco.setImageResource(R.drawable.hacedordecirculos);
         if(image.equals("comoadorar")) imgReco.setImageResource(R.drawable.comoadorar);
+        if(image.equals("despertar")) imgReco.setImageResource(R.drawable.despertar);
 
         txtTitulo.setText(titulo);
         txtSubtitulo.setText(subtitulo);
@@ -81,7 +72,7 @@ public class recoAdapter extends RecyclerView.Adapter<recoAdapter.ViewHolder> {
 
             Context context = v.getContext();
 
-            Intent mainIntent = new Intent(context, chapters.class);
+            Intent mainIntent = new Intent(context, estudios.class);
             mainIntent.putExtra("cap", "BOOKS\\BOOK_" + idReco + ".html");
             ((Activity) context).startActivityForResult(mainIntent, 1002);
 

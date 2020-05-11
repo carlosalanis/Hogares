@@ -2,6 +2,7 @@ package org.lavid.hogares;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -10,6 +11,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.amplifyframework.core.Amplify;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -51,15 +58,27 @@ public class mujeresMenu extends AppCompatActivity {
             }
         });
 
+        //S3FileInfo info = new S3FileInfo();
+        //String[] fileList = info.listFiles();
+
+        //new S3DownloadFileFromURL(mujeresMenu.this).execute("");
+
         ArrayList<String> list = new ArrayList<>();
         list.add("1/EVA/MADRE DE TODOS LOS VIVIENTES/vida eterna");
 
-        if(week>=3 || isAdmin) list.add(0,"2/SARA/HEROÍNA DE LA FE/promesa cumplida");
-        if(week>=4 || isAdmin) list.add(0,"3/REBECA/MATRIARCA DEL PUEBLO DE DIOS/pueblo escogido");
-        if(week>=5 || isAdmin) list.add(0,"4/LEA Y RAQUEL/EDIFICARON LA CASA DE ISRAEL/servicio");
-        if(week>=6 || isAdmin) list.add(0,"5/RAHAB/UNA VIDA REDIMIDA/generosidad");
-        if(week>=7 || isAdmin) list.add(0,"6/DÉBORA/LA MADRE Y JUEZ DE ISRAEL/alabanza");
-
+        list.add(0,"2/SARA/HEROÍNA DE LA FE/promesa cumplida");
+        list.add(0,"3/REBECA/MATRIARCA DEL PUEBLO DE DIOS/pueblo escogido");
+        list.add(0,"4/LEA Y RAQUEL/EDIFICARON LA CASA DE ISRAEL/servicio");
+        list.add(0,"5/RAHAB/UNA VIDA REDIMIDA/generosidad");
+        list.add(0,"6/DÉBORA/LA MADRE Y JUEZ DE ISRAEL/alabanza");
+        list.add(0,"7/RUT/UNA HISTORIA DE LEALTAD Y REDENCIÓN/lealtad");
+        list.add(0,"8/ANA/MUJER DE ORACIÓN Y FE/anhelo");
+        list.add(0,"9/ESTER/LA REINA QUE INTERCEDIÓ POR SU PUEBLO/proposito");
+        list.add(0,"10/MARÍA/UNA VIDA DE FE, OBEDIENCIA Y HUMILDAD/obediencia");
+        list.add(0,"11/ELISABET/LA MADRE DEL MAYOR HOMBRE QUE HAYA NACIDO/humildad");
+        list.add(0,"12/LA SAMARITANA/SU ENCUENTRO CON EL AGUA VIVA/entrega");
+        list.add(0,"13/LIDIA/UN CORAZÓN DISPUESTO Y HOSPITALARIO/fidelidad");
+        list.add(0,"14/MARTA Y MARÍA/TRABAJO Y ADORACIÓN/adoracion");
         String[] estudiosDataset = new String[list.size()];
         list.toArray(estudiosDataset);
 
@@ -72,6 +91,25 @@ public class mujeresMenu extends AppCompatActivity {
         mAdapter = new mujeresAdapter(estudiosDataset);
         recyclerView.setAdapter(mAdapter);
 
+    }
+
+    private void uploadFile() {
+        File sampleFile = new File(getApplicationContext().getFilesDir(), "sample.txt");
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(sampleFile));
+            writer.append("Howdy World!");
+            writer.close();
+        }
+        catch(Exception exception) {
+            Log.e("StorageQuickstart", exception.getMessage(), exception);
+        }
+
+        Amplify.Storage.uploadFile(
+                "myUploadedFileName.txt",
+                sampleFile.getAbsolutePath(),
+                result -> Log.i("StorageQuickStart", "Successfully uploaded: " + result.getKey()),
+                storageFailure -> Log.e("StorageQuickstart", "Upload error.", storageFailure)
+        );
     }
 
 }

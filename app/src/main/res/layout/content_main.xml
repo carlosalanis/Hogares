@@ -48,45 +48,46 @@
             android:contentDescription="Mujeres de la Biblia"/>
 
 
-
-
-    <ImageView
-        android:id="@+id/imgLectura"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="60dp"
-        android:layout_marginEnd="50dp"
-        android:clickable="true"
-        android:contentDescription="@string/Plan_ContentDescription"
-        android:focusable="true"
-        android:scaleType="fitCenter"
-        android:src="@drawable/lectura_green" />
-
-    <ImageView
-            android:id="@+id/imgBiblia"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="50dp"
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_height="60dp"
+            android:layout_width="310dp"
             android:layout_marginBottom="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true">
+
+
+                <ImageView
+                        android:id="@+id/imgBiblia"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/lbla2" />
+
+                <ImageView
+                    android:id="@+id/imgLectura"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:clickable="true"
+                    android:contentDescription="@string/Plan_ContentDescription"
+                    android:focusable="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lectura_green" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgReco"
+            android:layout_width="2000dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
             android:clickable="true"
             android:focusable="true"
             android:scaleType="fitCenter"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
-            android:src="@drawable/lbla2" />
-
-    <ImageView
-        android:id="@+id/imgReco"
-        android:layout_width="2000dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="10dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:scaleType="fitCenter"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/rec3" />
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/rec3" />
 
 </RelativeLayout>

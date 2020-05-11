@@ -113,7 +113,7 @@ public class planAdapter extends RecyclerView.Adapter<planAdapter.ViewHolder> {
             if(!versiculos.isEmpty()) { versiculoini = Integer.parseInt(versiculos.split("-")[0]); versiculofin = Integer.parseInt(versiculos.split("-")[1]); }
 
             Context context = v.getContext();
-            Intent mainIntent = new Intent(context, readerActivity.class);
+            Intent mainIntent = new Intent(context, bibleActivity.class);
             mainIntent.putExtra("ID", id);
             mainIntent.putExtra("IDLIBRO", idLibro);
             mainIntent.putExtra("CAPITULO", capitulo);

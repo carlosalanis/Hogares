@@ -27,6 +27,7 @@ public class recoMenu extends AppCompatActivity {
         list.add("1/elpresagio/El Presagio/Jonathan Cahn");
         list.add("2/hacedordecirculos/El Hacedor de Circulos/Mark Batterson");
         list.add("3/comoadorar/Cómo adorar al Rey/Zach Neese");
+        list.add("4/despertar/El Despertar de la Gracia/Charles R. Swindoll");
 
         String[] recoDataset = new String[list.size()];
         list.toArray(recoDataset);

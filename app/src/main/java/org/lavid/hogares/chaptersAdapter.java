@@ -68,7 +68,7 @@ public class chaptersAdapter extends RecyclerView.Adapter<chaptersAdapter.ViewHo
 
             Context context = v.getContext();
 
-            Intent mainIntent = new Intent(context, readerActivity.class);
+            Intent mainIntent = new Intent(context, bibleActivity.class);
             mainIntent.putExtra("IDLIBRO", midLibro);
             mainIntent.putExtra("CAPITULO", cap);
             ((Activity) context).startActivityForResult(mainIntent,1002);

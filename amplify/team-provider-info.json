@@ -1,0 +1,20 @@
+{
+    "prod": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-hogares-prod-201911-authRole",
+            "UnauthRoleArn": "arn:aws:iam::386587700154:role/amplify-hogares-prod-201911-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::386587700154:role/amplify-hogares-prod-201911-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-hogares-prod-201911-deployment",
+            "UnauthRoleName": "amplify-hogares-prod-201911-unauthRole",
+            "StackName": "amplify-hogares-prod-201911",
+            "StackId": "arn:aws:cloudformation:us-east-1:386587700154:stack/amplify-hogares-prod-201911/45133b70-8da5-11ea-949d-0a0faac5843d",
+            "AmplifyAppId": "d2oqx00qkmk0x9"
+        },
+        "categories": {
+            "auth": {
+                "hogares2fefc2d6": {}
+            }
+        }
+    }
+}
